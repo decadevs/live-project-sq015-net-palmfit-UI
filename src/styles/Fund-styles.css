@@ -117,3 +117,18 @@ line-height: 29px; /* 161.111% */
   background: #1A8D8D;
   height: 2rem;
 }
+
+/* Responsive CSS for input-group */
+.input-group {
+    flex-direction: row;
+    justify-content: space-between;
+     gap: 10px; 
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .input-group {
+    display: flex;
+  flex-direction: column;
+  }
+}
