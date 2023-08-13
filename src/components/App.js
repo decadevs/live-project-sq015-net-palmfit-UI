@@ -1,8 +1,9 @@
 import '../styles/App.css';
+import FundWallet from './Wallet/FundWallet';
 
 function App() {
   return (
-    <div> Hello World</div>
+    <FundWallet/>
   );
 }
 
