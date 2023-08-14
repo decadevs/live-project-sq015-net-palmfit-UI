@@ -1,8 +1,11 @@
 import '../styles/App.css';
+import Subscription from './Payment/Subscription';
 
 function App() {
   return (
-    <div> Hello World</div>
+    <>
+    <Subscription/>
+    </>
   );
 }
 
