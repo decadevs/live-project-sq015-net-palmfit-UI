@@ -1,0 +1,94 @@
+
+.container {
+    display: flex;
+    justify-content: left;
+    min-height: 100vh;
+}
+
+.content_container {
+    padding-top: 5vh;
+    background-color: #FEFFFF;
+}
+
+.container h3 {
+    font-size: 24px;
+    font-weight: 700px;
+    line-height: normal;
+}
+
+.container p {
+    color: #334848;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.btn {
+    padding: 17px;
+    background: #1A8D8D;
+    border-radius: 6px;
+    color: #FFFFFF;
+    border: none;
+}
+
+.wallet_container {
+    background-color: #599C90;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+    padding: 1.5em .7rem;
+    min-height: 220px;
+    color: #fff;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.wallet_container span{
+    display: block;
+}
+
+.top_half :nth-child(2) {
+    font-size: 32px;
+    font-size: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: .5rem;
+}
+
+.top_half :nth-child(1),
+.wallet_container :nth-child(2){
+    text-transform: capitalize;
+}
+
+.top_half :nth-child(1) {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.paid {
+    font-size: 16px;
+}
+
+.btn_secondary {
+    padding: 17px;
+    background: #fff;
+    border-radius: 6px;
+    color: #1A8D8D;
+    border: 1px solid #1A8D8D;
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 576px) {
+    .btn_con {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+@media (min-width:992px) {
+    .wallet_container {
+        max-width: 334px;
+    }
+}
+
