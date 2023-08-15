@@ -28,7 +28,7 @@ export default function Frame_1786(props) {
 
           <div className={styles.body_con_bottom}>
             <div className={styles.list}>
-              <GrStatusGood style={{color: "white"}} fill='#fff' className={styles.icon} />
+              <GrStatusGood style={{color: "#fff"}} fill='#fff' className={styles.icon} />
               <p>Only #1,000 after 1 week trial</p>
             </div>
             <div className={styles.list}>
@@ -42,7 +42,7 @@ export default function Frame_1786(props) {
           </div>
 
         </div>
-        
+
           <a href='#' type='button' className={styles.btn}>Proceed</a>
       </Modal.Body>
       
