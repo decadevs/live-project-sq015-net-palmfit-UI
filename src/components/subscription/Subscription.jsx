@@ -1,16 +1,21 @@
 import styles from "./Subscription.module.css";
-
+import Frame_1786 from "../subscriptionFrames/frame_1786/Frame_1786";
 import {useState} from "react"
 
 function Subscription() {
+  const [showModal, setShowModal] = useState(false);
 
-    const [show, setShow] = useState(false);
-  const handleShow = () => setShow(true);
-    
+  function handleShow() {
+    setShowModal(true)
+  }
 
   return (
     <div className={styles.container}>
-
+      <Frame_1786
+        show={showModal}
+        onHide={() => setShowModal(false)}
+      />
+     
       <div className={styles.content_container}>
         <h3>Active plan</h3>
         <p>
