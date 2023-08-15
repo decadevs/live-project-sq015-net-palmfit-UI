@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,700&display=swap');
+
+.container{
+    height: auto;
+    width: auto;
+
+    margin-top: 70px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+
+.head {
+    display: flex;
+    flex-direction: column;
+    
+    gap: .75rem;
+}
+
+
+.btn_container {
+    border-radius: 4px;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: inline-block;
+    
+}
+.btn {
+    background-color: none;
+    border: none;
+    box-sizing: border-box;
+    width: 200px;
+    height: 60px;
+    padding: 8px 35px ;
+}
+.selected {
+    background: #48a4a4;
+    color: #fff;
+}
+
+.notSelected {
+    background-color: #e3e5e5;
+}
+
+.header_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-right: 400px;
+}
+
+.h5{
+    color: #000;
+    font-family: Nunito Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bolder;
+    line-height: normal;
+}
+
+.btn_getplan{
+    padding: 8px 35px ;
+    border-radius: 8px;
+    color: #FFF;
+    text-align: center;
+    font-family: Nunito Sans;
+    font-size: 16px;
+    font-style: normal;
+    width: 183px;
+    height: 50px;
+    border: none;
+}
+
+.DailyMealTable{
+    margin-top: 50px;
+    width: 70%;
+    border-collapse: collapse;
+}
+
+.DailyMealTable tbody td{
+    border-bottom: 1px solid lightgray;
+    padding: 20px;
+    color: black;
+    font-family: Nunito sans;
+    font-size: 14px;
+    font-weight: 600px;
+    line-height: 5px;
+  
+}
+.DailyMealTable .td{
+    padding-left: 500px;
+    width: auto;
+}
+
+.DailyMealTable tb .one{
+    gap: 3.75rem;
+}
+
+.btn_total{
+    background-color: #f5f5f5;
+    border: none;
+    box-sizing: border-box;
+    width: 214px;
+    height: 75px;
+    margin-top: 50px;
+    margin-left: 500px;
+    font-family: Nunito sans;
+    
+}
+@media screen and (max-width: 1140px) {
+    .DailyMealTable .td{
+        padding-left: 300px;
+        /* background-color: red; */
+        
+    }
+    
+    .btn_total {
+        margin-left: 200px; 
+    }
+}

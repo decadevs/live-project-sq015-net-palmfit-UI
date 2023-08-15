@@ -1,8 +1,13 @@
 import '../styles/App.css';
+import DailyMealPlan from './dailyMealPlan/DailyMealPlan';
+
+
 
 function App() {
   return (
-    <div> Hello World</div>
+    <div>
+      <DailyMealPlan/>
+    </div>
   );
 }
 
