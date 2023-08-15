@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/SignUpPage1.css'; 
+import '../styles/SignUpPage1.css';
 import SignUpBanner from '../images/SignUpBanner.svg';
 
 
