@@ -1,0 +1,167 @@
+@media (max-width: 600px) {
+    .food-search-results {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .food-search-results .div {
+        width: 100%;
+        height: auto;
+    }
+
+    .food-search-results .line,
+    .food-search-results .img,
+    .food-search-results .chevron-right {
+        left: 0;
+        width: 100%;
+        position: static;
+    }
+
+    .food-search-results .frame,
+    .food-search-results .frame-2 {
+        left: 0;
+        width: 100%;
+        position: static;
+    }
+
+    .food-search-results .text-wrapper-3,
+    .food-search-results .text-wrapper-2,
+    .food-search-results .p,
+    .food-search-results .text-wrapper-1,
+    .food-search-results .search {
+        position: static;
+        left: 0;
+        width: 100%;
+    }
+}
+---------------------------------
+
+.food-search-results {
+    background-color: #fdffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    
+    @media (max-width: 600px) {
+        flex-direction: column;
+        align-items: center;
+    }   
+}
+
+.food-search-results .div {
+    background-color: #fdffff;
+    border: 1px none;
+    height: 1023px;
+    position: relative;
+    width: 1440px;
+
+}
+
+
+.food-search-results .line {
+    height: 1px;
+    left: 338px;
+    object-fit: cover;
+    position: absolute;
+    top: 365px;
+    width: 581px;
+}
+
+.food-search-results .img {
+    height: 1px;
+    left: 338px;
+    object-fit: cover;
+    position: absolute;
+    top: 287px;
+    width: 581px;
+}
+
+
+.food-search-results .frame {
+    height: 48px;
+    left: 337px;
+    position: absolute;
+    top: 303px;
+    width: 582px;
+}
+
+.food-search-results .text-wrapper-3 {
+    color: #000000;
+    font-family: "Nunito Sans-SemiBold", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: -1px;
+}
+
+.food-search-results .text-wrapper-2 {
+    color: #6d767e;
+    font-family: "Nunito Sans-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 28px;
+}
+
+.food-search-results .chevron-right {
+    height: 30px;
+    left: 552px;
+    position: absolute;
+    top: 9px;
+    width: 30px;
+    cursor: pointer;
+}
+
+
+.food-search-results .p {
+    color: #000000;
+    font-family: "Nunito Sans-SemiBold", Helvetica;
+    font-size: 20px;
+    font-weight: 600;
+    left: 337px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 50px;
+}
+
+.food-search-results .frame-2 {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #bdbdbd;
+    border-radius: 8px;
+    height: 65px;
+    left: 337px;
+    position: absolute;
+    top: 109px;
+    width: 747px;
+}
+
+.food-search-results .text-wrapper-1 {
+    color: #1a3833;
+    font-family: "Nunito Sans-Regular", Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.food-search-results .search {
+    height: 20px;
+    left: 694px;
+    position: absolute;
+    top: 22px;
+    width: 20px;
+    cursor: pointer;
+}
