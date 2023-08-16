@@ -1,0 +1,119 @@
+/* DailyPlan.css */
+
+.dailyplancontainer {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dailyplantitle {
+    font-size: 24px;
+  }
+  
+  .plancal {
+    gap: 10px;
+  }
+  
+  .getplanbutton {
+    
+    background-color: #1a8d8d;
+    border-radius: 8px;
+    color: #fff;
+    border: none;
+    padding: 5px 15px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .mealsection {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+  } 
+  .mcalories {
+    margin: 30px;
+  }
+  .show-details-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .mealtitle {
+    font-size: 16px;
+    
+  } 
+  
+  .showdetailsselect {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 1em;
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.3s; 
+  } 
+  .details-image {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s;
+  }
+  
+  .rotated {
+    transform: rotate(-90deg);
+  }
+  
+  .meal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .mealdetails-row {
+    flex-direction: column;
+    display: flex; 
+    flex-wrap: wrap; 
+    margin-top: 10px; 
+  }
+  
+   .mealdetailsactive-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    margin-top: 5px;
+    padding: 5px 0;  
+    margin-right: 20px;
+  }
+  .mealdetails-row {
+    display: flex; 
+    justify-content: space-between; 
+  }
+  
+  .food-item {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+  }
+  
+  .food-name {
+    flex: 1;
+  }
+  
+  .food-quantity {
+    display: flex;
+    padding-right: 20%; 
+  }
+  
+  .food-calories {
+    margin-right: 50px;
+    text-align: right;
+    padding-right: 10px; 
+    
+  } 

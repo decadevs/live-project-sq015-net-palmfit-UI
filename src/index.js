@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './components/App';
+import DailyPlan from './components/DailyPlanBreakfast';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <DailyPlan />
   </React.StrictMode>
 );
 
