@@ -108,10 +108,9 @@
     font-family: Nunito sans;
     
 }
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1150px) {
     .DailyMealTable .td{
         padding-left: 300px;
-        /* background-color: red; */
         
     }
     
