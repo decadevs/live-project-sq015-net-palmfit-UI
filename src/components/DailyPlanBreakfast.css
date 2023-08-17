@@ -1,6 +1,13 @@
 /* DailyPlan.css */
 
-.dailyplancontainer {
+@media screen and (max-width: 600px) {
+    .dailyplancontainer {
+      max-width: 100%;
+      padding: 10px;
+    }
+  }
+  
+  .dailyplancontainer {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
@@ -18,7 +25,6 @@
   }
   
   .getplanbutton {
-    
     background-color: #1a8d8d;
     border-radius: 8px;
     color: #fff;
@@ -34,10 +40,12 @@
     padding-top: 20px;
     display: flex;
     flex-direction: column;
-  } 
+  }
+  
   .mcalories {
     margin: 30px;
   }
+  
   .show-details-wrapper {
     display: flex;
     align-items: center;
@@ -46,19 +54,23 @@
   
   .mealtitle {
     font-size: 16px;
-    
-  } 
+  }
   
   .showdetailsselect {
-    background: none;
+    background: transparent;
     border: none;
     cursor: pointer;
     padding: 0;
     font-size: 1em;
     display: inline-flex;
     align-items: center;
-    transition: transform 0.3s; 
+    transition: transform 0.3s;
+    outline: none;
+    box-shadow: none;
+    border-color: transparent;
+    background-color: transparent;
   } 
+  
   .details-image {
     width: 20px;
     height: 20px;
@@ -66,7 +78,7 @@
   }
   
   .rotated {
-    transform: rotate(-90deg);
+    transform: rotate(-90deg); 
   }
   
   .meal-header {
@@ -77,23 +89,24 @@
   
   .mealdetails-row {
     flex-direction: column;
-    display: flex; 
-    flex-wrap: wrap; 
-    margin-top: 10px; 
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
   }
   
-   .mealdetailsactive-row {
+  .mealdetailsactive-row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
     margin-top: 5px;
-    padding: 5px 0;  
+    padding: 5px 0;
     margin-right: 20px;
   }
+  
   .mealdetails-row {
-    display: flex; 
-    justify-content: space-between; 
+    display: flex;
+    justify-content: space-between;
   }
   
   .food-item {
@@ -108,12 +121,27 @@
   
   .food-quantity {
     display: flex;
-    padding-right: 20%; 
+    padding-right: 20%;
   }
   
   .food-calories {
     margin-right: 50px;
     text-align: right;
-    padding-right: 10px; 
-    
-  } 
+    padding-right: 10px;
+  }
+  
+  @media screen and (max-width: 400px) {
+    .dailyplantitle {
+      font-size: 20px;
+    }
+  
+    .mealtitle {
+      font-size: 14px;
+    }
+  
+    .mealdetails-row,
+    .mealdetailsactive-row {
+      flex-direction: column;
+    }
+  }
+  
