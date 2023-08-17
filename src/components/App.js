@@ -1,9 +1,15 @@
 import '../styles/App.css';
+import MealPlan from './MealPlans/Mealplan';
+
 
 function App() {
   return (
-    <div> Hello World</div>
+    <>
+    <MealPlan/>
+    </>
+    
   );
 }
 
 export default App;
+  
