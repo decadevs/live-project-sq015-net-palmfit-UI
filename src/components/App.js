@@ -1,8 +1,9 @@
 import '../styles/App.css';
+import { ProfilePage } from './ProfilePage';
 
 function App() {
   return (
-    <div> Hello World</div>
+    <ProfilePage />
   );
 }
 
