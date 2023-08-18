@@ -64,7 +64,7 @@ const SearchFood = () => {
         {/* <div className="div">{calculatedNumber3}g</div> */}
         <div className="div">0.015g</div>
       </div>
-      <div className="text-wrapper-2">{searchTerm}</div>
+      {/* <div className="text-wrapper-2">{searchTerm}</div> */}
       <div className="text-wrapper-2">Efo riro</div>
       {/* <div className="text-wrapper-3">{calculatedNumber} Calories</div> */}
       <div className="text-wrapper-3">87 Calories</div>

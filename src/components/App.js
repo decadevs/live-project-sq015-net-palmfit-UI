@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className="App">
-      <MealInfo mealName="Meal 1" totalCalories={foods.reduce((total, food) => total + parseFloat(food.calories), 0)} />
+      <MealInfo mealName="Meal 1 name" totalCalories={foods.reduce((total, food) => total + parseFloat(food.calories), 0)} />
       <FoodTable foods={foods} />
       <SearchFood/>
 
