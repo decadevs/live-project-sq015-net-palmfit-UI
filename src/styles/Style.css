@@ -161,21 +161,6 @@ flex-shrink: 0;
     max-width: 300%; /* Ensure it doesn't exceed container width */
   }
 
-  .frame .group {
-    top: 180px; /* Adjust positioning */
-  }
-
-  .frame .group-2 {
-    left: 5%; /* Adjust positioning */
-  }
-
-  /* ... Adjust other elements as needed ... */
-
-  .frame-4 {
-    left: 5%; /* Adjust positioning */
-    width: 90%; /* Adjust width */
-  }
-
 }
 
 
