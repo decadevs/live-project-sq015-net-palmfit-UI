@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  color: red;
+  color: #000;
 }
 
 .App-logo {
@@ -8,10 +8,9 @@
   pointer-events: none;
 }
 
-@media (max-width: 768px) {
+@media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
-    width: 200%;
   }
 }
 
