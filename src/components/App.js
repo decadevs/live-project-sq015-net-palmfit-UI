@@ -16,13 +16,6 @@ import Subscription from './subscription/Subscription';
 
 
 
-
-import MealInfo from './Meal-List-Plan/MealInfo';
-import FoodTable from './Meal-List-Plan/FoodTable';
-import FoodSearch from './Meal-List-Plan/FoodSearch';
-import '../styles/Style.css';
-
-
 function App() {
   const foods = [
     { name: 'Plain white rice', amount: 2.5, measurement: 'cup', calories: 600, caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 } },
@@ -36,7 +29,7 @@ function App() {
     <div className="App">
       <MealInfo mealName="Meal 1 name" totalCalories={foods.reduce((total, food) => total + parseFloat(food.calories), 0)} />
       <FoodTable foods={foods} />
-      { <FoodSearch/> }
+      <SearchFood/>
       <ProfilePage />
     <PaymentSubscription/>
 
