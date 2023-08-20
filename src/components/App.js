@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/App.css';
+import { ProfilePage } from './ProfilePage';
 
 import PaymentSubscription from './Payment/Subscription';
 import FoodSingleOne from '../components/components/meal/FoodSingleOne';
@@ -26,6 +27,7 @@ function App() {
 
   return (
 
+    <ProfilePage />
     <>
     <PaymentSubscription/>
     </>
@@ -45,7 +47,6 @@ function App() {
       <Subscription/>
 
     </div>
-
 
   );
   
