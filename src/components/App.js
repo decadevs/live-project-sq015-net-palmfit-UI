@@ -1,8 +1,17 @@
-import '../styles/App.css';
+import '../styles/App.css'
+import ForgetPassword from './ForgetPassword'
+import PasswordReset from './PasswordReset'
+import EmailSend from './EmailSend'
 
 function App() {
   return (
-    <div> Hello World</div>
+    <>
+      <PasswordReset/>
+      <EmailSend/>
+      <ForgetPassword/>
+      
+    </>
+    
   );
 }
 
