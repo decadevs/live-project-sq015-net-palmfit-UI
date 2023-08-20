@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/App.css';
+import FoodSingleOne from '../components/components/meal/FoodSingleOne';
 
 //import '../style/Style.css';
 
@@ -21,6 +22,9 @@ function App() {
   ];
 
   return (
+
+    <FoodSingleOne />
+
     <div className="App">
       <MealInfo mealName="Meal 1 name" totalCalories={foods.reduce((total, food) => total + parseFloat(food.calories), 0)} />
       <FoodTable foods={foods} />
@@ -33,7 +37,9 @@ function App() {
       <Subscription/>
 
     </div>
+
   );
+  
 }
 
 export default App;
