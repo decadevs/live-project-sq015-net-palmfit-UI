@@ -1,113 +1,62 @@
-import React, { useState } from 'react';
-import './DailyPlanBreakfast.css';
+import React,{useState} from "react";
+import "./DailyPlanBreakfast.css";
+import chevronDownSvg from './chevron-down.svg';
 
-function DailyPlan () {
-  const planName = 'Name of daily Plan';
-  const totalCalories = 1874;
-  const breakfastCalories = 692;
-  const breakfastFoods = [
-    { food: 'Plain white rice', quantity: '2.5 cups', calories: 605 },
-    { food: 'Efo riro', quantity: '100 grams', calories: 87 },
-  ];
-  const lunchCalories = 723;
-  const dinnerCalories = 491;
+function DailyPlanBreakfast () {
+    const [isDropdownOpen, setDropdownOpen] = useState(false);
 
-  const [showBreakfastDetails, setShowBreakfastDetails] = useState(false);
-  const [showLunchDetails, setShowLunchDetails] = useState(false);
-  const [showDinnerDetails, setShowDinnerDetails] = useState(false);
-  const [rotateArrow, setRotateArrow] = useState(false);
-
-
-  const handleToggleBreakfastDetails = () => {
-    setShowBreakfastDetails(!showBreakfastDetails);
-    setRotateArrow(!rotateArrow);
-  };
-
-  const handleToggleLunchDetails = () => {
-    setShowLunchDetails(!showLunchDetails);
-  };
-
-  const handleToggleDinnerDetails = () => {
-    setShowDinnerDetails(!showDinnerDetails);
-  };
-
-  const handleGetPlan = () => {
-    console.log('Button clicked');
-  };
-
-  return (
-    <>      
-      <div className="dailyplancontainer">
-        <div className="meal-header">
-          <div className="plancal">
-            <h1 className="dailyplantitle">{planName}</h1>
-            <p>Total Calories: {totalCalories}</p>
-          </div>
-          <button className="getplanbutton" onClick={handleGetPlan}>Get Plan</button>
+    const toggleDropdown = () => {
+        setDropdownOpen(!isDropdownOpen);
+    };
+    return (
+        <>
+        <div className="daily-plan-breakfast">
+            <div className="div">
+                <div className="overlap">
+                    <div className="rectangle" />
+                    <div className="group">
+                        <div className="text-wrapper">Plain white rice</div>
+                        <div className="text-wrapper-2">2.5 cups</div>
+                        <div className="text-wrapper-3">605 calories</div>
+                    </div>
+                    <div className="group-2">
+                        <div className="text-wrapper">Efo riro</div>
+                        <div className="text-wrapper-2">100 grams</div>
+                        <div className="text-wrapper-3">87 calories</div>
+                    </div>
+                    <div className="group-3">
+                        <div className="text-wrapper-4">Breakfast</div>
+                        <div className="text-wrapper-5">692 calories</div>
+                        <img className="line" alt="line" src="line.svg" />
+                        <img className="chevron-down" alt="Chevron down" src={chevronDownSvg} />
+                    </div>
+                </div>
+                <div className="group-4">
+                    <div className="text-wrapper-6">Name of daily plan</div>
+                    <div className="text-wrapper-7">1874 calories</div>
+                </div>
+                <div className="group-5">
+                    <div className="text-wrapper-4">Lunch</div>
+                    <div className="text-wrapper-5">723 calories</div>
+                    <img className="line" alt="line" src="line.svg" />
+                    <img className="chevron-down" alt="Chevron down" src={chevronDownSvg} />
+                </div>
+                <div className="group-6">
+                    <div className="text-wrapper-4">Dinner</div>
+                    <div className="text-wrapper-5">491 calories</div>
+                    <img className="line" alt="line" src="line.svg" />
+                    <img className="chevron-down" alt="Chevron down" src={chevronDownSvg} />
+                </div>
+                <div className="buttons">
+                    <div className="overlap-group">
+                        <div className="text-wrapper-8">Get plan</div>
+                    </div>
+                </div>
+                
+            </div>
         </div>
-          <div className="mealsection">
-            <div className="meal-header">
-              <h2 className="mealtitle">Breakfast</h2>
-              <div className="show-details-wrapper">
-                <p className="mcalories">{breakfastCalories} calories</p>
-                <select
-                  className={`showdetailsselect ${rotateArrow ? 'rotated' : ''}`}
-                  onClick={handleToggleBreakfastDetails}
-                ></select>
-              </div>
-            </div>
-            {showBreakfastDetails && (
-              <div className="mealdetails-row">
-                {breakfastFoods.map((food, index) => (
-                  <div className="mealdetailsactive-row" key={index}>
-                    <div className="food-name">{food.food}</div>
-                    <div className="food-quantity">{food.quantity}</div>
-                    <div className="food-calories">{food.calories} calories</div>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-
-        <div className="mealsection">
-          <div className="meal-header">
-            <h2 className="mealtitle">Lunch</h2>
-            <div className="show-details-wrapper">
-              <p className="mcalories">{lunchCalories} calories</p>
-              <select
-                  className={`showdetailsselect ${rotateArrow ? 'rotated' : ''}`}
-                  onClick={handleToggleLunchDetails}
-                ></select>
-            </div>
-          </div>
-            {showLunchDetails && (
-            <div>
-                {/* Add lunch food details here */}
-            </div>
-            )}
-        </div>
-
-        <div className="mealsection">
-          <div className="meal-header">
-            <h2 className="mealtitle">Dinner</h2>
-            <div className="show-details-wrapper">
-              <p className="mcalories">{dinnerCalories} calories</p>
-              <select
-                  className={`showdetailsselect ${rotateArrow ? 'rotated' : ''}`}
-                  onClick={handleToggleDinnerDetails}
-                ></select>
-            </div>
-          </div>
-            {showDinnerDetails && (
-            <div>
-                {/* Add dinner food details here */}
-            </div>
-            )}
-        </div>
-      </div>
-      
-    </>
-  );
+        </>
+    );
 };
 
-export default DailyPlan;
+export default DailyPlanBreakfast;
