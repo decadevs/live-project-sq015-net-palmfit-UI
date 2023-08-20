@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-//import './FoodTable.css';
 
-const FoodTable = ({ foods }) => {
+const FoodTable = ({ foods, addMeal }) => {
   const [foodData, setFoodData] = useState(foods);
 
   return (
