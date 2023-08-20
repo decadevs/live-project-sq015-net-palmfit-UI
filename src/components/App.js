@@ -1,5 +1,7 @@
 import React from 'react';
 import '../styles/App.css';
+
+import PaymentSubscription from './Payment/Subscription';
 import FoodSingleOne from '../components/components/meal/FoodSingleOne';
 
 //import '../style/Style.css';
@@ -12,6 +14,7 @@ import '../styles/Style.css';
 import Subscription from './subscription/Subscription';
 
 
+
 function App() {
   const foods = [
     { name: 'Plain white rice', amount: 2.5, measurement: 'cup', calories: 600, caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 } },
@@ -22,6 +25,11 @@ function App() {
   ];
 
   return (
+
+    <>
+    <PaymentSubscription/>
+    </>
+
 
     <FoodSingleOne />
 
@@ -37,6 +45,7 @@ function App() {
       <Subscription/>
 
     </div>
+
 
   );
   
