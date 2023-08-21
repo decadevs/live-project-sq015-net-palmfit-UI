@@ -13,6 +13,8 @@ import SearchFood from './Meal-List-Plan/SearchFood';
 import '../styles/Style.css';
 //import '../styles/FoodSearch.css';
 import Subscription from './subscription/Subscription';
+import Login from './login page/Login';
+import "../styles/Login.css";
 
 
 
@@ -26,7 +28,8 @@ function App() {
   ];
 
   return (
-
+    <>
+    
     <ProfilePage />
     <>
     <PaymentSubscription/>
@@ -40,13 +43,16 @@ function App() {
       <FoodTable foods={foods} />
       <SearchFood/>
 
-      
+      </div>
       
 
     <div>
       <Subscription/>
 
     </div>
+
+    <Login/>
+    </>
 
   );
   
