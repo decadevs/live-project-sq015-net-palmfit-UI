@@ -5,7 +5,7 @@
 
 .App {
   text-align: center;
-  color: red;
+  color: #000;
 }
 
 .App-logo {
@@ -43,7 +43,7 @@
     transform: rotate(360deg);
   }
 }
-
+/*styles for forget password page*/
 .forgetpassword-container{
   display: flex;
   flex-direction: row;
@@ -118,7 +118,7 @@
   font-size: 18px;
   font-weight: 700;
 }
-
+/*styles for password reset page*/
 .passwordreset-container{
   display: flex;
   flex-direction: row;
@@ -178,14 +178,14 @@
   font-size: 18px;
   font-weight: 700;
 }
-
+/*styles for Email sent page*/
 .palmfit-logo{
   margin-left: 70px;
   margin-top: 50px;
   padding-left: 20px;
 }
 .palmfit{
-  margin-top: -14px;
+  margin-top: -12px;
   margin-left: -23px;
   color:  #1A8D8D;
   font-family: PT Serif;
@@ -209,13 +209,13 @@
   line-height: 72px;
 }
 .text-four{
-  margin-top: -30px;
+  margin-top: -20px;
   color: rgba(77, 95, 95, 0.80);
   font-family: Nunito Sans;
-  font-size: 14px;
+  font-size: 25px;
   font-weight: 400;
 }
-
+/*Responsiveness for password reset*/
 @media screen and (max-width: 740px){
 
   .passwordreset-container{
@@ -235,7 +235,7 @@
     width: 250px;
   }
 }
-
+/*Responsiveness for forget password*/
 @media screen and (max-width: 740px){
 
   .forgetpassword-container{
@@ -254,4 +254,92 @@
   .redirect-login{
     text-align:justify;
   }
+}
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+.h4{
+  margin-left: 300px;
+  margin-top: 70px;
+}
+.search-container {
+  position: relative;
+  width: 600px;
+  margin-left: 300px;
+  margin-top: 80px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 70%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #000; /* Set the color to black */
+  cursor: pointer;
+  filter: grayscale(100%); /* Convert the icon to black and white */
+}
+.box {
+  height: 300px;
+  width: 500px;
+  background-color: #fbfbfb;
+  margin-left: 300px;
+  margin-top: 50px;
+
+}
+.box-p{
+  padding: 20px;
+}
+.box-h1{
+  padding-left: 20px;
+}
+.box-input{
+  
+  margin-left: 20px;
+}
+input{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #ccc; /* Keep the bottom border */
+  outline: none; /* Optional - removes the outline when the input is focused */
+}
+.box-select{
+  margin-left: 20px;
+}
+.small-box-div{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.small-box{
+  height: 100px;
+  width: 100px;
+  /* background-color:; */
+}
+.button-div{
+  margin-top: 50px;
+  margin-left: 300px;
+}
+.button{
+  text-decoration: none;
+  /* border: 1px solid black; */
+  padding: 10px 30px;
+  background-color: teal;
+  color: white;
+  border-radius: 10px;
 }

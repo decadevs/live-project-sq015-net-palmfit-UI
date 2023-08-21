@@ -1,4 +1,4 @@
-import vector from './Images/Vector.svg'
+import vector from '../images/Vector.svg'
 
 const EmailSend = () => {
     return(
@@ -10,7 +10,7 @@ const EmailSend = () => {
         </div>
         <div className='emailsend-head'>
             <h1 className='text-three'>Check your mail</h1>
-            <p className='text-four'><h3>We have sent a password recover instruction to your mail</h3></p>
+            <p className='text-four'>We have sent a password recover instruction to your mail</p>
         </div>
         <div className='emailsend-foot'>
             <p>Did not recieve the email? check your spam filter</p>
