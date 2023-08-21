@@ -1,8 +1,12 @@
-import '../styles/App.css';
+// import '../styles/App.css';
+import FoodSearch from './FoodSearch';
+
 
 function App() {
   return (
-    <div> Hello World</div>
+    <div>
+      <FoodSearch/>
+    </div>
   );
 }
 
