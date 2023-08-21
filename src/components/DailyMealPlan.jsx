@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import styles from "./DailyMealPlan.module.css"
+import styles from "../styles/DailyMealPlan.module.css"
 
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/App.css';
-import DailyMealPlan from './dailyMealPlan/DailyMealPlan';
+import DailyMealPlan from './DailyMealPlan';
 import { ProfilePage } from './ProfilePage';
 import PaymentSubscription from './Payment/Subscription';
 import FoodSingleOne from '../components/components/meal/FoodSingleOne'
@@ -19,7 +19,7 @@ function App() {
    //{ name: 'Food 3', amount: 2, measurement: 'tablespoon', calories: 50, caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 } },
     //{ name: 'Food 3', amount: 2, measurement: 'tablespoon', calories: 50, caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 } },
     // Add more food items
-  ];
+    ];
 
     return (
       <>
