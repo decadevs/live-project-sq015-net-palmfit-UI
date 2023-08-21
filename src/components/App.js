@@ -25,12 +25,12 @@ function App() {
     // Add more food items
   ];
 
-  return (
+  return ( 
 
-    <ProfilePage />
+   
     <>
     <PaymentSubscription/>
-    </>
+    
 
 
     <FoodSingleOne />
@@ -41,12 +41,15 @@ function App() {
       <SearchFood/>
 
       
-      
+  
+    </div>
 
     <div>
       <Subscription/>
 
     </div>
+
+    </>
 
   );
   
