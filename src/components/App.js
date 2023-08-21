@@ -1,7 +1,9 @@
 import React from 'react';
 import '../styles/App.css';
-import MealPlan from './MealPlans/Mealplan';
+import { ProfilePage } from './ProfilePage';
 
+import PaymentSubscription from './Payment/Subscription';
+import FoodSingleOne from '../components/components/meal/FoodSingleOne';
 
 //import '../style/Style.css';
 
@@ -11,6 +13,7 @@ import SearchFood from './Meal-List-Plan/SearchFood';
 import '../styles/Style.css';
 //import '../styles/FoodSearch.css';
 import Subscription from './subscription/Subscription';
+
 
 
 function App() {
@@ -23,9 +26,16 @@ function App() {
   ];
 
   return (
+
+    <ProfilePage />
     <>
-    <MealPlan/>
-        <div className="App">
+    <PaymentSubscription/>
+    </>
+
+
+    <FoodSingleOne />
+
+    <div className="App">
       <MealInfo mealName="Meal 1 name" totalCalories={foods.reduce((total, food) => total + parseFloat(food.calories), 0)} />
       <FoodTable foods={foods} />
       <SearchFood/>
@@ -37,10 +47,8 @@ function App() {
       <Subscription/>
 
     </div>
-    </div>
-    </>
 
   );
-    
+  
 }
 export default App;
