@@ -13,6 +13,7 @@ import SearchFood from "./Meal-List-Plan/SearchFood";
 import "../styles/Style.css";
 //import '../styles/FoodSearch.css';
 import Subscription from "./subscription/Subscription";
+import Checkout from "./Main-Checkout-Page/CheckOutPage";
 
 function App() {
   const foods = [
@@ -52,6 +53,7 @@ function App() {
       <div>
         <Subscription />
       </div>
+      <Checkout />
     </>
   );
 }

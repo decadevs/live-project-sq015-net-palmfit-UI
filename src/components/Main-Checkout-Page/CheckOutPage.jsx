@@ -2,9 +2,9 @@ import React from "react";
 import CardDetail from "./Card-detail";
 import SelectedFeatures from "./Selected-Feature";
 import { useState } from "react";
-import personalizedWorkoutPlansImage from "../../../src/images/personalized-workout-plans.jpg";
-import nutritionTrackingImage from "../../../src/images/nutrition-tracking.jpg";
-import progressTrackingImage from "../../../src/images/progress-tracking.jpg";
+import personalizedWorkoutPlansImage from "../../../src/images/Checkout/personalized-workout-plans.jpg";
+import nutritionTrackingImage from "../../../src/images/Checkout/nutrition-tracking.jpg";
+import progressTrackingImage from "../../../src/images/Checkout/progress-tracking.jpg";
 
 import "./CheckOut.css";
 
