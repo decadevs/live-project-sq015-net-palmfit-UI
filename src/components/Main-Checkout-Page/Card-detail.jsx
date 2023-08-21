@@ -5,6 +5,7 @@ import {
   faCcVisa,
   faCcPaypal
 } from "@fortawesome/free-brands-svg-icons";
+import CheckoutSuccess from "./CheckOutSuccess";
 
 const CardDetail = ({
   subtotal,
@@ -38,7 +39,11 @@ const CardDetail = ({
   };
 
   if (paymentSuccessful) {
-    return <div>Payment Successful! Thank you for your purchase.</div>;
+    return (
+      <div>
+        <CheckoutSuccess />
+      </div>
+    );
   }
 
   return (

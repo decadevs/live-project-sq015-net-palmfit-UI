@@ -32,6 +32,7 @@ function App() {
 
   return (
     <>
+      <Checkout />
       <ProfilePage />
       <>
         <PaymentSubscription />
@@ -53,7 +54,6 @@ function App() {
       <div>
         <Subscription />
       </div>
-      <Checkout />
     </>
   );
 }

@@ -6,7 +6,7 @@ import personalizedWorkoutPlansImage from "../../../src/images/Checkout/personal
 import nutritionTrackingImage from "../../../src/images/Checkout/nutrition-tracking.jpg";
 import progressTrackingImage from "../../../src/images/Checkout/progress-tracking.jpg";
 
-import "./CheckOut.css";
+import "../../styles/CheckOut.css";
 
 const Checkout = () => {
   const initialFeatures = [
