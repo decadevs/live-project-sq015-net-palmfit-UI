@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import '../styles/Calories.css'
 
-export function CalulateCalories() {
+export default function CalulateCalories() {
 
     const [option, setOption] = useState('Select');
 

@@ -13,40 +13,31 @@ import SearchFood from './Meal-List-Plan/SearchFood';
 import '../styles/Style.css';
 //import '../styles/FoodSearch.css';
 import Subscription from './subscription/Subscription';
+import CalculateCalories from './CalculateCalories';
 
 
 
 function App() {
-  const foods = [
-    { name: 'Plain white rice', amount: 2.5, measurement: 'cup', calories: 600, caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 } },
-    //{ name: 'Food 2', amount: 2, measurement: 'tablespoon', calories: 50, caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 } },
-   //{ name: 'Food 3', amount: 2, measurement: 'tablespoon', calories: 50, caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 } },
-    //{ name: 'Food 3', amount: 2, measurement: 'tablespoon', calories: 50, caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 } },
-    // Add more food items
-  ];
 
   return (
 
-    <ProfilePage />
     <>
-    <PaymentSubscription/>
+      <div>
+        <ProfilePage />
+        <PaymentSubscription/>
+        <FoodSingleOne />
+        <MealInfo mealName="Meal 1 name" totalCalories={""} />
+        <FoodTable foods={[]} />
+        <SearchFood/>
+        <Subscription />
+        <CalculateCalories />
+
+      </div>
     </>
-
-
-    <FoodSingleOne />
-
-    <div className="App">
-      <MealInfo mealName="Meal 1 name" totalCalories={foods.reduce((total, food) => total + parseFloat(food.calories), 0)} />
-      <FoodTable foods={foods} />
-      <SearchFood/>
-
       
       
 
-    <div>
-      <Subscription/>
 
-    </div>
 
   );
   
