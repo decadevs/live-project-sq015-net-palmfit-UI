@@ -1,5 +1,5 @@
 import Accordion from 'react-bootstrap/Accordion';
-import styles from './WeeklyPlanbreakfast.module.css'
+import styles from '../../styles/WeeklyPlanbreakfast.module.css';
 
 function WeeklyPlanAccordion(props) {
   return (

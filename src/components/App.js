@@ -13,9 +13,12 @@ import SearchFood from './Meal-List-Plan/SearchFood';
 import '../styles/Style.css';
 //import '../styles/FoodSearch.css';
 import Subscription from './subscription/Subscription';
-
-
 import WeeklyPlanbreakfast from './weeklyplanbreakfast/WeeklyPlanbreakfast';
+import styles from '../styles/WeeklyPlanbreakfast.module.css';
+import { CalulateCalories } from '../components/CalculateCalories';
+
+
+
 
 function App() {
   const foods = [
@@ -27,11 +30,9 @@ function App() {
   ];
 
   return (
-
+<>
     <ProfilePage />
-    <>
     <PaymentSubscription/>
-    </>
 
 
     <FoodSingleOne />
@@ -40,6 +41,7 @@ function App() {
       <MealInfo mealName="Meal 1 name" totalCalories={foods.reduce((total, food) => total + parseFloat(food.calories), 0)} />
       <FoodTable foods={foods} />
       <SearchFood/>
+      </div>
 
       
       
@@ -48,8 +50,13 @@ function App() {
       <Subscription/>
 
     </div>
-
-    <div><WeeklyPlanbreakfast/></div>
+    <div>
+      <CalculateCalories />
+    </div>
+    <div>
+    <WeeklyPlanbreakfast/>
+    </div>
+    </>
   );
   
 }

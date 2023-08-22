@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import WeeklyPlanAccordion from './WeeklyPlanAccordion';
-import styles from './WeeklyPlanbreakfast.module.css'
+import styles from '../../styles/WeeklyPlanbreakfast.module.css';
 
 function WeeklyPlanbreakfast() {
  
