@@ -118,3 +118,13 @@
         margin-left: 200px; 
     }
 }
+@media screen and (max-width: 900px){
+    .DailyMealTable .td{
+        padding-left: 200px;
+        
+    }
+    
+    .btn_total {
+        margin-left: 200px; 
+    }
+}
