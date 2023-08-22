@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import '../styles/App.css';
 import { ProfilePage } from './ProfilePage';
 
@@ -33,7 +34,7 @@ function App() {
           <img src={logo_dark_svg} alt="svg logo" className="nav-logo" />
         </NavLink>
         <Navigation menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
-        <div className={styles.toggle_btn_con} style={{ display: menuIsOpen ? "none" : "block" }} onClick={() => setMenuIsOpen(prev => !prev)}>
+        <div className="toggle_btn_con" style={{ display: menuIsOpen ? "none" : "block" }} onClick={() => setMenuIsOpen(prev => !prev)}>
           {
             !menuIsOpen && <img src={menu} alt="" className="menu_open" />
           }
