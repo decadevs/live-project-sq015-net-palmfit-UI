@@ -14,15 +14,33 @@ import '../styles/Style.css';
 //import '../styles/FoodSearch.css';
 import Subscription from './subscription/Subscription';
 import CalculateCalories from './CalculateCalories';
+import Navigation from "./navigation/Navigation"
+import { logo_dark_svg, menu } from "./navigation/assets"
+
+
 
 
 
 function App() {
+  const [menuIsOpen, setMenuIsOpen] = useState(false)
 
   return (
 
-    <>
-      <div>
+    <div className='container'>
+
+      <div className="nav">
+        <NavLink to={"/"}>
+          <img src={logo_dark_svg} alt="svg logo" className="nav-logo" />
+        </NavLink>
+        <Navigation menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
+        <div className={styles.toggle_btn_con} style={{ display: menuIsOpen ? "none" : "block" }} onClick={() => setMenuIsOpen(prev => !prev)}>
+          {
+            !menuIsOpen && <img src={menu} alt="" className="menu_open" />
+          }
+        </div>
+      </div>
+
+      <div className='pages'>
         <ProfilePage />
         <PaymentSubscription/>
         <FoodSingleOne />
@@ -33,7 +51,8 @@ function App() {
         <CalculateCalories />
 
       </div>
-    </>
+
+    </div>
       
       
 
