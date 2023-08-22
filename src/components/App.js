@@ -27,8 +27,8 @@ function App() {
 
   return (
 <>
-    <ProfilePage />
-    <PaymentSubscription/>
+    {/* <ProfilePage />
+    <PaymentSubscription/> */}
 
 
     <FoodSingleOne />
@@ -42,7 +42,6 @@ function App() {
       
       <LandingPage/>
       
-    </div>
 
 
     <div className='container'>
@@ -71,9 +70,6 @@ function App() {
 
       </div>
 
-    </div>
-    <div>
-      <CalculateCalories />
     </div>
     <div>
     <WeeklyPlanbreakfast/>
