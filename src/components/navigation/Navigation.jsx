@@ -31,7 +31,7 @@ function Navigation({menuIsOpen, setMenuIsOpen }) {
             </NavLink>
           <NavLink to={"/meal-plans"} className={styles.nav_link}>
             <img src={plans} alt="svg icon" />
-            <span>meal palns</span>
+            <span>meal plans</span>
             </NavLink>
           <NavLink to={"/meal-diary"} className={styles.nav_link}>
             <img src={diary} alt="svg icon" />
