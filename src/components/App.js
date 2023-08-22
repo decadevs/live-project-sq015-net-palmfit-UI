@@ -13,6 +13,9 @@ import SearchFood from './Meal-List-Plan/SearchFood';
 import '../styles/Style.css';
 //import '../styles/FoodSearch.css';
 import Subscription from './subscription/Subscription';
+import DailyPlanBreakfast from './DailyPlan/DailyPlanBreakfast';
+import './DailyPlan/DailyPlanBreakfast.module.css';
+
 
 
 
@@ -48,6 +51,9 @@ function App() {
     <div>
       <Subscription/>
 
+    </div>
+    <div>
+      <DailyPlanBreakfast/>
     </div>
     </>
   );
