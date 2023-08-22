@@ -25,14 +25,22 @@ import { logo_dark_svg, menu } from "./navigation/assets"
 
 
 function App() {
+  const foods = [
+
+    { name: 'Plain white rice', amount: 2.5, measurement: 'cup', calories: 600, caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 } },
+
+    //{ name: 'Food 2', amount: 2, measurement: 'tablespoon', calories: 50, caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 } },
+   //{ name: 'Food 3', amount: 2, measurement: 'tablespoon', calories: 50, caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 } },
+    //{ name: 'Food 3', amount: 2, measurement: 'tablespoon', calories: 50, caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 } },
+    // Add more food items
+
+    ];
   const [menuIsOpen, setMenuIsOpen] = useState(false)
 
   return (
-
-    <div className="App">
-      
-      <LandingPage/>
-      
+  <div className='container'>
+    <div className="App">  
+      <LandingPage/>  
     </div>
 
 
@@ -63,10 +71,8 @@ function App() {
       </div>
 
     </div>
-      
-      
+    </div>
   );
-  
 }
 
 export default App;
