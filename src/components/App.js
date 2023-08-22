@@ -23,25 +23,23 @@ import { CalulateCalories } from '../components/CalculateCalories';
 
 
 function App() {
+  const foods = [
+
+    { name: 'Plain white rice', amount: 2.5, measurement: 'cup', calories: 600, caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 } },
+
+    //{ name: 'Food 2', amount: 2, measurement: 'tablespoon', calories: 50, caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 } },
+   //{ name: 'Food 3', amount: 2, measurement: 'tablespoon', calories: 50, caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 } },
+    //{ name: 'Food 3', amount: 2, measurement: 'tablespoon', calories: 50, caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 } },
+    // Add more food items
+
+    ];
   const [menuIsOpen, setMenuIsOpen] = useState(false)
 
   return (
-<>
-    {/* <ProfilePage />
-    <PaymentSubscription/> */}
-
-
-    <FoodSingleOne />
-
-    <div className="App">
-      <MealInfo mealName="Meal 1 name" totalCalories={foods.reduce((total, food) => total + parseFloat(food.calories), 0)} />
-      <FoodTable foods={foods} />
-      <SearchFood/>
-      </div>
-
-      
-      <LandingPage/>
-      
+  <div className='container'>
+    <div className="App">  
+      <LandingPage/>  
+    </div>
 
 
     <div className='container'>
@@ -71,12 +69,8 @@ function App() {
       </div>
 
     </div>
-    <div>
-    <WeeklyPlanbreakfast/>
     </div>
-    </>
   );
-  
 }
 
 export default App;
