@@ -1,3 +1,4 @@
+import LandingPage from '../components/HomePg/LandingPg';
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import '../styles/App.css';
@@ -22,10 +23,18 @@ import { logo_dark_svg, menu } from "./navigation/assets"
 
 
 
+
 function App() {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
 
   return (
+
+    <div className="App">
+      
+      <LandingPage/>
+      
+    </div>
+
 
     <div className='container'>
 
@@ -56,9 +65,6 @@ function App() {
     </div>
       
       
-
-
-
   );
   
 }
