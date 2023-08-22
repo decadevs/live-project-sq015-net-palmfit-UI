@@ -1,0 +1,399 @@
+.meal-info p {
+    color: #6E767E;
+font-family: Nunito Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.meal-info h1 {
+    color: #000;
+font-family: Nunito Sans;
+font-size: 28px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.meal-info {
+    text-align: left;
+    margin: 20px;
+  }
+  
+  .meal-name {
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  .total-calories {
+    text-align: right;
+  }
+  
+  .food-table {
+    width: 70%;
+    
+    border-collapse: collapse;
+
+  }
+  
+  .food-table th,
+  .food-table td {
+    border-bottom: 1px solid lightgray;
+    padding: 20px;
+    color: #000;
+    font-family: Nunito Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-color: #E5E5E5;
+    
+  }
+  
+  .food-table th {
+    border-bottom: 1px solid black;
+    color: #6E767E;
+    font-family: "Nunito Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-bottom: 1px solid #E5E5E5; 
+  }
+  
+  .total-row {
+    display: inline-flex;
+    height: 35px;
+    padding: 10px 27px 26px 27px;
+    margin-left: 10rem;
+    align-items: flex-start;
+    gap: 30px;
+    flex-shrink: 0;
+    border-radius: 5px;
+background: #F5F5F5;
+font-weight: bold;
+margin-top: 10px;
+  }
+  
+  .food-table input[type="number"] {
+    width: 50px; /* Adjust the width to your preference */
+    padding: 5px;
+  }
+
+ /* Match the select height with input height */
+.food-table select {
+    height: 30px; /* Match the height with input height */
+    border: none; /* Remove the border */
+  outline: none; /* Remove the outline on focus */
+  }
+
+  .search-container {
+    text-align: left;
+    margin: 20px;
+  }
+
+  .search-container p {
+    color: #000;
+font-family: "Nunito Sans";
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+  }
+  
+  .search-form {
+    display: flex;
+    align-items: center;
+
+  }
+  
+  .search-input {
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 10px;
+border: 1px s #BDBDBD;
+outline: none;
+background: #FFF;
+width: 55rem;
+height: 3rem;
+flex-shrink: 0;
+  }
+  
+  .search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: -70px;
+  }
+  
+
+  /* Apply mobile-responsive styles for screens up to 768px width */
+@media (max-width: 768px) {
+    .App{
+        overflow: hidden;
+    }
+  .meal-info {
+    margin: 10px; /* Adjust margins for smaller screens */
+  }
+
+  .meal-info h1 {
+    font-size: 24px; /* Reduce font size for smaller screens */
+  }
+
+  .total-row {
+    margin-left: 0; /* Reset left margin for smaller screens */
+    flex-direction: row; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  /* Adjust other styles as needed for mobile screens */
+  .food-table {
+    width: 100%; /* Make table full width */
+  }
+
+  .search-container {
+    margin: 10px; /* Adjust margins for smaller screens */
+  }
+
+  .search-input {
+    width: 80vw; /* Make input full width of the container */
+    max-width: 300%; /* Ensure it doesn't exceed container width */
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.frame {
+  background-color: #fbfbfb;
+  border: 1px none;
+  height: 340px;
+  position: relative;
+  width: 522px;
+  margin-top: 30px;
+}
+
+.frame .group {
+  height: 67px;
+  left: 32px;
+  position: absolute;
+  top: 237px;
+  width: 95px;
+}
+
+.frame .text-wrapper {
+  color: #6d767e;
+  font-family: "Nunito Sans-Regular", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+}
+
+.frame .div {
+  color: #000000;
+  font-family: "Nunito Sans-SemiBold", Helvetica;
+  font-size: 28px;
+  font-weight: 600;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 29px;
+}
+
+.frame .group-2 {
+  height: 67px;
+  left: 215px;
+  position: absolute;
+  top: 237px;
+  width: 78px;
+}
+
+.frame .group-3 {
+  height: 67px;
+  left: 399px;
+  position: absolute;
+  top: 237px;
+  width: 95px;
+}
+
+.frame .text-wrapper-2 {
+  color: #000000;
+  font-family: "Nunito Sans-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 32px;
+  width: 50%;
+  border: none;
+  outline: none;
+  height: 8%;
+  border-radius: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 35px;
+}
+
+.frame .text-wrapper-3 {
+  color: #000000;
+  font-family: "Nunito Sans-Regular", Helvetica;
+  font-size: 36px;
+  font-weight: 400;
+  left: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 82px;
+}
+
+.frame .div-2 {
+  height: 30px;
+  left: 32px;
+  position: absolute;
+  top: 167px;
+  width: 183px;
+}
+
+.frame .line {
+  height: 1px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 29px;
+  width: 183px;
+}
+
+.frame .text-wrapper-4 {
+  color: #6d767e;
+  font-family: "Nunito Sans-Regular", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  width: 10rem;
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: -1px;
+}
+
+.frame .group-4 {
+  height: 25px;
+  left: 245px;
+  position: absolute;
+  top: 162px;
+  width: 70px;
+}
+
+.frame .text-wrapper-5 {
+  color: #000000;
+  font-family: "Nunito Sans-SemiBold", Helvetica;
+  font-size: 18px;
+  font-weight: 600;
+  width: 10rem;
+  height: 2rem;
+  border-radius: 10rem;
+  outline: none;
+  border: none;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+}
+
+.frame .chevron-down {
+  height: 20px;
+  left: 48px;
+  position: absolute;
+  top: 3px;
+  width: 20px;
+}
+
+
+.button{
+    margin-left: 25px;
+}
+
+.button-click{
+    width: 13rem;
+    height: 3.5rem;
+    border-radius: 8px;
+    background: #1A8D8D;
+    color: #ffffff;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.button-click:hover{
+    background: rgb(134, 216, 189);
+}
+
+.frame-4 {
+  background-color: #1a8d8d;
+  border-radius: 8px;
+  height: 50px;
+  left: 338px;
+  position: absolute;
+  top: 959px;
+  width: 183px;
+}
+
+.text-wrapper-16 {
+  color: #ffffff;
+  font-family: "Nunito Sans-SemiBold", Helvetica;
+  font-size: 16px;
+  font-weight: 600;
+  left: 46px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 14px;
+}
