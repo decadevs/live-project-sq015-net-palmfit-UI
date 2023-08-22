@@ -1,6 +1,6 @@
 import React from "react";
 import FoodTile from "./FoodTile";
-import "./Food-Search.css";
+import "../styles/Food-Search.css";
 
 const FoodSearch = () => {
   const foodInfoList = [
