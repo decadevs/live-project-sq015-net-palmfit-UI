@@ -28,24 +28,47 @@ function App() {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
 
   return (
-
-    <ProfilePage />
     <>
-    <PaymentSubscription/>
-    </>
-
-
-    <FoodSingleOne />
-
     <div className="App">
       
+      <LandingPage/>
       
+    </div>
+
+
+    <div className='container'>
+
+      <div className="nav">
+        <NavLink to={"/"}>
+          <img src={logo_dark_svg} alt="svg logo" className="nav-logo" />
+        </NavLink>
+        <Navigation menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
+        <div className="toggle_btn_con" style={{ display: menuIsOpen ? "none" : "block" }} onClick={() => setMenuIsOpen(prev => !prev)}>
+          {
+            !menuIsOpen && <img src={menu} alt="" className="menu_open" />
+          }
+        </div>
+      </div>
+
+      <div className='pages'>
+        <ProfilePage />
+        <PaymentSubscription/>
+        <FoodSingleOne />
+        <MealInfo mealName="Meal 1 name" totalCalories={""} />
+        <FoodTable foods={[]} />
+        <SearchFood/>
+        <Subscription />
+        <CalculateCalories />
 
       </div>
 
     </div>
 
+    </>
+      
+      
   );
   
 }
+
 export default App;
