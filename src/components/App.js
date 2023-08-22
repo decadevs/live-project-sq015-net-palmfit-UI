@@ -1,3 +1,4 @@
+import LandingPage from '../components/HomePg/LandingPg';
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import '../styles/App.css';
@@ -18,6 +19,7 @@ import { logo_dark_svg, menu } from "./navigation/assets"
 
 
 
+
 function App() {
   const foods = [
     { name: 'Plain white rice', amount: 2.5, measurement: 'cup', calories: 600, caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 } },
@@ -30,9 +32,16 @@ function App() {
 
     return (
       <>
-        {/* <DailyMealPlan/> */}
+        
 
-        <div className='container'>
+    <div className="App">
+      
+      <LandingPage/>
+      
+    </div>
+
+
+    <div className='container'>
 
           <div className="nav">
           <NavLink to={"/"}>
@@ -46,7 +55,7 @@ function App() {
           </div>
           </div>
 
-          {/* <div className='pages'>
+          <div className='pages'>
               <ProfilePage />
               <PaymentSubscription/>
               <FoodSingleOne />
@@ -55,8 +64,9 @@ function App() {
               <SearchFood/>
               <Subscription />
               <CalculateCalories />
+              <DailyMealPlan/>
 
-            </div> */}
+            </div>
 
     </div>
       
