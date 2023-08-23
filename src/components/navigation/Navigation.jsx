@@ -3,7 +3,6 @@ import { calculator, diary, logo_light_svg, logout, plans, profile, subscription
 import { NavLink } from "react-router-dom"
 
 
-
 function Navigation({menuIsOpen, setMenuIsOpen }) {
 
 
