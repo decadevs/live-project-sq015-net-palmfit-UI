@@ -18,6 +18,7 @@ import MealPlan from "./MealPlans/Mealplan";
 import WeeklyPlanbreakfast from "./weeklyplanbreakfast/WeeklyPlanbreakfast";
 import styles from "../styles/WeeklyPlanbreakfast.module.css";
 import { CalulateCalories } from "../components/CalculateCalories";
+import DailyPlanBreakfast from "./DailyPlan/DailyPlanBreakfast";
 
 function App() {
   const foods = [
@@ -38,9 +39,11 @@ function App() {
 
   return (
     <>
+    <DailyMealPlan/>
+
       <div className="container">
         <div className="App">
-          <FoodSearch />
+          {/* <FoodSearch /> */}
 
           <ProfilePage />
 
@@ -89,6 +92,7 @@ function App() {
             <MealInfo mealName="Meal 1 name" totalCalories={""} />
             <FoodTable foods={[]} />
             <SearchFood />
+            <DailyPlanBreakfast />
             <Subscription />
             <CalculateCalories />
             <MealPlan />
@@ -97,6 +101,7 @@ function App() {
       </div>
     </>
   );
+  
 }
 
 export default App;

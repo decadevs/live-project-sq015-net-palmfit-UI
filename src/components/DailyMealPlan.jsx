@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import styles from "../styles/DailyMealPlan.module.css"
-
+import DailyPlanBreakfast from './DailyPlan/DailyPlanBreakfast';
 
 
 
@@ -20,40 +20,7 @@ const DailyMealPlan = () => {
                     <button className={`${gender == "female" ? styles.selected : styles.notSelected} ${styles.btn}`} onClick={()=>setGender("female")}>Female</button>
                 </div>
             </div>
-
-            <div className={styles.header_container}>
-                <div>
-                    <h5>Name of daily plan</h5>
-                    <span style={{fontSize: '15px', color: '#6E767E', fontFamily: 'nunito sans'}}>17777 calories</span>
-                </div>
-                <button className={`${styles.btn_getplan} ${styles.selected}`}>Get Plan</button>
-            </div>
-
-            <table className={styles.DailyMealTable}>
-                <tbody>
-                    <tr >
-                        <td className={styles.one}>Breakfast</td>
-                        <td className={styles.td}>7629 Calories</td>
-                       
-                    </tr>
-                    <tr>
-                        <td className={styles.one}>Lunch</td>
-                        <td className={styles.td}>7629 Calories</td>
-                        
-                    </tr>
-                    <tr>
-                        <td className={styles.one}>Dinner</td>
-                        <td className={styles.td}>7543 Calories</td>
-                        
-                    </tr>
-
-                </tbody>
-            </table> 
-
-             <div>
-               <button className={styles.btn_total}><span>Total : <span>1906</span> calories</span></button> 
-            </div>
-           
+            <DailyPlanBreakfast/>
         </div>
      
     )
