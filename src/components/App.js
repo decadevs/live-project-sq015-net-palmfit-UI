@@ -13,8 +13,10 @@ import MealInfo from './Meal-List-Plan/MealInfo';
 import FoodTable from './Meal-List-Plan/FoodTable';
 import SearchFood from './Meal-List-Plan/SearchFood';
 import '../styles/Style.css';
-//import '../styles/FoodSearch.css';
 import Subscription from './subscription/Subscription';
+
+import { AddAndRemoveRoles } from './components/AddAndRemoveRoles';
+
 
 import CalculateCalories from './CalculateCalories';
 import Navigation from "./navigation/Navigation"
@@ -27,17 +29,15 @@ import { CalulateCalories } from '../components/CalculateCalories';
 
 
 
-
 function App() {
   const foods = [
 
     { name: 'Plain white rice', amount: 2.5, measurement: 'cup', calories: 600, caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 } },
-
     //{ name: 'Food 2', amount: 2, measurement: 'tablespoon', calories: 50, caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 } },
    //{ name: 'Food 3', amount: 2, measurement: 'tablespoon', calories: 50, caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 } },
     //{ name: 'Food 3', amount: 2, measurement: 'tablespoon', calories: 50, caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 } },
-    // Add more food items
 
+    // Add more food items
     ];
   const [menuIsOpen, setMenuIsOpen] = useState(false)
 
@@ -53,7 +53,7 @@ function App() {
         <LandingPage/>
       
       </div>
-        
+       
 
       <div className='container'>
 
@@ -80,6 +80,7 @@ function App() {
             <CalculateCalories />
             <MealPlan/>
           </div>
+
 
     </div>
     </>  
