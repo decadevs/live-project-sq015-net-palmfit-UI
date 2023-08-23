@@ -1,25 +1,22 @@
-<<<<<<< HEAD
-import LandingPage from '../components/HomePg/LandingPg';
+// import LandingPage from '../components/HomePg/LandingPg';
+// // import '../styles/App.css';
+// import FoodSearch from './FoodSearch';
+// import React, { useState } from 'react';
+// import { NavLink } from 'react-router-dom';
 // import '../styles/App.css';
-import FoodSearch from './FoodSearch';
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import '../styles/App.css';
-import { ProfilePage } from './ProfilePage';
+// import { ProfilePage } from './ProfilePage';
 
-import PaymentSubscription from './Payment/Subscription';
-import FoodSingleOne from '../components/components/meal/FoodSingleOne';
-=======
-import LandingPage from "../components/HomePg/LandingPg";
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import "../styles/App.css";
-import FoodSearch from "../components/FoodSearch/FoodSearch.jsx";
-import "../styles/FoodSearch.css";
-import { ProfilePage } from "./ProfilePage";
-import PaymentSubscription from "./Payment/Subscription";
-import FoodSingleOne from "../components/components/meal/FoodSingleOne";
->>>>>>> c4318b0fa042c04133778d7eefc3a65f3c95a00a
+// import PaymentSubscription from './Payment/Subscription';
+// import FoodSingleOne from '../components/components/meal/FoodSingleOne';
+// import LandingPage from "../components/HomePg/LandingPg";
+// import React, { useState } from "react";
+// import { NavLink } from "react-router-dom";
+// import "../styles/App.css";
+// import FoodSearch from "../components/FoodSearch/FoodSearch.jsx";
+// import "../styles/FoodSearch.css";
+// import { ProfilePage } from "./ProfilePage";
+// import PaymentSubscription from "./Payment/Subscription";
+// import FoodSingleOne from "../components/components/meal/FoodSingleOne";
 
 //import '../style/Style.css';
 
@@ -58,7 +55,7 @@ function App() {
 
   return (
     <>
-      <div className="container">
+      {/* <div className="container">
         <div className="App">
           <FoodSearch />
 
@@ -85,40 +82,40 @@ function App() {
           </div>
 
           <LandingPage />
+        </div> */}
+
+      <div className="container">
+        <div className="nav">
+          <NavLink to={"/"}>
+            <img src={logo_dark_svg} alt="svg logo" className="nav-logo" />
+          </NavLink>
+          <Navigation menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
+          <div
+            className="toggle_btn_con"
+            style={{ display: menuIsOpen ? "none" : "block" }}
+            onClick={() => setMenuIsOpen((prev) => !prev)}
+          >
+            {!menuIsOpen && <img src={menu} alt="" className="menu_open" />}
+          </div>
         </div>
 
-        <div className="container">
-          <div className="nav">
-            <NavLink to={"/"}>
-              <img src={logo_dark_svg} alt="svg logo" className="nav-logo" />
-            </NavLink>
-            <Navigation menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
-            <div
-              className="toggle_btn_con"
-              style={{ display: menuIsOpen ? "none" : "block" }}
-              onClick={() => setMenuIsOpen((prev) => !prev)}
-            >
-              {!menuIsOpen && <img src={menu} alt="" className="menu_open" />}
-            </div>
-          </div>
-
-          <div className="pages">
-            <ProfilePage />
-            <PaymentSubscription />
-            <FoodSingleOne />
-            <MealInfo mealName="Meal 1 name" totalCalories={""} />
-            <FoodTable foods={[]} />
-            <SearchFood />
-            <DailyPlanBreakfast />
-            <Subscription />
-            <CalculateCalories />
-            <MealPlan />
-          </div>
+        <div className="pages">
+          <ProfilePage />
+          <PaymentSubscription />
+          <FoodSingleOne />
+          <MealInfo mealName="Meal 1 name" totalCalories={""} />
+          <FoodTable foods={[]} />
+          <SearchFood />
+          <DailyPlanBreakfast />
+          <Subscription />
+          <CalculateCalories />
+          <MealPlan />
         </div>
       </div>
+    {/* </div > */}
     </>
   );
-  
+
 }
 
 export default App;
