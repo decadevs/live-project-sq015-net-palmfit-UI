@@ -12,8 +12,6 @@
 import MealInfo from "./Meal-List-Plan/MealInfo";
 import FoodTable from "./Meal-List-Plan/FoodTable";
 import SearchFood from "./Meal-List-Plan/SearchFood";
-import "../styles/Style.css";
-//import '../styles/FoodSearch.css';
 import Subscription from "./subscription/Subscription";
 
 import CalculateCalories from "./CalculateCalories";
