@@ -1,3 +1,4 @@
+
 import LandingPage from '../components/HomePg/LandingPg';
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
@@ -14,6 +15,8 @@ import Subscription from './subscription/Subscription';
 import CalculateCalories from './CalculateCalories';
 import Navigation from "./navigation/Navigation"
 import { logo_dark_svg, menu } from "./navigation/assets"
+import FoodSearch from "../components/FoodSearch/FoodSearch.jsx";
+//import '../styles/FoodSearch.css';
 import MealPlan from "./MealPlans/Mealplan";
 import WeeklyPlanbreakfast from "./weeklyplanbreakfast/WeeklyPlanbreakfast";
 import styles from "../styles/WeeklyPlanbreakfast.module.css";
