@@ -26,6 +26,7 @@ const hardcodedUsers = [
 function UserTable() {
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [searchText, setSearchText] = useState("");
 
     useEffect(() => {
         // Simulate fetching users from an API
@@ -89,28 +90,16 @@ function UserTable() {
         console.log("Delete user:", user);
     };
 
+    const handleSearch = (e) => {
+        setSearchText(e.target.value);
+    };
+
+    const filteredUsers = users.filter((user) =>
+        user.name.toLowerCase().includes(searchText.toLowerCase())
+    );
+
     const customStyles = {
-        rows: {
-            style: {
-                fontSize: "14px",
-            },
-        },
-        headRow: {
-            style: {
-                backgroundColor: "#f8f9fa",
-                borderBottom: "none",
-            },
-        },
-        headCells: {
-            style: {
-                fontWeight: "bold",
-            },
-        },
-        pagination: {
-            style: {
-                marginTop: "10px",
-            },
-        },
+        // Your custom styles...
     };
 
     return (
@@ -121,10 +110,20 @@ function UserTable() {
                 <DataTable
                     title="User Table"
                     columns={columns}
-                    data={users}
+                    data={filteredUsers}
                     pagination
                     selectableRows
                     search
+                    subHeader
+                    subHeaderComponent={
+                        <input
+                            id="search"
+                            type="text"
+                            placeholder="Search users"
+                            value={searchText}
+                            onChange={handleSearch}
+                        />
+                    }
                     customStyles={customStyles}
                 />
             )}
