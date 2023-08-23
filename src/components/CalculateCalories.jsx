@@ -1,7 +1,11 @@
 import React, {useState} from 'react'
 import '../styles/Calories.css'
 
+<<<<<<< HEAD
+export function CalulateCalories() {
+=======
 export default function CalulateCalories() {
+>>>>>>> 941a8ad4d1a51c4ab12b1f1689d0aa760b43c119
 
     const [option, setOption] = useState('Select');
 
