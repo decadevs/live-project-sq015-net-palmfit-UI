@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,500&display=swap');
+
+*{
+    margin: 0;
+}
+
+body{  
+    background-color: #fff;
+}
+
+/* --------Custom----------- */
+.App{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+.App h4 {
+    font-family: Nunito Sans;
+}
+.App h1 {
+    margin-bottom: 50px;
+    font-family: Nunito Sans;
+}
+.contentholder{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 1200px;
+}
+
+.search{
+    display: flex;
+    gap: 8%;
+    position: relative;
+}
+.searchItem{
+    display: flex;
+}
+.searchUser{
+    width: 20%; 
+}
+.userfound{
+    margin-top: 20px;
+    display: flex;
+    line-break: auto;
+    width: 650px;
+}
+.child{
+    width: fit-content;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin-right: 5px;
+    gap: 10px;
+    padding: 10px;
+}
+
+.passwordCheck{
+    display: flex;
+    margin-top: 40px;
+}
+
+.notification{
+    display: flex;
+    margin-top: 40px;
+}
+.notifyME{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.sendnotify{
+    margin-right: 140px;
+}
+.dropdown{
+    display: flex;
+    margin-top: 40px;
+}
+
+.addrole{
+    width: 150px;
+    color: #fff;
+    border: 1px solid;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: teal;
+}
+.addrole:hover{
+    width: 150px;
+    border: 1px solid;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 600px;
+    margin-top: 10px;
+    background-color: rgb(25, 187, 187);
+}
+
+.role-role{
+    margin-right: 260px;
+}
+.adminpass{
+    margin-right: 140px;
+}
+option { 
+    background-color: white; 
+    border-radius: none; 
+    font-size: 18px; 
+}
+
+select {
+    width: 220px;
+    border: 1px solid #d6d4d4;
+    border-radius: 5px;
+    padding: 10px;
+}
+select option {
+    display: block;
+}
+
+
+/* ------Static---------- Don't touch */
+.search input{
+    width: 100%;
+    height: 60px;
+    text-indent: 25px;
+    border: 2px solid #d6d4d4;
+}
+
+.search input:focus{
+    box-shadow: none;
+    border: 2px solid rgb(40, 201, 201);
+}
+
+.search .fa-search{
+    position: absolute;
+    top: 20px;
+    left: 16px;
+}
+
+.search button{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 83%;
+    width: 20%;
+    border: 0px solid #fff;
+    background: teal;
+}
+.search button:hover{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height:83%;
+    width: 20%;
+    color: #000;
+    border: 0px solid #fff;
+    background: rgb(201, 212, 212);
+}
+
+/* ------------- Tablet Screen Responsiveness---------- */
+@media screen and (max-width: 992px) {
+    .App{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+    }
+    .App h4 {
+        font-family: Nunito Sans;
+    }
+    .App h1 {
+        margin-bottom: 50px;
+        font-family: Nunito Sans;
+    }
+    .contentholder{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        margin-left: 120px;
+    }
+    
+    .search{
+        display: flex;
+        gap: 8%;
+        position: relative;
+    }
+    .searchItem{
+        display: flex;
+    }
+    .searchUser{
+        width: 20%; 
+        margin-right: 90px;
+    }
+    .userfound{
+        margin-top: 20px;
+        display: flex;
+        line-break: auto;
+        width: 650px;
+    }
+    .child{
+        width: fit-content;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid grey;
+        border-radius: 5px;
+        margin-right: 5px;
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .passwordCheck{
+        display: flex;
+        margin-top: 40px;
+    }
+    
+    .notification{
+        display: flex;
+        margin-top: 40px;
+    }
+    .notifyME{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .sendnotify{
+        margin-right: 140px;
+    }
+    .dropdown{
+        display: flex;
+        margin-top: 40px;
+    }
+    
+    .addrole{
+        width: 150px;
+        color: #fff;
+        border: 1px solid;
+        padding: 10px 20px;
+        border-radius: 10px;
+        margin-top: 10px;
+        background-color: teal;
+    }
+    .addrole:hover{
+        width: 150px;
+        border: 1px solid;
+        padding: 10px 20px;
+        font-size: 18px;
+        font-weight: 600px;
+        margin-top: 10px;
+        background-color: rgb(25, 187, 187);
+    }
+    
+    .role-role{
+        margin-right: 260px;
+    }
+    .adminpass{
+        margin-right: 140px;
+    }
+    
+    select {
+        width: 220px;
+        border: 1px solid #d6d4d4;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    select .options {
+        display: block;
+        width: 20px;
+        background-color: white; 
+        border-radius: none; 
+        font-size: 14px; 
+        width:fit-content;
+    }
+    
+    
+    /* ------Static---------- Don't touch */
+    .search input{
+        width: 90%;
+        height: 50px;
+        text-indent: 25px;
+        border: 2px solid #d6d4d4;
+    }
+    
+    .search input:focus{
+        box-shadow: none;
+        border: 2px solid rgb(40, 201, 201);
+    }
+    
+    .search .fa-search{
+        position: absolute;
+        top: 20px;
+        left: 16px;
+    }
+    
+    .search button{
+        position: absolute;
+        top: 6px;
+        right: 50px;
+        height: 35px;
+        width: 80px;
+        
+        border: 0px solid #fff;
+        background: teal;
+    }
+    .search button:hover{
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        height:83%;
+        width: 20%;
+        color: #000;
+        border: 0px solid #fff;
+        background: rgb(201, 212, 212);
+    }
+}
+
+/* ----------------Mobile Screen Responsiveness */
+@media screen and (max-width: 579px) {
+    .App{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: center;
+        margin-top: 60px;
+    }
+    .App h4 {
+        font-family: Nunito Sans;
+    }
+    .App h1 {
+        margin-bottom: 50px;
+        font-family: Nunito Sans;
+    }
+    .contentholder{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+    }
+    
+    .search{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .searchItem{
+        display: flex;
+    }
+    .searchUser{
+        width: 100%; 
+    }
+    .userfound{
+        margin-top: 20px;
+        display: flex;
+        line-break: auto;
+        width: 650px;
+    }
+    .child{
+        width: fit-content;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid grey;
+        border-radius: 5px;
+        margin-right: 5px;
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .passwordCheck{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .passMe{
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+    .notification{
+        display: flex;
+        justify-content: space-around;
+    }
+    .notifyME{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .sendnotify{
+        display: flex;
+        flex-direction: column;
+    }
+    .dropdown{
+        display: flex;
+        margin-top: 40px;
+    }
+    
+    .addrole{
+        color: #fff;
+        border: 1px solid;
+        padding: 10px 20px;
+        border-radius: 10px;
+        margin: 10px 0 100px 0;
+        background-color: teal;
+    }
+    .addrole:hover{
+        border: 1px solid;
+        padding: 10px 20px;
+        font-size: 18px;
+        font-weight: 600px;
+        margin-top: 10px;
+        background-color: rgb(25, 187, 187);
+    }
+    
+   .roledesign{
+    display: flex;
+    justify-content: space-between;
+   }
+
+   select {
+        width: 200px;
+        border: 1px solid #d6d4d4;
+        border-radius: 5px;
+        padding: 10px;
+        margin-right: 10px;
+    }
+    select .options {
+        display: block;
+        width: 20px;
+        background-color: white; 
+        border-radius: none; 
+        font-size: 14px; 
+        width:fit-content;
+    }
+    
+    
+    /* ------Static---------- Don't touch */
+    .search input{
+        width: 90%;
+        height: 50px;
+        text-indent: 25px;
+        border: 2px solid #d6d4d4;
+    }
+    
+    .search input:focus{
+        box-shadow: none;
+        border: 2px solid rgb(40, 201, 201);
+    }
+    
+    .search .fa-search{
+        position: absolute;
+        top: 20px;
+        left: 16px;
+    }
+    
+    .search button{
+        position: absolute;
+        top: 6px;
+        right: 70px;
+        height: 35px;
+        width: 80px;
+        
+        border: 0px solid #fff;
+        background: teal;
+    }
+    .search button:hover{
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        height:83%;
+        width: 20%;
+        color: #000;
+        border: 0px solid #fff;
+        background: rgb(201, 212, 212);
+    }
+}

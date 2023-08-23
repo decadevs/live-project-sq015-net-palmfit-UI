@@ -1,0 +1,53 @@
+
+.card {
+    border: 1px solid #ccc;
+    
+    display: inline-block;
+    margin: 16px;
+ 
+    border-radius: 10px;
+}
+
+.card-image {
+    max-width: 268px;
+}
+
+
+
+.card-label {
+
+    margin: 1px 0;
+    margin-left: 10px;
+    color: #000;
+font-family: "Nunito Sans";
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.card-text {
+    margin-left: 10px;
+    color: #000;
+font-family: "Nunito Sans";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.meal-card-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.mealname{
+    color: #000;
+font-family: "Nunito Sans";
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin-bottom: 30px;
+margin-top: 50px;
+}
