@@ -5,7 +5,6 @@ import "../styles/App.css";
 import FoodSearch from "../components/FoodSearch/FoodSearch.jsx";
 import "../styles/FoodSearch.css";
 import { ProfilePage } from "./ProfilePage";
-
 import PaymentSubscription from "./Payment/Subscription";
 import FoodSingleOne from "../components/components/meal/FoodSingleOne";
 
