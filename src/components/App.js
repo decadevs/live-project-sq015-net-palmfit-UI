@@ -6,17 +6,6 @@
 // import '../styles/App.css';
 // import { ProfilePage } from './ProfilePage';
 
-// import PaymentSubscription from './Payment/Subscription';
-// import FoodSingleOne from '../components/components/meal/FoodSingleOne';
-// import LandingPage from "../components/HomePg/LandingPg";
-// import React, { useState } from "react";
-// import { NavLink } from "react-router-dom";
-// import "../styles/App.css";
-// import FoodSearch from "../components/FoodSearch/FoodSearch.jsx";
-// import "../styles/FoodSearch.css";
-// import { ProfilePage } from "./ProfilePage";
-// import PaymentSubscription from "./Payment/Subscription";
-// import FoodSingleOne from "../components/components/meal/FoodSingleOne";
 
 //import '../style/Style.css';
 
