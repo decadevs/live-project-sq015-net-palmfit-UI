@@ -49,9 +49,9 @@ function App() {
 
 
     <ProfilePage />
-    <>
+    
     <PaymentSubscription/>
-    </>
+    
 
 
     <FoodSingleOne />
