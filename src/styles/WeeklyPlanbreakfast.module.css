@@ -1,0 +1,107 @@
+
+
+
+.container {
+    min-height: 100vh;
+}
+
+.weeklyPlan {
+    width: 90%;
+    margin: auto;
+}
+
+.header_con {
+    margin-top: 1rem;
+}
+
+.title_con h4{
+    color: #001A1A;
+    font-family: Nunito Sans;
+    font-size: 24px;
+    font: 600;
+    line-height: normal;
+}
+
+.title_con p {
+    color: #6E767E;
+    font-family: Nunito Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.header_con button {
+    border-radius: 4px;
+    background-color: #1A8D8D;
+    border: none;
+    color: #fff;
+    padding: .5rem 1.5rem;
+}
+
+.Accordion_con {
+    margin-top: 2rem;
+    border-bottom: 1px solid #E5E5E5;
+    padding-bottom: 2rem;
+}
+
+.Accordion_title_con {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 576px) {
+    .header_con {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 2rem;
+    }
+
+    .header_con button {
+        padding: .5rem 3rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .weeklyPlan {
+        max-width: 550px;
+        margin: 2rem auto 2rem 2rem ;
+    }
+}
+
+
+/* 
+
+    *************************************************
+                weekly plan accordion
+    *************************************************
+
+
+*/
+
+.Item_header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropDown {
+  
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 12px;
+    gap: .5rem;
+    background-color: #E5E5E5;
+    padding: .75em;
+}
+
+.item_layer_one,
+.item_layer_two {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
