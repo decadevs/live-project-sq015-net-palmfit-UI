@@ -1,0 +1,60 @@
+.check-out {
+  color: #f9f9f9;
+  font-family: "Nunito Sans-SemiBold", Helvetica;
+  font-size: 18px;
+  font-weight: 600;
+}
+.check-out input {
+    border-radius: 5px;
+}
+
+.coupon-button {
+  background-color: white;
+  border-color: #1a8d8d;
+  border-radius: 5px;
+  color: #1a8d8d;
+  font-family: "Nunito Sans-Bold", Helvetica;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.checkout-button {
+  background-color: white;
+  border-color: #1a8d8d;
+  border-radius: 5px;
+  color: #1a8d8d;
+  font-family: "Nunito Sans-Bold", Helvetica;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* styles.css */
+
+.btn-custom-lg {
+  font-size: 24px; /* Adjust the font size as needed */
+  padding: 15px 40px; /* Adjust padding to increase button size */
+}
+
+/* styles.css */
+
+/* ...existing styles... */
+
+/* Hover styles for the custom button */
+.coupon-button:hover,.btn-custom-lg:hover, .checkout-button:hover {
+  background-color: #1a8d8d; /* Change background color on hover */
+  border-color: #1a8d8d; /* Change border color on hover */
+  color: white; /* Change text color on hover */
+}
+
+.coupon-input {
+  width: 150px; /* Adjust the width as needed */
+  font-size: 14px;
+}
+
+
+
+/* Selected Features Styles */
+
+.selected-features {
+    font-family: "Nunito Sans-Regular", Helvetica;
+}

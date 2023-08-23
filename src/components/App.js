@@ -1,25 +1,14 @@
-<<<<<<< HEAD
-import LandingPage from '../components/HomePg/LandingPg';
-// import '../styles/App.css';
-import FoodSearch from './FoodSearch';
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import '../styles/App.css';
-import { ProfilePage } from './ProfilePage';
-
-import PaymentSubscription from './Payment/Subscription';
-import FoodSingleOne from '../components/components/meal/FoodSingleOne';
-=======
-import LandingPage from "../components/HomePg/LandingPg";
 import React, { useState } from "react";
+import "../styles/App.css";
+import { ProfilePage } from "./ProfilePage";
+
+import PaymentSubscription from "./Payment/Subscription";
+import FoodSingleOne from "../components/components/meal/FoodSingleOne";
+import LandingPage from "../components/HomePg/LandingPg";
 import { NavLink } from "react-router-dom";
 import "../styles/App.css";
 import FoodSearch from "../components/FoodSearch/FoodSearch.jsx";
 import "../styles/FoodSearch.css";
-import { ProfilePage } from "./ProfilePage";
-import PaymentSubscription from "./Payment/Subscription";
-import FoodSingleOne from "../components/components/meal/FoodSingleOne";
->>>>>>> c4318b0fa042c04133778d7eefc3a65f3c95a00a
 
 //import '../style/Style.css';
 
@@ -29,6 +18,7 @@ import SearchFood from "./Meal-List-Plan/SearchFood";
 import "../styles/Style.css";
 //import '../styles/FoodSearch.css';
 import Subscription from "./subscription/Subscription";
+import Checkout from "./Main-Checkout-Page/CheckOutPage";
 
 import CalculateCalories from "./CalculateCalories";
 import Navigation from "./navigation/Navigation";
@@ -46,8 +36,8 @@ function App() {
       amount: 2.5,
       measurement: "cup",
       calories: 600,
-      caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 },
-    },
+      caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 }
+    }
 
     //{ name: 'Food 2', amount: 2, measurement: 'tablespoon', calories: 50, caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 } },
     //{ name: 'Food 3', amount: 2, measurement: 'tablespoon', calories: 50, caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 } },
@@ -118,7 +108,6 @@ function App() {
       </div>
     </>
   );
-  
 }
 
 export default App;
