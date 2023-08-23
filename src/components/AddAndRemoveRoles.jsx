@@ -1,7 +1,7 @@
 import React from 'react'
 import "../../styles/AddRoles.css"
 
-export const AddAndRemoveRoles = () => {
+const AddAndRemoveRoles = () => {
   return (
     <div className="App">
     <div className="contentholder">
@@ -56,3 +56,5 @@ export const AddAndRemoveRoles = () => {
     </div>
   )
 }
+
+export default AddAndRemoveRoles
