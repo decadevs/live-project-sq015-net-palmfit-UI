@@ -14,69 +14,89 @@ import Subscription from './subscription/Subscription';
 import CalculateCalories from './CalculateCalories';
 import Navigation from "./navigation/Navigation"
 import { logo_dark_svg, menu } from "./navigation/assets"
-
-
-
-
-
+import MealPlan from "./MealPlans/Mealplan";
+import WeeklyPlanbreakfast from "./weeklyplanbreakfast/WeeklyPlanbreakfast";
+import styles from "../styles/WeeklyPlanbreakfast.module.css";
+import { CalulateCalories } from "../components/CalculateCalories";
 
 function App() {
   const foods = [
-    { name: 'Plain white rice', amount: 2.5, measurement: 'cup', calories: 600, caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 } },
+    {
+      name: "Plain white rice",
+      amount: 2.5,
+      measurement: "cup",
+      calories: 600,
+      caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 },
+    },
+
     //{ name: 'Food 2', amount: 2, measurement: 'tablespoon', calories: 50, caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 } },
-   //{ name: 'Food 3', amount: 2, measurement: 'tablespoon', calories: 50, caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 } },
+    //{ name: 'Food 3', amount: 2, measurement: 'tablespoon', calories: 50, caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 } },
     //{ name: 'Food 3', amount: 2, measurement: 'tablespoon', calories: 50, caloriesPerMeasurement: { cup: 100, tablespoon: 50, ounce: 75 } },
     // Add more food items
-    ];
-  const [menuIsOpen, setMenuIsOpen] = useState(false)
+  ];
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
 
-    return (
-      <>
-        
+  return (
+    <>
+      <div className="container">
+        <div className="App">
+          <FoodSearch />
 
-    <div className="App">
-      
-      <LandingPage/>
-      
-    </div>
+          <ProfilePage />
 
+          <PaymentSubscription />
 
-    <div className='container'>
+          <FoodSingleOne />
 
+          <div className="App">
+            <MealInfo
+              mealName="Meal 1 name"
+              totalCalories={foods.reduce(
+                (total, food) => total + parseFloat(food.calories),
+                0
+              )}
+            />
+            <FoodTable foods={foods} />
+            <SearchFood />
+          </div>
+
+          <div>
+            <Subscription />
+          </div>
+
+          <LandingPage />
+        </div>
+
+        <div className="container">
           <div className="nav">
-          <NavLink to={"/"}>
-          <img src={logo_dark_svg} alt="svg logo" className="nav-logo" />
-          </NavLink>
-          <Navigation menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
-          <div className="toggle_btn_con" style={{ display: menuIsOpen ? "none" : "block" }} onClick={() => setMenuIsOpen(prev => !prev)}>
-          {
-            !menuIsOpen && <img src={menu} alt="" className="menu_open" />
-          }
-          </div>
-          </div>
-
-          <div className='pages'>
-              <ProfilePage />
-              <PaymentSubscription/>
-              <FoodSingleOne />
-              <MealInfo mealName="Meal 1 name" totalCalories={""} />
-              <FoodTable foods={[]} />
-              <SearchFood/>
-              <Subscription />
-              <CalculateCalories />
-              <DailyMealPlan/>
-
+            <NavLink to={"/"}>
+              <img src={logo_dark_svg} alt="svg logo" className="nav-logo" />
+            </NavLink>
+            <Navigation menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
+            <div
+              className="toggle_btn_con"
+              style={{ display: menuIsOpen ? "none" : "block" }}
+              onClick={() => setMenuIsOpen((prev) => !prev)}
+            >
+              {!menuIsOpen && <img src={menu} alt="" className="menu_open" />}
             </div>
+          </div>
 
-    </div>
-      
-      
-  
+          <div className="pages">
+            <ProfilePage />
+            <PaymentSubscription />
+            <FoodSingleOne />
+            <MealInfo mealName="Meal 1 name" totalCalories={""} />
+            <FoodTable foods={[]} />
+            <SearchFood />
+            <Subscription />
+            <CalculateCalories />
+            <MealPlan />
+          </div>
+        </div>
+      </div>
     </>
-
   );
-  
 }
 
 export default App;
-

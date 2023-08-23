@@ -3,7 +3,6 @@ import { calculator, diary, logo_light_svg, logout, plans, profile, subscription
 import { NavLink } from "react-router-dom"
 
 
-
 function Navigation({menuIsOpen, setMenuIsOpen }) {
 
 
@@ -32,7 +31,7 @@ function Navigation({menuIsOpen, setMenuIsOpen }) {
             </NavLink>
           <NavLink to={"/meal-plans"} className={styles.nav_link}>
             <img src={plans} alt="svg icon" />
-            <span>meal palns</span>
+            <span>meal plans</span>
             </NavLink>
           <NavLink to={"/meal-diary"} className={styles.nav_link}>
             <img src={diary} alt="svg icon" />
