@@ -15,11 +15,14 @@ import SearchFood from './Meal-List-Plan/SearchFood';
 import '../styles/Style.css';
 //import '../styles/FoodSearch.css';
 import Subscription from './subscription/Subscription';
+
 import CalculateCalories from './CalculateCalories';
 import Navigation from "./navigation/Navigation"
 import { logo_dark_svg, menu } from "./navigation/assets"
 import MealPlan from './MealPlans/Mealplan';
-
+import WeeklyPlanbreakfast from './weeklyplanbreakfast/WeeklyPlanbreakfast';
+import styles from '../styles/WeeklyPlanbreakfast.module.css';
+import { CalulateCalories } from '../components/CalculateCalories';
 
 
 
