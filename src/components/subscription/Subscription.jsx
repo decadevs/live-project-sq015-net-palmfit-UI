@@ -1,19 +1,30 @@
 import styles from "./Subscription.module.css";
 import Frame_1786 from "../subscriptionFrames/frame_1786/Frame_1786";
 import {useState} from "react"
+import {Payment} from "../";
 
 function Subscription() {
-  const [showModal, setShowModal] = useState(false);
+  const [showSubscriptionModal, setShowSubscriptionModal] = useState(false);
+  const [showPaymentModal, setShowPaymentModal] = useState(false)
 
   function handleShow() {
-    setShowModal(true)
+    showSubscriptionModal(true)
+  }
+
+  function handlePaymentModal() {
+    setShowPaymentModal(true)
   }
 
   return (
     <div className={styles.container}>
       <Frame_1786
-        show={showModal}
-        onHide={() => setShowModal(false)}
+        show={showSubscriptionModal}
+        onHide={() => setShowSubscriptionModal(false)}
+      />
+
+      <Payment
+         show={showPaymentModal}
+        onHide={() => setShowPaymentModal(false)}
       />
      
       <div className={styles.content_container}>
@@ -35,7 +46,7 @@ function Subscription() {
           </div>
           <span className={styles.paid}>paid out</span>
         </div>
-        <button type="button" className={styles.btn_secondary}>
+        <button onClick={handlePaymentModal} type="button" className={styles.btn_secondary}>
           Fund Wallet
         </button>
       </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import "../../styles/AddRoles.css"
+// import "../../styles/AddRoles.css"
 
 const AddAndRemoveRoles = () => {
   return (

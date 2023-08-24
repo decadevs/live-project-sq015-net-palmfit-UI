@@ -1,27 +1,27 @@
 
 // daily meal
-export { default as DailyPlanAccordion } from "./DailyPlan/DailyPlanAccordion"
-export { default as DailyPlanBreakfast } from "./DailyPlan/DailyPlanBreakfast"
+export { default as DailyPlanAccordion } from "./dailyPlan/DailyPlanAccordion"
+export { default as DailyPlanBreakfast } from "./dailyPlan/DailyPlanBreakfast"
 
 // food search
-export { default as FoodResult } from "./FoodSearch/FoodResult"
-export { default as FoodSearch } from "./FoodSearch/FoodSearch"
+export { default as FoodResult } from "./foodSearch/FoodResult"
+export { default as FoodSearch } from "./foodSearch/FoodSearch"
 
 // homePg
-export { default as Header } from "./HomePg/Header"
-export { default as Footer } from "./HomePg/Footer"
-export { default as Landing } from "./HomePg/LandingPg"
-export { default as CalorieModal } from "./HomePg/CalorieModal"
+export { default as Header } from "./homePg/Header"
+export { default as Footer } from "./homePg/Footer"
+export { default as Landing } from "./homePg/LandingPg"
+export { default as CalorieModal } from "./homePg/CalorieModal"
 
 // meal-list-plan
-export { default as FoodSearch } from "./Meal-List-Plan/FoodSearch"
-export { default as FoodTable } from "./Meal-List-Plan/FoodTable"
-export { default as MealInfo } from "./Meal-List-Plan/MealInfo"
-export { default as SearchFood } from "./Meal-List-Plan/SearchFood"
+// export { default as FoodSearch } from "./meal-List-Plan/FoodSearch"
+export { default as FoodTable } from "./meal-List-Plan/FoodTable"
+export { default as MealInfo } from "./meal-List-Plan/MealInfo"
+export { default as SearchFood } from "./meal-List-Plan/SearchFood"
 
 // MealPlans
-export { default as MealCard } from "./MealPlans/MealCard"
-export { default as MealPlan } from "./MealPlans/Mealplan"
+// export { default as MealCard } from "./mealPlans/MealCard"
+export { default as MealPlan } from "./mealPlans/Mealplan"
 
 // navigation
 export { default as Navigation } from "./navigation/Navigation"
@@ -29,25 +29,25 @@ export { default as Navigation } from "./navigation/Navigation"
 // payment
 export { default as Payment } from "./payment/Payment"
 export { default as PaymentSuccess } from "./payment/PaymentSuccess"
-export { default as Subscription } from "./payment/Subscription"
+// export { default as Subscription } from "./payment/Subscription"
 
 //Subscription
 export { default as Subscription } from "./subscription/Subscription"
 
 // Subscription / frame_1786
-export { default as Frame_1786 } from "./subscription/frame_1786/Frame_1786"
+// export { default as Frame_1786 } from "./subscription/frame_1786/Frame_1786"
 
 // weeklyplanbreakfast
 export { default as WeeklyPlanAccordion } from "./weeklyplanbreakfast/WeeklyPlanAccordion"
 export { default as WeeklyPlanbreakfast } from "./weeklyplanbreakfast/WeeklyPlanbreakfast"
 
 //meal
-export { default as FoodSingleOne } from "./meal/FoodSingleOne"
+// export { default as FoodSingleOne } from "./meal/FoodSingleOne"
 
 //others
 export { default as CalculateCalories } from "./CalculateCalories"
 export { default as EmailSend } from "./EmailSend"
-export { default as FoodSearch } from "./FoodSearch"
+// export { default as FoodSearch } from "./FoodSearch"
 export { default as FoodTile } from "./FoodTile"
 export { default as ForgetPassword } from "./ForgetPassword"
 export { default as PalmFitImage } from "./PalmFitImage"
