@@ -1,14 +1,14 @@
 import styles from "./Subscription.module.css";
 import Frame_1786 from "../subscriptionFrames/frame_1786/Frame_1786";
 import {useState} from "react"
-import {Payment} from "../";
+import {Frame_1927} from "../";
 
 function Subscription() {
   const [showSubscriptionModal, setShowSubscriptionModal] = useState(false);
   const [showPaymentModal, setShowPaymentModal] = useState(false)
 
   function handleShow() {
-    showSubscriptionModal(true)
+    setShowSubscriptionModal(true)
   }
 
   function handlePaymentModal() {
@@ -22,10 +22,7 @@ function Subscription() {
         onHide={() => setShowSubscriptionModal(false)}
       />
 
-      <Payment
-         show={showPaymentModal}
-        onHide={() => setShowPaymentModal(false)}
-      />
+      
      
       <div className={styles.content_container}>
         <h3>Active plan</h3>

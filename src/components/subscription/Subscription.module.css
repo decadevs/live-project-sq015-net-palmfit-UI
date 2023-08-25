@@ -10,7 +10,7 @@
 }
 
 .content_container {
-    padding-top: 2vh;
+    /* padding-top: 2vh; */
     background-color: #FEFFFF;
     width: 90%;
     margin: auto;
@@ -103,7 +103,7 @@
 @media (min-width: 576px) {
     .content_container {
         margin: 0;
-        margin-left: 2rem;
+        /* margin-left: 2rem; */
     }
     .btn_con {
         display: flex;

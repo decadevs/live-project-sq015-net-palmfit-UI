@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PaymentSuccess from './PaymentSuccess';
 
-const Payment = () => {
+const Payment = ({bill}) => {
   const [paymentSuccessful, setPaymentSuccessful] = useState(false);
 
   // for the total amount
@@ -17,8 +17,11 @@ const Payment = () => {
 
   return (
     <div className="pay-now-container">
-            <h1>Get unlimited access to everything</h1>
-      <label>Total billed # {amount}</label>
+      <h1>Get unlimited access to everything</h1>
+      {
+        bill &&
+        <label>Total billed: {bill}{amount}</label>
+      }
       <p>Enter your credit card details to complete subscription</p>
       <label>Card Number</label>
       <input type="text" placeholder="1234 1234 1234 1234" />
@@ -35,7 +38,7 @@ const Payment = () => {
       <p className="terms">
         By subscribing you agree to our Use of Service and you'll have access to all locked features until 20 Oct 2021.
       </p>
-      <button onClick={handlePayment} className="pay-now-button">Pay Now</button>
+      <button onClick={handlePayment} className="pay-now-button_">Pay Now</button>
     </div>
   );
 };

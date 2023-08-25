@@ -29,6 +29,7 @@
 
 .list {
     display: flex;
+    align-items: flex-start;
 }
 
 .list p{
@@ -36,10 +37,9 @@
 }
 
 .icon {
-    flex: .1;
     fill: #fff !important;
     color: #fff !important;
-    margin-right: .5rem;
+    margin-right: 1.5rem;
 }
 
 .btn {
@@ -51,6 +51,8 @@
     background-color: #1A8D8D;
     padding: .9rem;
     border-radius: 8px;
+    border: none;
+    width: 60%;
 }
 
 @media (min-width: 992px) {
@@ -58,4 +60,5 @@
         max-width: 500px;
        margin: 2rem auto;
     }
+
 }

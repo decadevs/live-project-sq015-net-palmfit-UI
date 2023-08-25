@@ -1,3 +1,7 @@
+//sign up
+import { default as SignUpPage1 } from "./signuppages/SignUpPage1"
+import { default as SignupPage2} from "./signuppages/SignUpPage2"
+
 
 // daily meal
 export { default as DailyPlanAccordion } from "./dailyPlan/DailyPlanAccordion"
@@ -25,6 +29,7 @@ export { default as MealPlan } from "./mealPlans/Mealplan"
 
 // navigation
 export { default as Navigation } from "./navigation/Navigation"
+export { default as NavigationBar } from "./navigation/NavigationBar"
 
 // payment
 export { default as Payment } from "./payment/Payment"
@@ -35,7 +40,8 @@ export { default as PaymentSuccess } from "./payment/PaymentSuccess"
 export { default as Subscription } from "./subscription/Subscription"
 
 // Subscription / frame_1786
-// export { default as Frame_1786 } from "./subscription/frame_1786/Frame_1786"
+export { default as Frame_1786 } from "./subscriptionFrames/frame_1786/Frame_1786"
+export { default as Frame_1927 } from "./subscriptionFrames/frame_1927/Frame_1927"
 
 // weeklyplanbreakfast
 export { default as WeeklyPlanAccordion } from "./weeklyplanbreakfast/WeeklyPlanAccordion"
@@ -53,5 +59,5 @@ export { default as ForgetPassword } from "./ForgetPassword"
 export { default as PalmFitImage } from "./PalmFitImage"
 export { default as PasswordReset } from "./PasswordReset"
 export { default as ProfilePage } from "./ProfilePage"
-export { default as SignUpPage1 } from "./SignUpPage1"
+// export { default as SignUpPage1 } from "./SignUpPage1"
 export { default as AddAndRemoveRoles } from "./AddAndRemoveRoles"
