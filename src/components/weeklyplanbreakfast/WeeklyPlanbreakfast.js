@@ -3,7 +3,7 @@ import WeeklyPlanAccordion from './WeeklyPlanAccordion';
 import styles from '../../styles/WeeklyPlanbreakfast.module.css';
 
 function WeeklyPlanbreakfast() {
- 
+    
 
     return (
         <div className={styles.container}>

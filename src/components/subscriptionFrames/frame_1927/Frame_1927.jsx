@@ -9,19 +9,19 @@ import Payment from '../../payment/Payment';
 export default function Frame_1786(props) {
   return (
       
-    <Modal
-      {...props}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Header closeButton>
-      </Modal.Header>
-      <Modal.Body>
+    // <Modal
+    //   {...props}
+    //   size="lg"
+    //   aria-labelledby="contained-modal-title-vcenter"
+    //   centered
+    // >
+    //   <Modal.Header closeButton>
+    //   </Modal.Header>
+    //   <Modal.Body>
         <Payment/>
-      </Modal.Body>
+    //   </Modal.Body>
       
-    </Modal>
+    // </Modal>
   
   );
 }

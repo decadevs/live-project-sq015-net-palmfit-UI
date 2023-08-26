@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../styles/SignUpPage2.css';
-import SignUpBanner from '../images/SignUpBanner.svg';
+// import '../styles/SignUpPage2.css';
+// import SignUpBanner from '../images/SignUpBanner.svg';
  
 
 
@@ -39,7 +39,7 @@ function OTPValidationPage() {
                 <section>
                     <div className="inner">
                         <div className="image-holder">
-                            <img src={SignUpBanner} alt="" height="600vh" width="100%" />
+                            {/* <img src={SignUpBanner} alt="" height="600vh" width="100%" /> */}
                         </div>
                         <div className="form-content">
                             <div className="form-header">

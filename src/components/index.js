@@ -47,6 +47,12 @@ export { default as Frame_1927 } from "./subscriptionFrames/frame_1927/Frame_192
 export { default as WeeklyPlanAccordion } from "./weeklyplanbreakfast/WeeklyPlanAccordion"
 export { default as WeeklyPlanbreakfast } from "./weeklyplanbreakfast/WeeklyPlanbreakfast"
 
+// users tab
+export { default as UsersTab } from "./usersTab/UserTable"
+
+
+
+
 //meal
 // export { default as FoodSingleOne } from "./meal/FoodSingleOne"
 

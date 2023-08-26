@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PaymentSuccess from './PaymentSuccess';
 
-const Payment = ({bill}) => {
+const Payment = () => {
   const [paymentSuccessful, setPaymentSuccessful] = useState(false);
 
   // for the total amount
@@ -18,10 +18,9 @@ const Payment = ({bill}) => {
   return (
     <div className="pay-now-container">
       <h1>Get unlimited access to everything</h1>
-      {
-        bill &&
-        <label>Total billed: {bill}{amount}</label>
-      }
+     
+      <label>Total billed: {amount}</label>
+   
       <p>Enter your credit card details to complete subscription</p>
       <label>Card Number</label>
       <input type="text" placeholder="1234 1234 1234 1234" />

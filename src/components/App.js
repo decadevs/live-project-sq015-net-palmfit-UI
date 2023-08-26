@@ -6,7 +6,7 @@ import '../styles/App.css';
 import { UserContextConsumer } from '../context/UserContext';
 
 //components
-import { Header, Footer, Landing, NavigationBar, SignUpPage1, MealPlan, ProfilePage, Subscription } from "./index"
+import { Header, Footer, Landing, NavigationBar, SignUpPage1, MealPlan, ProfilePage, Subscription, UsersTab, DailyPlanBreakfast, WeeklyPlanbreakfast } from "./index"
 
 
 
@@ -29,14 +29,18 @@ function App() {
       <div className="pages">
         <div className='layout_container'>
           <div className='pages_container'>
-            <hr />
+            {/* <hr /> */}
             <Routes>
               <Route path='/' index element={<Landing />} />
-              <Route path='/sign-up' index element={<SignUpPage1 />} />
+              {/* <Route path='/sign-up' index element={<SignUpPage1 />} /> */}
               <Route path='/login' index element={<Landing />} />
-              <Route path='/meal-plans' element={<MealPlan />} />
               <Route path='/profile' element={<ProfilePage />} />
-              <Route path='/subscription' element={<Subscription/>} />
+              <Route path='/subscription' element={<Subscription />} />
+              <Route path='/users' element={<UsersTab />} />
+              <Route path='/daily-plan/:id' element={<DailyPlanBreakfast />} />
+              <Route path='/meal-plans' element={<MealPlan />} />
+              <Route path='/get-plan' element={<WeeklyPlanbreakfast />} />
+              
 
 
             </Routes>
