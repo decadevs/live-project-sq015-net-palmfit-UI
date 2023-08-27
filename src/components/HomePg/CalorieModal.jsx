@@ -19,20 +19,50 @@ export default function CalorieModal(props) {
     setAmount(event.target.value);
   };
 
+  // const handleCalculateCalorie = async () => {
+  //   try {
+  //     const unitMappings = {
+  //       Cup: 0,
+  //       Ounce: 1
+  //       // Add more mappings as needed
+  //     };
+
+  //     const response = await fetch(
+  //       `https://localhost:7069/api/Food/calculate-calorie-by-name?foodName=${foodName}&unit=${unitMappings[unit]}&amount=${amount}`
+  //     );
+  //     const data = await response.json();
+  //     if (data.success) {
+  //       setCalorie(data.data);
+  //     }
+  //   } catch (error) {
+  //     console.error("Error fetching data:", error);
+  //   }
+  // };
+
   const handleCalculateCalorie = async () => {
     try {
       const unitMappings = {
-        Cup: 0,
-        Ounce: 1
-        // Add more mappings as needed
+        Tbs: 0,
+        Ounce: 1,
+        Cup: 2,
+        Pound: 3
       };
 
       const response = await fetch(
         `https://localhost:7069/api/Food/calculate-calorie-by-name?foodName=${foodName}&unit=${unitMappings[unit]}&amount=${amount}`
       );
       const data = await response.json();
-      if (data.success) {
-        setCalorie(data.data);
+      //console.log("API Response:", data); // Log the response data for debugging
+
+      // if (data.success) {
+      //   setCalorie(data.data);
+      // } else {
+      //   console.error("API Error:", data.message); // Log the error message for debugging
+      // }
+      if (data.succeeded) {
+        const parsedCalorie = parseFloat(data.data);
+        setCalorie(parsedCalorie);
+        //console.log(parsedCalorie);
       }
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -43,7 +73,7 @@ export default function CalorieModal(props) {
     <Modal {...props} size="sm" centered>
       <Modal.Body style={{ padding: 0, backgroundColor: "#1A8D8D" }}>
         <p className="text-white fs-5 ps-4 pt-3">Kcal</p>
-        <p className="text-white fs-4 ps-5">{calorie}</p>
+        <p className="text-white fs-4 ps-4">{calorie}</p>
         <form
           className="bg-white mt-5"
           style={{ width: "100%", height: "45vh", borderRadius: "5% 5% 0 0" }}
@@ -86,13 +116,18 @@ export default function CalorieModal(props) {
                   {unit}
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
-                  <Dropdown.Item onClick={() => handleUnitChange("Cup")}>
-                    Cup
+                  <Dropdown.Item onClick={() => handleUnitChange("Tbs")}>
+                    TableSpoon
                   </Dropdown.Item>
                   <Dropdown.Item onClick={() => handleUnitChange("Ounce")}>
                     Ounce
                   </Dropdown.Item>
-                  {/* Add other units here */}
+                  <Dropdown.Item onClick={() => handleUnitChange("Cup")}>
+                    Cup
+                  </Dropdown.Item>
+                  <Dropdown.Item onClick={() => handleUnitChange("Pound")}>
+                    Pound
+                  </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
             </div>
