@@ -2,35 +2,24 @@ import styles from "./Subscription.module.css";
 import Frame_1786 from "../subscriptionFrames/frame_1786/Frame_1786";
 import {useState} from "react"
 import SubscriptionModal from "./SubscriptionModal";
+import FundModal from "./FundModal"
 
 function Subscription() {
-  const [showSubscriptionModal, setShowSubscriptionModal] = useState(false);
-  const [showPaymentModal, setShowPaymentModal] = useState(false)
+  // const [showSubscriptionModal, setShowSubscriptionModal] = useState(false);
+  // const [showPaymentModal, setShowPaymentModal] = useState(false)
 
-
-
-  //new
-  const [subModal, setsubModal] = useState(false)
-  const [paymentModal, setPaymentModal] = useState(false)
   const [modal, setModal] = useState(false)
+  const [fundsModal, setFundsModal] = useState(false) 
 
   function handleShow(selection) {
-    
+    setModal(prev => !prev)
   }
-
-  // function handlePaymentModal() {
-  //   setShowPaymentModal(true)
-  // }
 
   return (
     <div className={styles.container}>
-      {/* <Frame_1786
-        show={showSubscriptionModal}
-        onHide={() => setShowSubscriptionModal(false)}
-      /> */}
 
       <SubscriptionModal show = {modal} onHide={()=>setModal(false)} />
-
+      <FundModal show={fundsModal} onHide={setFundsModal} />
       
      
       <div className={styles.content_container}>
@@ -40,7 +29,7 @@ function Subscription() {
           pricing to get started.
         </p>
         <div className={styles.btn_con}>
-          <button onClick={handleShow("subscription")} className={styles.btn} type="button">
+          <button onClick={handleShow} className={styles.btn} type="button">
             Subscribe
           </button>
         </div>
@@ -52,7 +41,7 @@ function Subscription() {
           </div>
           <span className={styles.paid}>paid out</span>
         </div>
-        <button onClick={handleShow("payment")} type="button" className={styles.btn_secondary}>
+        <button onClick={()=>setFundsModal(true)} type="button" className={styles.btn_secondary}>
           Fund Wallet
         </button>
       </div>

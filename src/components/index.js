@@ -38,6 +38,7 @@ export { default as PaymentSuccess } from "./payment/PaymentSuccess"
 
 //Subscription
 export { default as Subscription } from "./subscription/Subscription"
+export {default as FundModal } from "./subscription/FundModal"
 
 // Subscription / frame_1786
 export { default as Frame_1786 } from "./subscriptionFrames/frame_1786/Frame_1786"
@@ -50,7 +51,12 @@ export { default as WeeklyPlanbreakfast } from "./weeklyplanbreakfast/WeeklyPlan
 // users tab
 export { default as UsersTab } from "./usersTab/UserTable"
 
+// calorieCounter
+export { default as CaloriesCounter } from "./calorieCounter/CaloriesCounter"
 
+// funds
+export { default as FundNow } from "./subscriptionFrames/fund/FundNow"
+export { default as FundSuccess } from "./subscriptionFrames/fund/FundSuccess"
 
 
 //meal

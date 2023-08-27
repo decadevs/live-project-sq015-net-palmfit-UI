@@ -2,7 +2,7 @@ import {useState} from 'react'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import "../../styles/Payment.css"
-import { Payment, Frame_1786, Frame_1927} from "../"
+import { FundNow } from "../"
 
 
 export default function SubscriptionModal(props) {
@@ -20,9 +20,7 @@ export default function SubscriptionModal(props) {
       </Modal.Header>
           <Modal.Body>
         {
-          subModal == "subcription" ? <Frame_1786 setModal={setSubModal} /> :
-            subModal == "payment" ? <Payment onHide={props.onHide} setModal={setSubModal} /> : ""
-            
+          <FundNow setModal={props.onHide} />
         }
 
       </Modal.Body>

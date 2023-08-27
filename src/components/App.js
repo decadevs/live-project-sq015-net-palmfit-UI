@@ -6,7 +6,7 @@ import '../styles/App.css';
 import { UserContextConsumer } from '../context/UserContext';
 
 //components
-import { Header, Footer, Landing, NavigationBar, SignUpPage1, MealPlan, ProfilePage, Subscription, UsersTab, DailyPlanBreakfast, WeeklyPlanbreakfast } from "./index"
+import { Header, Footer, Landing, NavigationBar, SignUpPage1, MealPlan, ProfilePage, Subscription, UsersTab, DailyPlanBreakfast, WeeklyPlanbreakfast, CaloriesCounter } from "./index"
 
 
 
@@ -40,7 +40,7 @@ function App() {
               <Route path='/daily-plan/:id' element={<DailyPlanBreakfast />} />
               <Route path='/meal-plans' element={<MealPlan />} />
               <Route path='/get-plan' element={<WeeklyPlanbreakfast />} />
-              
+              <Route path='/calorie-calulator' element={<CaloriesCounter />} />
 
 
             </Routes>

@@ -4,7 +4,7 @@ import icon from "./Icon.svg"
 
 
 
-function Frame_1786() {
+function Frame_1786({setModal}) {
   return (
     <>
       <div className={styles.top}>
@@ -35,8 +35,7 @@ function Frame_1786() {
 
       </div>
 
-      {/* <button onClick={() => setShouldProceed(true)} type='button' className={styles.btn}>Proceed</button> */}
-      <button type='button' className={styles.btn}>Proceed</button>
+      <button type='button' onClick={()=>setModal("payment")} className={styles.btn}>Proceed</button>
 
     </>
         

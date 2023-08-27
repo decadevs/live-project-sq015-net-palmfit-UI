@@ -1,27 +1,24 @@
 import React, { useState } from 'react';
-import PaymentSuccess from './PaymentSuccess';
+import FundSuccess from './FundSuccess';
+import "./Fund-styles.css"
 
-const Payment = (props) => {
+const FundNow = ({setModal}) => {
   const [paymentSuccessful, setPaymentSuccessful] = useState(false);
 
-  // for the total amount
-  const amount = 1000;
-
-  const handlePayment = () => {
+  const handlePayment = (props) => {
     setPaymentSuccessful(true);
   };
 
   if (paymentSuccessful) {
-    return <PaymentSuccess onHideModal={props.onHide} />;
+    return <FundSuccess setModal={setModal} />;
   }
 
   return (
     <div className="pay-now-container">
-      <h1>Get unlimited access to everything</h1>
-     
-      <label>Total billed: {amount}</label>
-   
-      <p>Enter your credit card details to complete subscription</p>
+            <h1>Get unlimited access to everything</h1>
+      <p>Enter your credit card details to complete wallet funding</p>
+      <label>Amount</label>
+      <input type="text" placeholder="Enter amount in number" />
       <label>Card Number</label>
       <input type="text" placeholder="1234 1234 1234 1234" />
       <div className="input-group">
@@ -37,9 +34,10 @@ const Payment = (props) => {
       <p className="terms">
         By subscribing you agree to our Use of Service and you'll have access to all locked features until 20 Oct 2021.
       </p>
-      <button onClick={handlePayment} className="pay-now-button_">Pay Now</button>
+      <button onClick={handlePayment} className="pay-now-button">Pay Now</button>
     </div>
   );
 };
 
-export default Payment;
+export default FundNow;
+
