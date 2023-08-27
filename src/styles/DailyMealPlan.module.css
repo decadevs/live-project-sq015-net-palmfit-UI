@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,700&display=swap');
+
+.container{
+    height: auto;
+    width: auto;
+
+    margin-top: 70px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+
+.head {
+    display: flex;
+    flex-direction: column;
+    
+    gap: .75rem;
+}
+
+
+.btn_container {
+    border-radius: 4px;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: inline-block;
+    
+}
+.btn {
+    background-color: none;
+    border: none;
+    box-sizing: border-box;
+    width: 200px;
+    height: 60px;
+    padding: 8px 35px ;
+}
+.selected {
+    background: #48a4a4;
+    color: #fff;
+}
+
+.notSelected {
+    background-color: #e3e5e5;
+}
+
