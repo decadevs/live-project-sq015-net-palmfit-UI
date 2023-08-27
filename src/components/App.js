@@ -22,9 +22,6 @@ import "../styles/Style.css";
 //import '../styles/FoodSearch.css';
 import Subscription from "./subscription/Subscription";
 
-import CalculateCalories from "./CalculateCalories";
-import Navigation from "./navigation/Navigation";
-import { NavLink } from "react-router-dom";
 import "../styles/App.css";
 
 //images
