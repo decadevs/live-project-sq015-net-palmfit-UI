@@ -1,29 +1,32 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600&display=swap');
 
-.left{
+.left {
     margin: 40px 0 10px 20px;
 }
 
-.mydata{
+.mydata {
     display: flex;
     justify-content: space-between;
     gap: 10px;
 }
-.mydata .first{
+
+.mydata .first {
     margin-left: 1px;
     gap: 10px;
     margin-right: 20px;
 }
-.first span{
+
+.first span {
     font-size: 16px;
     font-weight: 500;
 }
-.holder{
+
+.holder {
+    width: 100% !important;
     justify-content: space-between;
-    margin-left: 20px;
     font-family: Nunito Sans;
 }
+
 .holder button {
     outline: none;
     border: none;
@@ -31,6 +34,7 @@
     overflow: hidden;
     font-size: 18px;
 }
+
 .holder button:focus {
     outline: none;
     border: none;
@@ -41,26 +45,31 @@
     font-size: 18px;
 }
 
-.holder .leftt{
+.holder .leftt {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
-.holder .right{
+
+.holder .right {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 
 input::placeholder {
     text-align: right;
-}  
+}
 
-.inactive, .somewhat, .aactive{
+.inactive,
+.somewhat,
+.aactive {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.leftt:hover, .center:hover, .right:hover{
+.leftt:hover,
+.center:hover,
+.right:hover {
     background-color: #48A4A4;
     gap: 10px;
     color: #fff;
@@ -68,13 +77,15 @@ input::placeholder {
     font-weight: 500;
 }
 
-.Submit{
+.Submit {
     border-radius: 5px;
     font-size: 18px;
     font-weight: 500;
     margin-left: 50px;
 }
-.Submit:hover, .Submit:focus{
+
+.Submit:hover,
+.Submit:focus {
     border-radius: 5px;
     background-color: #48A4A4;
     font-weight: 500;
@@ -82,20 +93,20 @@ input::placeholder {
 }
 
 /* Left ELement */
-.rightELe{
+.rightELe {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #e7f3f3;
 }
 
-.sideHold{
+.sideHold {
     display: flex;
     justify-content: space-between;
     gap: 10px;
 }
 
-.sideHold .element{
+.sideHold .element {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -103,29 +114,31 @@ input::placeholder {
     border-radius: 10px;
     background-color: #bad1d1;
 }
-.sideHold .element:hover{
+
+.sideHold .element:hover {
     border-radius: 10px;
     background-color: #48A4A4;
     color: #fff;
 }
 
-.seeforU{
+.seeforU {
     display: flex;
     text-align: center;
     align-items: center;
 }
 
-.inner small{
+.inner small {
     margin-top: 30px;
-    
+
 }
 
-.buttHold{
+.buttHold {
     display: flex;
     flex-direction: column;
     text-align: center;
     /* width: 95%; */
 }
+
 .buttHold span {
     line-height: 18px;
 }
@@ -141,56 +154,62 @@ input::placeholder {
     align-items: center;
     color: #000;
     font-size: 16px;
-  }
-  
-  .content {
+}
+
+.content {
     padding: 30px;
     text-align: center;
-  }
+}
 
-  .content span {
+.content span {
     font-weight: 500;
     font-size: 18px;
-  }
-  .content .data{
+}
+
+.content .data {
     font-size: 48px;
     font-weight: 700;
-  }
+}
 
-  @media (max-width: 575.98px){
+@media (max-width: 575.98px) {
     .status {
         display: flex;
     }
+
     .status button {
         flex-direction: row;
         width: 35%;
     }
-    .mydata{
+
+    .mydata {
         display: flex;
         flex-direction: column;
     }
-    .mydata input{
+
+    .mydata input {
         /* width: 200px;  */
-        margin: 0 40px ;
+        margin: 0 40px;
     }
-    .Submit{
+
+    .Submit {
         margin: 0;
     }
 
-    .weightStatus{
+    .weightStatus {
         display: flex;
         flex-direction: column;
     }
+
     .container button {
         width: 30%;
     }
 
-    .container button span{
+    .container button span {
         display: none;
     }
 
-    .content .data{
+    .content .data {
         font-size: 34px;
         font-weight: 700;
-      }
-  }
+    }
+}

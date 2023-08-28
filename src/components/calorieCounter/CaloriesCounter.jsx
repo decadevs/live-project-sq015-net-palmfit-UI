@@ -2,7 +2,7 @@ import React from 'react'
 import '../../styles/CalCalories.css';
 
 function CaloriesCounter() {
-
+ 
     return (
         <div>
             <div className="holder row ml-5">

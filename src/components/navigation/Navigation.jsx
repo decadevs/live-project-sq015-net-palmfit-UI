@@ -48,10 +48,10 @@ function Navigation({menuIsOpen, setMenuIsOpen }) {
                 <img src={profile} alt="svg icon" />
                 <span>profile</span>
                 </NavLink>
-              <NavLink to={"/subscription"} className={styles.nav_link}>
+              {/* <NavLink to={"/subscription"} className={styles.nav_link}>
                 <img src={subscription} alt="svg icon" />
                 <span>subscription</span>
-                </NavLink>
+                </NavLink> */}
             </>
 
             
@@ -69,16 +69,16 @@ function Navigation({menuIsOpen, setMenuIsOpen }) {
             <>
               <NavLink to={"/users"} className={styles.nav_link}>
                 <img src={users} alt="svg icon" />
-                <span>users tab</span>
+                <span>users</span>
                 </NavLink>
               <NavLink to={"/foods"} className={styles.nav_link}>
                 <img src={food} alt="svg icon" />
                 <span>foods</span>
                 </NavLink>
-              <NavLink to={"/analytics"} className={styles.nav_link}>
+              {/* <NavLink to={"/analytics"} className={styles.nav_link}>
                 <img src={analytics} alt="svg icon" />
                 <span>analytics</span>
-                </NavLink>
+                </NavLink> */}
               <NavLink to={"/referrals"} className={styles.nav_link}>
                 <img src={links} alt="svg icon" />
                 <span>referrals</span>

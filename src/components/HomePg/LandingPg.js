@@ -19,7 +19,7 @@ function LandingPage() {
     return (
 
         <div className="con__">
-            <Header />
+            {/* <Header /> */}
             <div className="container__">
                 <CalorieModal
                     show={modalShow}
@@ -36,7 +36,7 @@ function LandingPage() {
                         <div className='content'>
                             <h2 className="mt-sm-4">Your fitness <span>starts</span> with what you eat</h2>
                             <p className="sect">
-                                At Palmfit, we offer you the chance to keep tab on what you and when you eat. It requires minimal commitment and the journey starts when you say it starts.Click below to register!
+                                At Palmfit, we offer you the chance to keep tab on what you and when you eat. It requires minimal commitment and the journey starts when you say it starts.
                             </p>
                             <a className="btn text-white btn__" style={{ backgroundColor: "#1A8D8D" }} href="#" role="button"
                                 onClick={() => setModalShow(true)}

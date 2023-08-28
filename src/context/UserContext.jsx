@@ -6,7 +6,8 @@ const UserContext = createContext("")
 
 let InitUser = {
     role: "",
-    jwt: ""
+    jwt: "",
+    isLoggedIn: false
 }
 
 
