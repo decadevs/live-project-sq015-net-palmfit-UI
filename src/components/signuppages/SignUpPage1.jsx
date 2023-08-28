@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 // import '../styles/SignUpPage1.css';
-// import SignUpBanner from '../images/SignUpBanner.svg';
+import "../../styles/SignUpPage1.css"
+import SignUpBanner from '../../images/SignUpBanner.svg';
 import axios from 'axios';
+import {Link} from 'react-router-dom'
 
 function SignUpPage1() {
     const [firstName, setFirstName] = useState('');
@@ -68,7 +70,7 @@ function SignUpPage1() {
                 <section>
                     <div className="inner">
                         <div className="image-holder">
-                            {/* <img src={SignUpBanner} alt="" height="600vh" width="100%" /> */}
+                            <img src={SignUpBanner} alt="" height="600vh" width="100%" />
                         </div>
                         <div className="form-content">
                             <div className="form-header">
@@ -107,7 +109,7 @@ function SignUpPage1() {
                                         placeholder="Enter your email"
                                         className="form-control"
                                         value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
+                                        // onChange={(e) => setEmail(e.target.value)}
                                     />
                                 </div>
                             </div>
@@ -119,7 +121,7 @@ function SignUpPage1() {
                                         placeholder="Enter your password"
                                         className="form-control"
                                         value={password}
-                                        onChange={(e) => setPassword(e.target.value)}
+                                        // onChange={(e) => setPassword(e.target.value)}
                                     />
                                     <small> Must have uppercase, lowercase, number, special character.</small>
                                 </div>
@@ -132,7 +134,7 @@ function SignUpPage1() {
                                         placeholder="Verify your password"
                                         className="form-control"
                                         value={verifyPassword}
-                                        onChange={(e) => setVerifyPassword(e.target.value)}
+                                        // onChange={(e) => setVerifyPassword(e.target.value)}
                                     />
                                 </div>
                             </div>
@@ -153,20 +155,21 @@ function SignUpPage1() {
                             </div>}
                             <div className="form-row">
                                 <div className="form-holder">
-                                    <button
+                                    <Link 
+                                        to="/opt-verification"
                                         className="btn btn-success form-control"
                                         type="submit"
                                         style={{ backgroundColor: 'rgb(26,141,141)', color: 'white', marginTop: '2vh' }}
-                                        onClick={handleRegister}
+                                        // onClick={handleRegister}
                                         disabled={!agreeTerms} // Disable button if terms are not agreed
                                     >
                                         Register
-                                    </button>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="form-holder" style={{ textAlign: 'center' }}>
                                 <label>
-                                    <small><b> Already have an account? <a href="#">Login</a></b></small>
+                                    <small><b> Already have an account? <Link to="/" href="#">Login</Link></b></small>
                                 </label>
                             </div>
                         </div>

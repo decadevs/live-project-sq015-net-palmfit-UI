@@ -18,7 +18,7 @@ const Header = () => {
           <a className="nav-link" href="#">Calorie Counter</a>
         </li>
         <li className="nav-item">
-          <NavLink to="/login" className="nav-link" href="#">Sign-in</NavLink>
+          <NavLink to="/login" className="nav-link">Sign-in</NavLink>
         </li>
         <li className="nav-item">
         <NavLink to="/sign-up" className="btn text-white" style={{backgroundColor: 'teal'}}>Get Started</NavLink>

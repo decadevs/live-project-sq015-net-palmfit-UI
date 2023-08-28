@@ -1,6 +1,7 @@
 //sign up
-import { default as SignUpPage1 } from "./signuppages/SignUpPage1"
-import { default as SignupPage2} from "./signuppages/SignUpPage2"
+export { default as SignUpPage1 } from "./signuppages/SignUpPage1"
+// export { default as SignupPage2} from "./signuppages/SignUpPage2"
+export { default as OTPValidationPage } from "./signuppages/OTPValidationPage"
 
 
 // daily meal
@@ -57,6 +58,9 @@ export { default as CaloriesCounter } from "./calorieCounter/CaloriesCounter"
 // funds
 export { default as FundNow } from "./subscriptionFrames/fund/FundNow"
 export { default as FundSuccess } from "./subscriptionFrames/fund/FundSuccess"
+
+// login
+export { default as Login } from "./loginPage/Login"
 
 
 //meal

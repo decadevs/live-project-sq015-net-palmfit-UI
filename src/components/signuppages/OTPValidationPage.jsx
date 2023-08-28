@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-// import '../styles/SignUpPage2.css';
-// import SignUpBanner from '../images/SignUpBanner.svg';
+import "../../styles/SignUpPage2.css"
+import { redirect } from "react-router-dom"
+import SignUpBanner from "../../images/SignUpBanner.svg"
  
 
 
@@ -26,10 +27,12 @@ function OTPValidationPage() {
 
     const handleOTPSubmit = (event) => {
         event.preventDefault();
+        redirect("/login")
         const otp = otpValues.join("");
         // Here you can implement the logic to verify the OTP
         // For example, you can send the OTP to a server for validation
         // If the OTP is valid, you can proceed with the registration process
+
     };
 
     return (
@@ -39,7 +42,7 @@ function OTPValidationPage() {
                 <section>
                     <div className="inner">
                         <div className="image-holder">
-                            {/* <img src={SignUpBanner} alt="" height="600vh" width="100%" /> */}
+                            <img src={SignUpBanner} alt="" height="600vh" width="100%" />
                         </div>
                         <div className="form-content">
                             <div className="form-header">
