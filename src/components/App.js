@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import LandingPage from '../components/HomePg/LandingPg';
-// import '../styles/App.css';
-import FoodSearch from './FoodSearch';
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import '../styles/App.css';
-import { ProfilePage } from './ProfilePage';
-
-import PaymentSubscription from './Payment/Subscription';
-import FoodSingleOne from '../components/components/meal/FoodSingleOne';
-=======
 import LandingPage from "../components/HomePg/LandingPg";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
@@ -19,7 +7,6 @@ import "../styles/FoodSearch.css";
 import { ProfilePage } from "./ProfilePage";
 import PaymentSubscription from "./Payment/Subscription";
 import FoodSingleOne from "../components/components/meal/FoodSingleOne";
->>>>>>> c4318b0fa042c04133778d7eefc3a65f3c95a00a
 
 //import '../style/Style.css';
 
