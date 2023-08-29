@@ -5,9 +5,9 @@ import { createContext, useReducer } from "react";
 const UserContext = createContext("")
 
 let InitUser = {
-    role: "",
-    jwt: "",
-    isLoggedIn: false
+    role: "user",
+    jwt: "c",
+    isLoggedIn: true
 }
 
 

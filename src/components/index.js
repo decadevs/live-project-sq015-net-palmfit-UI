@@ -15,7 +15,7 @@ export { default as FoodSearch } from "./foodSearch/FoodSearch"
 // homePg
 export { default as Header } from "./homePg/Header"
 export { default as Footer } from "./homePg/Footer"
-export { default as Landing } from "./homePg/LandingPg"
+export { default as LandingPg } from "./homePg/LandingPg"
 export { default as CalorieModal } from "./homePg/CalorieModal"
 
 // meal-list-plan
@@ -25,7 +25,7 @@ export { default as MealInfo } from "./meal-List-Plan/MealInfo"
 export { default as SearchFood } from "./meal-List-Plan/SearchFood"
 
 // MealPlans
-// export { default as MealCard } from "./mealPlans/MealCard"
+export { default as MealCard } from "./mealPlans/MealCard"
 export { default as MealPlan } from "./mealPlans/Mealplan"
 
 // navigation

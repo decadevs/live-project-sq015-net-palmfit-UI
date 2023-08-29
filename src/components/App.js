@@ -6,7 +6,7 @@ import '../styles/App.css';
 import { UserContextConsumer } from '../context/UserContext';
 
 //components
-import { Header, Footer, Landing, NavigationBar, SignUpPage1, OTPValidationPage, MealPlan, ProfilePage, Subscription, UsersTab, DailyPlanBreakfast, WeeklyPlanbreakfast, CaloriesCounter, Login, FoodSearch, LoadingPage } from "./index"
+import { Header, Footer, LandingPg, NavigationBar, SignUpPage1, OTPValidationPage, MealPlan, ProfilePage, Subscription, UsersTab, DailyPlanBreakfast, WeeklyPlanbreakfast, CaloriesCounter, Login, FoodSearch, LoadingPage } from "./"
 
 //auth
 import Auth from '../utils/Auth';
@@ -25,7 +25,7 @@ function App() {
           <div>
             <Header />
             <Routes>
-              <Route path='/' index element={<Landing />} />
+              <Route path='/' index element={<LandingPg />} />
               <Route path='/sign-up' element={<SignUpPage1 />} />
               <Route path='/opt-verification' element={<OTPValidationPage />} />
               <Route path='/login' element={<Login />} />
