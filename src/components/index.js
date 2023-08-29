@@ -26,7 +26,7 @@ export { default as SearchFood } from "./meal-List-Plan/SearchFood"
 
 // MealPlans
 export { default as MealCard } from "./mealPlans/MealCard"
-export { default as MealPlan } from "./mealPlans/Mealplan"
+export { default as MealPlan } from "./mealPlans/MealPlan"
 
 // navigation
 export { default as Navigation } from "./navigation/Navigation"
