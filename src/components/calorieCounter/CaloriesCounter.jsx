@@ -1,68 +1,116 @@
 import React from 'react'
-import '../../styles/CalCalories.css';
+import styles from '../../styles/CalCalories.module.css';
+import Form from 'react-bootstrap/Form';
+import Table from 'react-bootstrap/Table';
 
 function CaloriesCounter() {
- 
     return (
         <div>
-            <div className="holder row ml-5">
-                <div className="col"></div>
-                <div className="left col-md-7 mt-3">
-                    <h3 className='mb-5 mt-5'>Calculate your calorie</h3>
-                    <div className="mydata col-md-11 d-flex">
-                        <div className="first d-flex flex-xs-column">
-                            <span className='w-md-75'>Your Age</span>
-                            <input class="form-control p-2" type="text" placeholder="" aria-label="Search" />
-                        </div>
-                        <div className="first d-flex">
-                            <span>Height</span>
-                            <input class="form-control p-2" type="text" placeholder="cm" aria-label="Search" />
-                        </div>
-                        <div className="first d-flex">
-                            <span>Weight</span>
-                            <input class="form-control p-2" type="text" placeholder="kg" aria-label="Search" />
-                        </div>
+            <div className={`${styles.holder} row `}>
+                <div className={`${styles.left} col-md-7 mt-3 `}>
+                    <div className={`${styles.weekHold} col-md-3`}>
+                        <Form.Select aria-label="Default select example">
+                            <option value="1">Monday</option>
+                            <option value="2">Tuesday</option>
+                            <option value="3">Wednesday</option>
+                            <option value="4">Thursday</option>
+                            <option value="5">Friday</option>
+                            <option value="6">Saturday</option>
+                            <option value="7">Sunday</option>
+                        </Form.Select>
                     </div>
 
-                    <div className="gender mb-5 mt-3">
-                        <h4>You're a</h4>
-                        <div className=''><button className="leftt">Male</button><button className="right">Female</button></div>
-                    </div>
+                    <div className={`${styles.food_controller} gap-3`}>
+                        <div className={`${styles.dayMeal} col-md-4 col-sm-6 mt-3 mr-3`}>
+                            <Table striped bordered hover variant="light">
+                                <tbody>
+                                    <tr className={`${styles.foodCheck}`}>
+                                        <td colSpan={2}>Breakfast</td>
+                                        <td className='d-flex gap-5'><h5>Rice</h5></td>
+                                    </tr>
+                                    <tr>
+                                        <td colSpan={2}>Lunch</td>
+                                        <td><h5>Beans</h5> </td>
+                                    </tr>
+                                    <tr>
+                                        <td colSpan={2}>Dinner</td>
+                                        <td><h5>Moi-Moi</h5></td>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                        </div>
 
-                    <div className="weightControl mb-5">
-                        <h4>What is your weight goal</h4>
-                        <div className=''><button className='leftt'>Lose</button><button className='center'>Maintain</button><button className='right'>Gain</button></div>
-                    </div>
+                        <div className={`${styles.dataholder}`}>
+                            <div className={`${styles.DetailsPerFood} col-md-12`}>
+                                <div className="weekHold col-md-5 mt-3">
+                                    <Form.Select aria-label="Default select example">
+                                        <option value="1">Rice</option>
+                                        <option value="2">Beans</option>
+                                        <option value="3">MoiMoi</option>
+                                    </Form.Select>
+                                </div>
+                                <div className={`${styles.hold} d-flex gap-3 mt-3`}><h5>237</h5> <span>Calories</span></div>
 
-                    <div className="weightStatus mb-5">
-                        <h4 className='container'>What is your weight goal</h4>
-                        <div className='container'>
-                            <div className='row mr-5'>
-                                <button className='leftt col-md-4 col-sm-4'><div className="inactive"><h5>Inactive</h5> <span>No exercise</span></div></button>
-                                <button className='center col-md-4 col-sm-4'><div className="somewhat"><h5>Somewhat Active</h5> <span>(3x-4x per week)</span></div></button>
-                                <button className='right col-md-4 col-sm-4'><div className="aactive"><h5>Active</h5> <span>(5x+ per week)</span></div></button>
+                                <div className={`${styles.custominput} mt-3 d-flex gap-2`}>
+                                    <input type="text" id="customInput" placeholder='food quantity'/>
+
+                                    <div className={`${styles.Hold} col-md-4"`}>
+                                        <Form.Select aria-label="Default select example">
+                                            <option value="1">cup</option>
+                                            <option value="2">pounce</option>
+                                            <option value="3">grams</option>
+                                        </Form.Select>
+                                    </div>
+                                </div>
+                                
+
+                                <div className={`${styles.types} d-flex gap-5 mt-5 justify-content-around`}>
+                                    <div className={`${styles.left}`}><h5>Carbs</h5> <span>0.85 <span>g</span></span></div>
+                                    <div className={`${styles.center}`}><h5>Fat</h5> <span>0.02<span>g</span></span></div>
+                                    <div className={`${styles.right}`}><h5>Protein</h5> <span>0.15<span>g</span></span></div>
+                                </div>
+                            </div>
+                            <div className={`${styles.summary} col-md-12 mt-3`}>
+                                <Table striped bordered hover variant="light">
+                                    <tbody>
+                                        <tr>
+                                            <td colSpan={2}>Total</td>
+                                            <td>2102 <span>g</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td colSpan={2}>Youd daily goal</td>
+                                            <td>7120 <span>g</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td colSpan={2}>Remaining</td>
+                                            <td >5023 <span>g</span></td>
+                                        </tr>
+                                    </tbody>
+                                </Table>
                             </div>
                         </div>
+                        
                     </div>
-
-                    <button type="submit" className='Submit col-md-6 col-sm-10 mb-4 align-content-center'>Calculate Calorie</button>
+                    
                 </div>
 
-                <div className="container rightELe col-md-4">
-                    <h3 className='mt-5 mb-4'>Calorie Estimate</h3>
-                    <div class="circle col-xs-4">
-                        <div className="content">
+
+                {/* Right Side */}
+                <div className={`${styles.rightELe} container col-md-4`}>
+                    <h3 className='mt-3 mb-4'>Calorie Estimate</h3>
+                    <div class={`${styles.circle} col-xs-4`}>
+                        <div className={`${styles.content}`}>
                             <span>Total</span>
-                            <div className="data">1900</div>
+                            <div className={`${styles.data}`}>1900</div>
                             <span>kcal</span>
                         </div>
                     </div>
+                    
+                    <div className={`${styles.seeforU} m-4 `}><span> See how your daily calorie needs change if you alter your activity level</span></div>
 
-                    <div className='m-4 seeforU'><span> See how your daily calorie needs change if you alter your activity level</span></div>
-
-                    <div className="container sideHold col-md-10 col-sm-10">
-                        <button className='element col-md-4 col-sm-4'>
-                            <div className="inner">
+                    <div className={`${styles.sideHold} container col-md-10 col-sm-10`}>
+                        <button className={`${styles.element} col-md-4 col-sm-4`}>
+                            <div className={`${styles.inner}`}>
                                 <div>
                                     <h3>1900</h3>
                                     <span>kcal</span>
@@ -70,8 +118,8 @@ function CaloriesCounter() {
                                 <small>Incactive</small>
                             </div>
                         </button>
-                        <button className='element col-md-4 col-sm-4'>
-                            <div className="inner">
+                        <button className={`${styles.element} col-md-4 col-sm-4`}>
+                            <div className={`${styles.inner}`}>
                                 <div>
                                     <h3>2100</h3>
                                     <span>kcal</span>
@@ -79,8 +127,8 @@ function CaloriesCounter() {
                                 <small>Somewhat Active</small>
                             </div>
                         </button>
-                        <button className='element col-md-4 col-sm-4'>
-                            <div className="inner">
+                        <button className={`${styles.element} col-md-4 col-sm-4`}>
+                            <div className={`${styles.inner}`}>
                                 <div>
                                     <h3>2600</h3>
                                     <span>kcal</span>
@@ -90,7 +138,7 @@ function CaloriesCounter() {
                         </button>
                     </div>
 
-                    <div className='buttHold m-4 col-md-10 col-sm-10'>
+                    <div className={`${styles.buttHold} m-4 col-md-10 col-sm-10`}>
                         <h2>Our Recommendation</h2>
                         <span className='col-md-12'>We recommend that you increase your daily calorie intake from 1.900 to 2.100,
                             you should add 1 pound (0.45 kg) in 1 week, as 3,500 calories (500 calories saved over 7 days)

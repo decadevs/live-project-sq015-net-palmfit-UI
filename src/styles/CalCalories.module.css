@@ -1,7 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600&display=swap');
 
+.DetailsPerFood {
+    border: 1px solid grey;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.custominput input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #000;
+    padding: 5px;
+    outline: none;
+    text-align: left;
+    width: 50%;
+}
+
+.foodCheck {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+}
+
 .left {
-    margin: 40px 0 10px 20px;
+    margin: 0 0 10px 40px;
+    /* alihn right */
 }
 
 .mydata {
@@ -22,8 +44,8 @@
 }
 
 .holder {
-    width: 100% !important;
     justify-content: space-between;
+    margin-left: 20px;
     font-family: Nunito Sans;
 }
 
@@ -56,7 +78,7 @@
 }
 
 input::placeholder {
-    text-align: right;
+    text-align: left;
 }
 
 .inactive,
@@ -94,6 +116,7 @@ input::placeholder {
 
 /* Left ELement */
 .rightELe {
+    margin-top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -144,10 +167,10 @@ input::placeholder {
 }
 
 .circle {
-    width: 200px;
-    height: 200px;
+    width: 170px;
+    height: 170px;
     background-color: #fff;
-    border: 10px solid #48A4A4;
+    border: 5px solid #48A4A4;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -167,7 +190,7 @@ input::placeholder {
 }
 
 .content .data {
-    font-size: 48px;
+    font-size: 32px;
     font-weight: 700;
 }
 

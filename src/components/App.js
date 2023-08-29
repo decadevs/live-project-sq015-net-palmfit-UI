@@ -6,7 +6,7 @@ import '../styles/App.css';
 import { UserContextConsumer } from '../context/UserContext';
 
 //components
-import { Header, Footer, Landing, NavigationBar, SignUpPage1, OTPValidationPage, MealPlan, ProfilePage, Subscription, UsersTab, DailyPlanBreakfast, WeeklyPlanbreakfast, CaloriesCounter, Login, FoodSearch } from "./index"
+import { Header, Footer, Landing, NavigationBar, SignUpPage1, OTPValidationPage, MealPlan, ProfilePage, Subscription, UsersTab, DailyPlanBreakfast, WeeklyPlanbreakfast, CaloriesCounter, Login, FoodSearch, LoadingPage } from "./index"
 
 //auth
 import Auth from '../utils/Auth';
@@ -17,6 +17,7 @@ function App() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const { userState } = useContext(UserContextConsumer)
 
+  const [loading, setLoading] = useState(true);
   return (
     <>
       {
@@ -49,11 +50,14 @@ function App() {
                       <Route path='/profile' element={<Auth><ProfilePage /></Auth>} />
                       <Route path='/subscription' element={<Auth><Subscription /></Auth>} />
                       <Route path='/users' element={<Auth><UsersTab /></Auth>} />
-                      <Route path='/daily-plan/:id' element={<Auth><DailyPlanBreakfast /></Auth>} />
                       <Route path='/meal-plans' element={<Auth><MealPlan /></Auth>} />
-                      <Route path='/get-plan' element={<Auth><WeeklyPlanbreakfast /></Auth>} />
+
+                      <Route path='/weekly-plan/:id' element={<Auth><DailyPlanBreakfast /></Auth>} />
+                      <Route path='/get-plan/:page' element={<Auth><WeeklyPlanbreakfast /></Auth>} />
                       <Route path='/calorie-calulator' element={<Auth><CaloriesCounter /></Auth>} />
                       <Route path="/meal-diary" element={<Auth><FoodSearch /></Auth>} />
+                      <Route path='/loading' element={<LoadingPage state={loading} />} />
+
 
 
                     </Routes>

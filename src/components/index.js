@@ -62,6 +62,8 @@ export { default as FundSuccess } from "./subscriptionFrames/fund/FundSuccess"
 // login
 export { default as Login } from "./loginPage/Login"
 
+//loading page
+export { default as LoadingPage } from "./loadingPage/LoadingPage"
 
 //meal
 // export { default as FoodSingleOne } from "./meal/FoodSingleOne"

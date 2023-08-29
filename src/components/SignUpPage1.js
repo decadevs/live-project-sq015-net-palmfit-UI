@@ -1,10 +1,15 @@
 import React from 'react';
 import '../styles/SignUpPage1.css';
 import SignUpBanner from '../images/SignUpBanner.svg';
+import { LoadingPage } from './';
 
 
 function SignUpPage1() {
+    const [loading, setLoading] = useState(true);
+
     return (
+        <>
+            <LoadingPage show={loading} onHide={setLoading} />
         <div className="wrapper">
             <form action="" id="signup-form">
                 <section>
@@ -71,7 +76,9 @@ function SignUpPage1() {
                     </div>
                 </section>
             </form>
-        </div>
+            </div>
+        </>
+
     );
 }
 

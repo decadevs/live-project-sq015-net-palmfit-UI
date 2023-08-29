@@ -1,54 +1,60 @@
 import Accordion from 'react-bootstrap/Accordion';
 import styles from './DailyPlanBreakfast.module.css';
+import { Link, useNavigate } from 'react-router-dom';
+import arrow from './arrow.svg'
+
 
 function DailyPlanAccordion() {
+  // const history = useNavigate()
+
+
   return (
-    <Accordion>
-      <Accordion.Item eventKey="0">
-        <Accordion.Header>
-            <div className={styles.Item_header}>
-                <h6>Breakfast</h6>
-                <span>692 calories</span>
-            </div>
-        </Accordion.Header>
-        <Accordion.Body>
-         <div className={styles.dropDown}>
-                <span>rice</span>
-                <span>2.5 cups</span>
-                <span>605 calories</span>
-                <span>Efo riro</span>
-                <span>100 grams</span>
-                <span>87 calories</span>
-         </div>
-        </Accordion.Body>
-      </Accordion.Item>
-      <Accordion.Item eventKey="1">
-        <Accordion.Header>
-            <div className={styles.Item_header}>
-                <h6>Lunch</h6>
-                <span>723 calories</span>
-            </div>
-        </Accordion.Header>
-        <Accordion.Body>
-            <div className={styles.dropDown}>
-                
-            </div>
-        </Accordion.Body>
-      </Accordion.Item>
-      <Accordion.Item eventKey="2">
-        <Accordion.Header>
-            <div className={styles.Item_header}>
-                <h6>Dinner</h6>
-                <span>491 calories</span>
-            </div>
-        </Accordion.Header>
-        <Accordion.Body>
-            <div className={styles.dropDown}>
-                
-            </div>
-        </Accordion.Body>
-      </Accordion.Item>
-    </Accordion>
+    <div className={styles.con__}>
+
+      <div className={styles.item}>
+        <Link to={`/get-plan/${1}`} className={styles.link}>
+          <div className={styles.text_con}>
+            <span>Week 1</span>
+            <span>meal plan</span>
+          </div>
+          <img src={arrow} alt="" />
+        </Link>
+      </div>
+
+      <div className={styles.item}>
+        <Link to={`/get-plan/${2}`} className={styles.link}>
+          <div className={styles.text_con}>
+            <span>Week 2</span>
+            <span>meal plan</span>
+          </div>
+          <img src={arrow} alt="" />
+        </Link>
+      </div>
+
+
+      <div className={styles.item}>
+        <Link to={`/get-plan/${3}`} className={styles.link}>
+          <div className={styles.text_con}>
+            <span>Week 3</span>
+            <span>meal plan</span>
+          </div>
+          <img src={arrow} alt="" />
+        </Link>
+      </div>
+
+
+      <div className={styles.item}>
+        <Link to={`/get-plan/${4}`} className={styles.link}>
+          <div className={styles.text_con}>
+            <span>Week 4</span>
+            <span>meal plan</span>
+          </div>
+          <img src={arrow} alt="" />
+        </Link>
+      </div>
+
+
+    </div>
   );
 }
 

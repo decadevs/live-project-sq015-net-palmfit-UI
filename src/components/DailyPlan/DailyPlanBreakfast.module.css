@@ -91,3 +91,35 @@
   background-color: #E5E5E5;
   padding: .75em;
 }
+
+.con__{
+  width: 100%;
+}
+
+.item {
+  border-top: 1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
+
+}
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  color: #001A1A;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem .5rem;
+  align-items: center;
+
+}
+
+.link:hover {
+  background-color: #E5E5E5;
+  color: #001A1A;
+}
+
+.text_con {
+  display: flex;
+  flex-direction: column;
+}

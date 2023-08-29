@@ -1,14 +1,15 @@
-import React from 'react'
-import {useParams, Link} from "react-router-dom"
+import React, {useState} from 'react'
+import { useParams, useNavigate } from "react-router-dom"
 import DailyPlanAccordion from './DailyPlanAccordion';
-// import styles from './DailyPlanBreakfast.module.css';
 import styles from "../../styles/WeeklyPlanbreakfast.module.css"
-// import styles from '../../styles/WeeklyPlanbreakfast.module.css';
+import LoadingPage from '../loadingPage/LoadingPage';
 
 
 
 function DailyPlanBreakfast() {
     const { id } = useParams();
+    const navigate = useNavigate()
+    const [loading, setLoading] = useState(false)
 
     const css = {
         borderRadius: '4px',
@@ -18,9 +19,23 @@ function DailyPlanBreakfast() {
         padding: '.5rem 1.5rem',
         textDecoration: 'none',
     }
+
+
+
+    function handleBtnClick() {
+        console.log("click")
+        //do something
+
+        
+        navigate("/calorie-calulator")
+
+        
+    }
     
 
     return (
+        <>
+        <LoadingPage state={loading} />
         <div className={styles.container}>
             <div className={styles.weeklyPlan}>
                 <div className={styles.header_con}>
@@ -28,21 +43,19 @@ function DailyPlanBreakfast() {
                         <h4>Name of Daily plan</h4>
                         <p>1874 calories</p>
                     </div>
-                    <Link style={css} to='/get-plan'>Get plan</Link>
+                    <button type='button' style={css} onClick={handleBtnClick}>Select plan</button>
                 </div>
                 <div className={styles.main_body}>
 
                     <div className={styles.Accordion_con}>
-                        <div className={styles.Accordion_title_con}>
-                            {/* <h5>Day 1</h5>
-                            <span>1874 calories</span> */}
-                        </div>
                         <DailyPlanAccordion />
                     </div>
 
                 </div>
             </div>
-        </div>
+            </div>
+        </>
+
       );
     }
 

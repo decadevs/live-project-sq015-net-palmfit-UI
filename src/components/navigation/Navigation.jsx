@@ -40,10 +40,10 @@ function Navigation({menuIsOpen, setMenuIsOpen }) {
                 <img src={plans} alt="svg icon" />
                 <span>meal plans</span>
                 </NavLink>
-              <NavLink to={"/meal-diary"} className={styles.nav_link}>
+              {/* <NavLink to={"/meal-diary"} className={styles.nav_link}>
                 <img src={diary} alt="svg icon" />
                 <span>meal diary</span>
-                </NavLink>
+                </NavLink> */}
               <NavLink to={"/profile"} className={styles.nav_link}>
                 <img src={profile} alt="svg icon" />
                 <span>profile</span>
