@@ -14,7 +14,7 @@ let style = {
     backgroundColor: ""
 }
 
-function LandingPage() {
+function LandingPg() {
     const [modalShow, setModalShow] = useState(false)
     return (
 
@@ -135,4 +135,4 @@ function WordsFromUsers(props) {
 }
 
 
-export default LandingPage;
+export default LandingPg;
