@@ -25,7 +25,7 @@ export default function CalorieModal(props) {
         Tbs: 0,
         Ounce: 1,
         Cup: 2,
-        Pound: 3
+        Piece: 3
       };
 
       const response = await fetch(
@@ -33,7 +33,7 @@ export default function CalorieModal(props) {
       );
       const data = await response.json();
       if (data.succeeded) {
-        const parsedCalorie = parseFloat(data.data);
+        const parsedCalorie = parseFloat(data.data.calorie);
         setCalorie(parsedCalorie);
       }
     } catch (error) {
@@ -97,8 +97,8 @@ export default function CalorieModal(props) {
                   <Dropdown.Item onClick={() => handleUnitChange("Cup")}>
                     Cup
                   </Dropdown.Item>
-                  <Dropdown.Item onClick={() => handleUnitChange("Pound")}>
-                    Pound
+                  <Dropdown.Item onClick={() => handleUnitChange("Piece")}>
+                    Piece
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
