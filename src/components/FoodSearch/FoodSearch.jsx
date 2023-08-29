@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import search from '../images/search.svg';
-import FoodResult from '../FoodSearch/FoodResult.jsx';
+import FoodResult from './FoodResult.jsx';
 
 
 const FoodSearch = () => {

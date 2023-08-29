@@ -5,7 +5,7 @@ import twitterLogo from '../images/logos_twitter.svg';
 import whatsappLogo from '../images/logos_whatsapp.svg';
 
 
-export function ProfilePage () {
+export default function ProfilePage () {
   return (
     <div className="element">
         <div className="profileholder">

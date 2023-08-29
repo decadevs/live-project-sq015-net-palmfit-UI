@@ -2,6 +2,7 @@ import React from 'react';
 import "../../styles/MealPlan.css";
 import MealCard from './Mealcard';
 
+
 const MealPlan = () => {
     const mealImageUrl = ["food.png", "food.png", "food.png", "food.png", "food.png"];
     const mealPlan = ["Breakfast", "Dinner", "Lunch", "Breakfast", "dinner"];
@@ -12,9 +13,10 @@ const MealPlan = () => {
         "Take your breakfast early.", "take your dinner late"
     ];
 
+
     const cards = mealPlan.map((plan, index) => (
-        <div className="meal-card" key={index}>
-            <MealCard imageUrl={mealImageUrl[index]} cardLabel={plan} cardText={mealText[index]} />
+        <div  className="meal-card" key={index}>
+            <MealCard imageUrl={mealImageUrl[index]} cardLabel={plan} cardText={mealText[index]} mealId={'please do not forget to pass the meal id along'} />
         </div>
     ));
 

@@ -1,0 +1,161 @@
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+  .login-text {
+    font-size: 20px;
+    margin-top: 1rem;
+  }
+  
+  .form-group {
+    margin-bottom: 0.5rem;
+  }
+  
+  .login-button {
+    font-size: 16px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 750px) {
+
+  .login-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .login-image {
+    max-width: 80%;
+    margin-bottom: 1rem;
+  }
+  
+  .login-text {
+    font-size: 18px;
+    margin-top: 1rem;
+  }
+  
+  .email-input,
+  .password-input {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.login-image{
+  width: 720;
+  height: 900;
+  flex-shrink: 0;
+}
+
+.text-center {
+padding-left: 2.5rem; 
+padding-right: 2.5rem;
+}
+
+.container-fluid{
+display: flex;
+}
+
+.login-text{
+  color: var(--dark, #001A1A);
+font-family: "Nunito Sans";
+font-size: 24.701px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+display: flex;
+flex-direction: column;
+margin-top: 10rem;
+
+}
+
+.Email{
+  color: var(--dark, #001A1A);
+font-family: "Nunito Sans";
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.email-input{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 398px;
+  height: 52px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 1px solid var(--grey, #B3BABA);
+  background: #FFF;
+  padding-left: 18px;
+}
+.login-container{
+  display: flex;
+  flex-direction: row;
+  gap: 4rem ;
+}
+.form-container{
+  display: flex;
+  flex-direction: column;
+}
+.password-input{
+  margin-top: 1rem;
+  width: 398px;
+  height: 52px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 1px solid var(--grey, #B3BABA);
+  background: #FFF;
+  padding-left: 18px;
+  margin-bottom: 0;
+}
+.forget-password{
+  color: var(--dark-02, #334848);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 4rem;
+  cursor: pointer;
+  text-align: left;
+}
+.login-button{
+  border-radius: 5px;
+  background: var(--teal, #1A8D8D);
+  width: 100%s;
+  width: 420px;
+  height: 60px;
+  flex-shrink: 0;
+  color: white;
+  font-size: 18px;
+  border-style: none;
+  text-align: center;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+.link{
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
+}
+button:hover{
+  background-color: #037070;
+  color: rgb(101, 230, 101);
+}
+p{
+  text-align: center;
+  text-decoration: none;
+}
+h5{
+
+ font-size: 14px;
+ margin-top: 2rem;
+ color: var(--dark, #001A1A);
+ font-family: Nunito Sans;
+ font-size: 18.526px;
+ font-style: normal;
+ font-weight: 400;
+ line-height: normal
+}
+
