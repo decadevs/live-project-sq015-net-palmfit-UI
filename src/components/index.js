@@ -67,6 +67,9 @@ export { default as LoadingPage } from "./loadingPage/LoadingPage";
 //meal
 // export { default as FoodSingleOne } from "./meal/FoodSingleOne"
 
+//error page
+export { default as ErrorPage } from "./ErrorPage"
+
 //others
 export { default as CalculateCalories } from "./CalculateCalories";
 export { default as EmailSend } from "./EmailSend";
