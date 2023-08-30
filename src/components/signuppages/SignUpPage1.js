@@ -45,8 +45,8 @@ function SignUpPage1() {
                 setSuccessMessage('');
                 return;
             }
-          /*https://palmfit-test.onrender.com/api/SignUp/register*/
-            const response = await axios.post('https://localhost:7069/api/SignUp/register', {
+           
+            const response = await axios.post('https://palmfit-test.onrender.com/api/SignUp/register', {
                 firstName,
                 lastName,
                 email,
@@ -65,7 +65,7 @@ function SignUpPage1() {
                 setError(''); // Clear any previous error
                 setSuccessMessage(response.data.data);
                 localStorage.setItem('email', email);
-                navigate("/login");
+                navigate("/opt-verification");
             }
             // Clear input fields after successful registration
             setFirstName('');
