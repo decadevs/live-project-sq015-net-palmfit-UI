@@ -15,17 +15,12 @@ img {
     max-width: 100%;
 }
 
-.wrapper {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+  
 
 
 #Signuplogo {
     position: relative;
-    margin-left: -30vw;
+   
 }
 
 
@@ -53,7 +48,7 @@ img {
 .form-content {
     font-size: 13px;
     width: 50%;
-    padding-top: 10vh;
+   
     padding-left: 3vw;
     padding-right: 5vw;
 }
@@ -61,12 +56,14 @@ img {
 .form-header {
     text-align: center;
     width: 100%;
+    
 }
 
 #SignUp-H3 {
     font-family: "Muli-SemiBold";
     font-size: 20px;
     color: #453e79;
+    margin-top:-18vh;
 }
 
 .form-row {
@@ -215,10 +212,7 @@ img {
             margin-bottom: 18px;
         }
 
-    .wrapper {
-        height: 1201px;
-        background: none;
-    }
+     
 
     .checkbox-circle {
         width: 100%;
@@ -234,3 +228,4 @@ img {
             transform: translateX(50%);
         }
 }
+
