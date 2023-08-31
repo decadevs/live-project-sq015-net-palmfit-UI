@@ -3,6 +3,7 @@ import '../styles/ProfilePage.css'
 import facebookLogo from '../images/logos_facebook.svg';
 import twitterLogo from '../images/logos_twitter.svg';
 import whatsappLogo from '../images/logos_whatsapp.svg';
+import UserDetails from './UserDetails';
 
 
 export default function ProfilePage () {
@@ -17,29 +18,11 @@ export default function ProfilePage () {
                         your account secure and send you notifications.
                     </span>
                 </div>
-                <div className="rightTop">
-                    <div className="password">
-                        <div className="oldpass">
-                            <h3>Old Password</h3>
-                            <input className="form-control p-2 me-2" type="text" />
-                        </div>
-                        <div className="newpass">
-                            <h3>New Password</h3>
-                            <input className="form-control p-2 me-2"  type="text" />
-                        </div>
-                    </div>
-
-                    <div className="email">
-                        <h3>Email Address</h3>
-                        <input className="form-control p-2" type="text" placeholder='Enter your email address'/>
-                    </div>
-
-                    <div className="changePass">
-                        <h3>Password</h3>
-                        <button className="btn-teal">Change your password</button>
-                    </div>
-                </div>
+                
             </div>
+            <br/>
+            <br/>
+            <UserDetails/>
 
             <div className="buttomholder">
                 <div className="leftbutt">
@@ -68,6 +51,37 @@ export default function ProfilePage () {
                     </div>
                 </div>
             </div>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <h2>Password Change</h2>
+
+            <form className="rightTop">
+                    <div className="password">
+                        <div className="oldpass">
+                            <h3>Old Password</h3>
+                            <input className="form-control p-2 me-2" type="text" />
+                        </div>
+                        <div className="newpass">
+                            <h3>New Password</h3>
+                            <input className="form-control p-2 me-2"  type="text" />
+                        </div>
+                    </div>
+
+                    <div className="email">
+                        <h3>Email Address</h3>
+                        <input className="form-control p-2" type="text" placeholder='Enter your email address'/>
+                    </div>
+
+                    <div className="changePass">
+                        <h3>Password</h3>
+                        <button className="btn-teal">Change your password</button>
+                    </div>
+                </form>
+
+
+
         </div>
     </div>
   )
