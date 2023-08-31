@@ -65,7 +65,8 @@ function SignUpPage1() {
                 setError(''); // Clear any previous error
                 setSuccessMessage(response.data.data);
                 localStorage.setItem('email', email);
-                navigate("/opt-verification");
+                /*navigate("/opt-verification");*/
+                navigate("/login");
             }
             // Clear input fields after successful registration
             setFirstName('');

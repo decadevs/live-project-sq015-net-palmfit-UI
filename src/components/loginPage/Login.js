@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import "../../styles/SignUpPage1.css";
 import SignUpBanner from '../../images/SignUpBanner.svg';
 import axios from 'axios';
 import Cookies from 'js-cookie'; // Import the cookie library
+import {UserContextConsumer} from "../../context/UserContext"
+import jwtDecode from "jwt-decode"
+import {redirect, useNavigate} from "react-router-dom"
 
 function Login() {
-    
+    const navigate = useNavigate()
+    const {userDispatch} = useContext(UserContextConsumer)
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
@@ -49,12 +53,12 @@ function Login() {
                 
                 if (authorizationHeader) {
                     const token = authorizationHeader.replace('Bearer ', '');
-                    console.log(token)
-                    // Storing the token in a cookie with an expiry time of 1 day
-                    Cookies.set('token', token, { expires: 1 });
+                    const result = jwtDecode(token);
+                    userDispatch({type:"jwt", payload: {userId: result.sub, jwt: token}})
+                    navigate("/meal-plans")
                     
                 }
-              
+ 
                 setError(''); // Clear any previous error
                 setSuccessMessage(response.data.data);
             }
@@ -81,7 +85,6 @@ function Login() {
             else
             {
                 setSuccessMessage('');
-                console.error(error);
                 setError('An error occurred during Login');
             }
         }

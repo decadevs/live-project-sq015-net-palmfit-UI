@@ -6,7 +6,7 @@ function Auth({children}) {
     const location = useLocation()
     const { userState } = useContext(UserContextConsumer)
 
-  return userState.isLoggedIn ? (
+  return userState.userInfo.isLoggedIn ? (
       <div>
         {children}
     </div>

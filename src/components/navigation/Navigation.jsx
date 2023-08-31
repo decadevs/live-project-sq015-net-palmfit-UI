@@ -29,7 +29,7 @@ function Navigation({menuIsOpen, setMenuIsOpen }) {
         <div className={styles.container}>
           {/* user tabs */}
           {
-              userState.role === "user" &&
+              userState.userInfo.isLoggedIn === true &&
 
             <>
               <NavLink to={"/calorie-calulator"} className={styles.nav_link}>

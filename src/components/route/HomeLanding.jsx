@@ -1,26 +1,17 @@
-import React, { useState, useContext } from 'react';
+import { Header, Footer, LandingPg, NavigationBar, SignUpPage1, OTPValidationPage, MealPlan, ProfilePage, Subscription, UsersTab, DailyPlanBreakfast, WeeklyPlanbreakfast, CaloriesCounter, Login, FoodSearch, LoadingPage } from "../index"
+import { useState, useContext } from "react";
 import { Routes, Route } from 'react-router-dom';
-import '../styles/App.css';
-
-//context
-import { UserContextConsumer } from '../context/UserContext';
-
-//components
-import { Header, Footer, LandingPg, NavigationBar, SignUpPage1, OTPValidationPage, MealPlan, ProfilePage, Subscription, UsersTab, DailyPlanBreakfast, WeeklyPlanbreakfast, CaloriesCounter, Login, FoodSearch, LoadingPage } from "./"
-
-//auth
-import Auth from '../utils/Auth';
+// import { UserContextConsumer } from '../context/UserContext';
+import { UserContextConsumer } from '../../context/UserContext';
+// import Auth from '../utils/Auth';
+import Auth from '../../utils/Auth';
 
 
+export default function HomeLanding(){
 
-function App() {
-  const [menuIsOpen, setMenuIsOpen] = useState(false);
-  const { userState } = useContext(UserContextConsumer)
-
-  const [loading, setLoading] = useState(true);
-  return (
-    <>
-      {
+    const [menuIsOpen, setMenuIsOpen] = useState(false);
+    const { userState } = useContext(UserContextConsumer)
+    {
         !userState.userInfo.isLoggedIn ?
           <div>
             <Header />
@@ -56,9 +47,7 @@ function App() {
                       <Route path='/get-plan/:page' element={<Auth><WeeklyPlanbreakfast /></Auth>} />
                       <Route path='/calorie-calulator' element={<Auth><CaloriesCounter /></Auth>} />
                       <Route path="/meal-diary" element={<Auth><FoodSearch /></Auth>} />
-                      <Route path='/loading' element={<LoadingPage state={loading} />} />
-
-
+                      {/* <Route path='/loading' element={<LoadingPage state={loading} />} /> */}
 
                     </Routes>
                   </div>
@@ -67,11 +56,5 @@ function App() {
               </div>
             </div>
           </>
-
       }
-    </>
-  );
-
 }
-
-export default App;
