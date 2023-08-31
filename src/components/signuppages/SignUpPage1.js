@@ -54,6 +54,17 @@ function SignUpPage1() {
                 middleName
             });
 
+            function sendOTP() {
+            axios
+                .post('https://palmfit-test.onrender.com/api/Auth/sendotp', { email: email })
+                .then(response => {
+                console.log('OTP Sent:', response.data);
+                })
+                .catch(error => {
+                console.error('Error sending OTP:', error);
+                });
+            };
+
             // Handle the response here, e.g., show a success message to the user.
             console.log(response.data);
             if (!response.data.succeeded) {
@@ -65,6 +76,7 @@ function SignUpPage1() {
                 setError(''); // Clear any previous error
                 setSuccessMessage(response.data.data);
                 localStorage.setItem('email', email);
+                sendOTP();
                 navigate("/opt-verification");
             }
             // Clear input fields after successful registration

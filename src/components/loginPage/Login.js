@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import "../../styles/SignUpPage1.css";
 import SignUpBanner from '../../images/SignUpBanner.svg';
 import axios from 'axios';
-import Cookies from 'js-cookie'; // Import the cookie library
 
 function Login() {
     
@@ -51,7 +50,7 @@ function Login() {
                     const token = authorizationHeader.replace('Bearer ', '');
                     console.log(token)
                     // Storing the token in a cookie with an expiry time of 1 day
-                    Cookies.set('token', token, { expires: 1 });
+                    // Cookies.set('token', token, { expires: 1 });
                     
                 }
               
