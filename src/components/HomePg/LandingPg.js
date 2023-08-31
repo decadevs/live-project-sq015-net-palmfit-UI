@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import Header from "../HomePg/Header";
-import Footer from "../HomePg/Footer";
+import Header from "./Header";
+import Footer from "./Footer";
 import "../../styles/Landingpg.css";
 import { wordsFromOurUsers, whyChooseUs } from "../../utils/landingData";
-import CalorieModal from "../HomePg/CalorieModal";
+import CalorieModal from "./CalorieModal";
 
 let style = {
   marginTop: 45,
@@ -12,12 +12,13 @@ let style = {
   backgroundColor: ""
 };
 
-function LandingPage() {
+function LandingPg() {
   const [modalShow, setModalShow] = useState(false);
   return (
     <div className="con__">
-      <Header />
+      {/* <Header /> */}
       <div className="container__">
+        <CalorieModal show={modalShow} onHide={() => setModalShow(false)} />
         <section>
           <div className="section-container reverse-row">
             <div className="section-container-first">
@@ -31,15 +32,16 @@ function LandingPage() {
               <p className="sect">
                 At Palmfit, we offer you the chance to keep tab on what you and
                 when you eat. It requires minimal commitment and the journey
-                starts when you say it starts.Click below to register!
+                starts when you say it starts.
               </p>
               <a
                 className="btn text-white btn__"
                 style={{ backgroundColor: "#1A8D8D" }}
                 href="#"
                 role="button"
+                onClick={() => setModalShow(true)}
               >
-                Get Started
+                Calculate Calorie
               </a>
             </div>
           </div>
@@ -52,10 +54,6 @@ function LandingPage() {
               <img className="img___" src={"../img/landPg2.png"} />
             </div>
             <div className="content">
-              <CalorieModal
-                show={modalShow}
-                onHide={() => setModalShow(false)}
-              />
               <h2 className="mt-sm-4">About Palmfit</h2>
               <p className="sect">
                 Palmfit is an easy-to-use calorie calculator that helps users
@@ -72,9 +70,8 @@ function LandingPage() {
                 style={{ backgroundColor: "#1A8D8D" }}
                 href="#"
                 role="button"
-                onClick={() => setModalShow(true)}
               >
-                Calculate Calorie
+                Get Started
               </a>
             </div>
           </div>
@@ -82,7 +79,6 @@ function LandingPage() {
         <WhyUs />
         <WordsFromOurUsers />
       </div>
-      <Footer />
     </div>
   );
 }
@@ -115,20 +111,28 @@ function WhyUs() {
 
 function WhyChooseUs(props) {
   return (
-    <div
-      className="whyChooseUs card mb-sm-2 mx-sm-auto fs-md-6 mb-sm-4 border border-0"
-      style={{ backgroundColor: props.bg }}
-    >
-      <img
-        className="card-img-top mx-auto"
-        src={props.img}
-        style={{ width: 40, height: 40, marginTop: 20 }}
-      />
-      <div class="card-body">
-        <h3 className="text-center">{props.head}</h3>
-        <p class="card-text">{props.paragraph}</p>
+    <>
+      <div
+        className="whyChooseUs card mb-sm-2 mx-sm-auto fs-md-6 mb-sm-4 border border-0"
+        style={{ backgroundColor: props.bg }}
+      >
+        <img
+          className="card-img-top mx-auto"
+          src={props.img}
+          style={{ width: 40, height: 40, marginTop: 20 }}
+        />
+        <div class="card-body">
+          <h3 className="text-center">{props.head}</h3>
+          <p class="card-text">{props.paragraph}</p>
+        </div>
       </div>
-    </div>
+
+      <WhyUs />
+      <WordsFromOurUsers />
+      <div>
+        <Footer />
+      </div>
+    </>
   );
 }
 
@@ -174,4 +178,4 @@ function WordsFromUsers(props) {
   );
 }
 
-export default LandingPage;
+export default LandingPg;

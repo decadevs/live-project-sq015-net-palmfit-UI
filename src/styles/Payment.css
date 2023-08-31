@@ -1,7 +1,9 @@
 .pay-now-container {
-    max-width: 450px;
+    /* max-width: 450px; */
+    width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 3rem;
+    /* background: red; */
   }
   
   .pay-now-container h1 {
@@ -62,18 +64,15 @@
   font-weight: 400;
   line-height: 24px; /* 171.429% */
   }
-  
-  .pay-now-container .pay-now-button {
-    display: block;
-    width: 105%;
+ 
+  .pay-now-button_, .back-to-dashboard-button {
     margin-top: 20px;
     color: white;
     border: none;
-    padding: 10px;
     cursor: pointer;
     border-radius: 5px;
     background: #1A8D8D;
-    height: 2rem;
+    padding: .5rem .75rem !important;
   }
   
   
@@ -105,7 +104,7 @@
   line-height: 29px; /* 161.111% */
   }
   
-  .payment-success-container .back-to-dashboard-button {
+  /* .payment-success-container .back-to-dashboard-button {
     display: block;
     width: 100%;
     margin-top: 20px;
@@ -116,4 +115,4 @@
     border-radius: 5px;
     background: #1A8D8D;
     height: 2rem;
-  }
+  } */
