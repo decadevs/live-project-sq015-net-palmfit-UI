@@ -69,10 +69,12 @@ function OTPValidationPage() {
             .then(response => {
                 if (response.data.succeeded) {
                     setValidationResult(response.data.message);
+                    console.log("success");
                     //Redirect should come in here
-                    navigate("/onboarding");
+                    navigate("/login");
                 } else {
                     setValidationResult(response.data.message);
+                    console.log("Failed");
                 }
             })
             .catch(error => {
