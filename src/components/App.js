@@ -7,6 +7,7 @@ import { UserContextConsumer } from '../context/UserContext';
 
 //components
 import { Header, Footer, LandingPg, ErrorPage, NavigationBar, SignUpPage1, OTPValidationPage, MealPlan, ProfilePage, Subscription, UsersTab, DailyPlanBreakfast, WeeklyPlanbreakfast, CaloriesCounter, Login, FoodSearch, LoadingPage } from "./"
+import MultiStepForm from '../components/useronboarding/MultiStepForm';
 
 //auth
 import Auth from '../utils/Auth';
@@ -29,7 +30,7 @@ function App() {
               <Route path='/sign-up' element={<SignUpPage1 />} />
               <Route path='/opt-verification' element={<OTPValidationPage />} />
               <Route path='/login' element={<Login />} />
-              <Route path='*' element={<ErrorPage/>} />
+              {/* <Route path='*' element={<ErrorPage/>} /> */}
             </Routes>
             <Footer />
           </div>
@@ -52,14 +53,16 @@ function App() {
                       <Route path='/subscription' element={<Auth><Subscription /></Auth>} />
                       <Route path='/users' element={<Auth><UsersTab /></Auth>} />
                       <Route path='/meal-plans' element={<Auth><MealPlan /></Auth>} />
+                      <Route path='/onboarding' element={<Auth><MultiStepForm /></Auth>} />       
+
 
                       <Route path='/weekly-plan/:id' element={<Auth><DailyPlanBreakfast /></Auth>} />
                       <Route path='/get-plan/:page' element={<Auth><WeeklyPlanbreakfast /></Auth>} />
                       <Route path='/calorie-calulator' element={<Auth><CaloriesCounter /></Auth>} />
                       <Route path="/meal-diary" element={<Auth><FoodSearch /></Auth>} />
-                      <Route path='/loading' element={<LoadingPage state={loading} />} />
+                      {/* <Route path='/loading' element={<LoadingPage state={loading} />} /> */}
 
-                      <Route path='*' element={<ErrorPage/>} />
+                      {/* <Route path='*' element={<ErrorPage/>} /> */}
 
 
 

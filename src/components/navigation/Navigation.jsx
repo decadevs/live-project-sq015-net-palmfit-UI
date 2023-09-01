@@ -1,14 +1,13 @@
 import {useContext} from "react"
 import styles from "./Navigation.module.css"
 import { calculator, diary, logo_light_svg, logout, plans, profile, subscription, food, analytics, users, reviews, links, close } from "./assets"
-import { NavLink } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 import { UserContextConsumer } from "../../context/UserContext"
 
 
 function Navigation({menuIsOpen, setMenuIsOpen }) {
-
-  const { userState } = useContext(UserContextConsumer)
-
+  const navigate = useNavigate()
+  const { userState, userDispatch } = useContext(UserContextConsumer)
   return (
     <nav className={styles.nav_con} style={{display : menuIsOpen ? "block" : "none"}} > 
 
@@ -91,7 +90,12 @@ function Navigation({menuIsOpen, setMenuIsOpen }) {
 
             
           }
-          <NavLink to={"/logout"} className={styles.nav_link}>
+          <NavLink  onClick={()=>{
+            userDispatch({type: "logout", payload: false})
+            navigate("/")
+            window.location.reload()
+          }          
+            } className={styles.nav_link}>
             <img src={logout} alt="svg icon" />
             <span>logout</span>
           </NavLink>

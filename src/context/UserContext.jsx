@@ -22,6 +22,13 @@ function reducer(state, action) {
             return {...state, jwt: action.payload}
         case "storage":
             return {...state, userInfo: action.payload}
+        case "logout":
+            localStorage.removeItem("user")
+            return {...state, 
+                userId: null,
+                token:null,
+                isLoggedIn: false
+            }
     }
 }
 
