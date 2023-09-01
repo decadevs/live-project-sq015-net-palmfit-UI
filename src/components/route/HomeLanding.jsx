@@ -1,27 +1,17 @@
-import React, { useState, useContext } from 'react';
+import { Header, Footer, LandingPg, NavigationBar, SignUpPage1, OTPValidationPage, MealPlan, ProfilePage, Subscription, UsersTab, DailyPlanBreakfast, WeeklyPlanbreakfast, CaloriesCounter, Login, FoodSearch, LoadingPage } from "../index"
+import { useState, useContext } from "react";
 import { Routes, Route } from 'react-router-dom';
-import '../styles/App.css';
-
-//context
-import { UserContextConsumer } from '../context/UserContext';
-
-//components
-import { Header, Footer, LandingPg, ErrorPage, NavigationBar, SignUpPage1, OTPValidationPage, MealPlan, ProfilePage, Subscription, UsersTab, DailyPlanBreakfast, WeeklyPlanbreakfast, CaloriesCounter, Login, FoodSearch, LoadingPage } from "./"
-import MultiStepForm from '../components/useronboarding/MultiStepForm';
-
-//auth
-import Auth from '../utils/Auth';
+// import { UserContextConsumer } from '../context/UserContext';
+import { UserContextConsumer } from '../../context/UserContext';
+// import Auth from '../utils/Auth';
+import Auth from '../../utils/Auth';
 
 
+export default function HomeLanding(){
 
-function App() {
-  const [menuIsOpen, setMenuIsOpen] = useState(false);
-  const { userState } = useContext(UserContextConsumer)
-
-  const [loading, setLoading] = useState(true);
-  return (
-    <>
-      {
+    const [menuIsOpen, setMenuIsOpen] = useState(false);
+    const { userState } = useContext(UserContextConsumer)
+    {
         !userState.userInfo.isLoggedIn ?
           <div>
             <Header />
@@ -30,7 +20,6 @@ function App() {
               <Route path='/sign-up' element={<SignUpPage1 />} />
               <Route path='/opt-verification' element={<OTPValidationPage />} />
               <Route path='/login' element={<Login />} />
-              {/* <Route path='*' element={<ErrorPage/>} /> */}
             </Routes>
             <Footer />
           </div>
@@ -53,19 +42,12 @@ function App() {
                       <Route path='/subscription' element={<Auth><Subscription /></Auth>} />
                       <Route path='/users' element={<Auth><UsersTab /></Auth>} />
                       <Route path='/meal-plans' element={<Auth><MealPlan /></Auth>} />
-                      <Route path='/onboarding' element={<Auth><MultiStepForm /></Auth>} />       
-
 
                       <Route path='/weekly-plan/:id' element={<Auth><DailyPlanBreakfast /></Auth>} />
                       <Route path='/get-plan/:page' element={<Auth><WeeklyPlanbreakfast /></Auth>} />
                       <Route path='/calorie-calulator' element={<Auth><CaloriesCounter /></Auth>} />
                       <Route path="/meal-diary" element={<Auth><FoodSearch /></Auth>} />
                       {/* <Route path='/loading' element={<LoadingPage state={loading} />} /> */}
-
-                      {/* <Route path='*' element={<ErrorPage/>} /> */}
-
-
-
 
                     </Routes>
                   </div>
@@ -74,11 +56,5 @@ function App() {
               </div>
             </div>
           </>
-
       }
-    </>
-  );
-
 }
-
-export default App;

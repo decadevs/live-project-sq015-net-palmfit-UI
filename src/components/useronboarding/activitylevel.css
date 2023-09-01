@@ -1,0 +1,81 @@
+.activity_container___ {
+    width: 350px;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0px 4px 6px hsla(0, 1%, 38%, 0.631);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+  }
+  
+  .baseline_con___ {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .baseline_con___ h4 {
+    margin: 0;
+  }
+  
+  .choice_con___ {
+    margin-bottom: 20px;
+  }
+  
+  .choice_con___ div {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .choice_con___ div h5 {
+    margin: 0;
+  }
+  
+  .choice_con___ div:hover{
+    background-color: teal;
+    color: #fff;
+  }
+
+  .choice_con___ div span {
+    font-size: 12px;
+  }
+  .choice_con___ div span:hover {
+    font-size: 12px;
+    color: #ffffff;
+  }
+  
+  .next_con___ {
+    text-align: center;
+  }
+  
+  .next_con___ button {
+    background-color: #1A8D8D;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .next_con___ button:hover {
+    background-color: white;
+    color: teal;
+    padding: 10px 20px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    cursor: pointer;
+
+  }
+
+  .btn__disabled____ {
+    background-color: #ccc !important;
+    border: 1px solid #1A8D8D !important;
+  }
+
+  .selected______ {
+    background-color: #1A8D8D;
+  }
