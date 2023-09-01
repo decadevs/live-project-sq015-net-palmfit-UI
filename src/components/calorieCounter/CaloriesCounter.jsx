@@ -21,6 +21,8 @@ function CaloriesCounter() {
   //     setSelectedDayMeals(mealsForSelectedDay);
   //   }, [selectedDay]);
 
+  const dailyCalorieEstimate = 2000;
+
   function getMealTitle(index) {
     switch (index) {
       case 0:
@@ -34,33 +36,92 @@ function CaloriesCounter() {
     }
   }
 
-  const [selectedDay, setSelectedDay] = useState("1");
+  const [selectedDay, setSelectedDay] = useState("Monday");
   const [selectedDayMeals, setSelectedDayMeals] = useState([]);
   const [mealOptions, setMealOptions] = useState([]);
 
+  //   useEffect(() => {
+  //     // Fetch data from the API
+  //     axios
+  //       .get(
+  //         "https://localhost:7069/api/MealPlanController/get-selected-meal-plan?appUserId=03aff654-84a2-464e-8c93-8b1ab274e992"
+  //       )
+  //       .then((response) => {
+  //         // Extract and update the meal options and selected day meals
+  //         console.log(response.data);
+  //         const mealData = response.data.data.$values;
+  //         const dayMeals = mealData.filter(
+  //           (meal) => meal.dayOfWeek === selectedDay
+  //         );
+  //         const mealOptions = mealData.map((meal) => meal.name);
+  //         console.log(mealData, dayMeals, mealOptions);
+
+  //         setSelectedDayMeals(dayMeals);
+  //         setMealOptions(mealOptions);
+  //       })
+  //       .catch((error) => {
+  //         console.error("Error fetching data:", error);
+  //       });
+  //   }, [selectedDay]);
+
   useEffect(() => {
-    // Fetch data from the API
     axios
       .get(
         "https://localhost:7069/api/MealPlanController/get-selected-meal-plan?appUserId=03aff654-84a2-464e-8c93-8b1ab274e992"
       )
       .then((response) => {
-        // Extract and update the meal options and selected day meals
-        console.log(response.data);
         const mealData = response.data.data.$values;
+
+        // Convert selectedDay to its corresponding day of the week
+        //const selectedDayIndex = parseInt(selectedDay) - 1; // Convert to 0-based index
+        const daysOfWeek = [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ];
+        const selectedDayName = daysOfWeek; //[selectedDayIndex];
+
+        // Filter meals for the selected day and meal type
         const dayMeals = mealData.filter(
           (meal) => meal.dayOfWeek === selectedDay
         );
-        const mealOptions = mealData.map((meal) => meal.name);
-        console.log(mealData, dayMeals, mealOptions);
-
+        console.log(dayMeals);
         setSelectedDayMeals(dayMeals);
-        setMealOptions(mealOptions);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
   }, [selectedDay]);
+
+  //   useEffect(() => {
+  //     axios
+  //       .get(
+  //         "https://localhost:7069/api/MealPlanController/get-selected-meal-plan?appUserId=03aff654-84a2-464e-8c93-8b1ab274e992"
+  //       )
+  //       .then((response) => {
+  //         const mealData = response.data.data.$values;
+  //         const dayMeals = mealData.filter(
+  //           (meal) => meal.day === parseInt(selectedDay)
+  //         ); // Filter meals for the selected day
+  //         const mealOptions = dayMeals.map((meal) => meal.name);
+
+  //         setSelectedDayMeals(dayMeals);
+  //         setMealOptions(mealOptions);
+  //         console.log({ filtered: mealData.filter((meal) => meal.day === "1") });
+  //         console.log({
+  //           "meal data": mealData,
+  //           "day meals": dayMeals,
+  //           "meal options": mealOptions
+  //         });
+  //       })
+  //       .catch((error) => {
+  //         console.error("Error fetching data:", error);
+  //       });
+  //   }, [selectedDay]);
 
   // meal
   const [mealName, setMealName] = useState("Coconut Jollof Rice"); // State to store selected meal name
@@ -104,6 +165,17 @@ function CaloriesCounter() {
     fetchCalorieInfo();
   }, [mealName, unit, mealQuantity]);
 
+  function calculateTotalCalories(meals) {
+    let totalCalories = 0;
+    meals.forEach((meal) => {
+      totalCalories += meal.calorie;
+    });
+    return totalCalories;
+  }
+
+  const caloreLeft =
+    dailyCalorieEstimate - calculateTotalCalories(selectedDayMeals);
+
   return (
     <div>
       <div className={`${styles.holder} row `}>
@@ -114,26 +186,32 @@ function CaloriesCounter() {
               value={selectedDay}
               onChange={(e) => setSelectedDay(e.target.value)}
             >
-              <option value="1">Monday</option>
-              <option value="2">Tuesday</option>
-              <option value="3">Wednesday</option>
-              <option value="4">Thursday</option>
-              <option value="5">Friday</option>
-              <option value="6">Saturday</option>
-              <option value="7">Sunday</option>
+              <option value="Monday">Monday</option>
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
+              <option value="Saturday">Saturday</option>
+              <option value="Sunday">Sunday</option>
             </Form.Select>
           </div>
 
           <div className={`${styles.food_controller} gap-3`}>
+            {/* Display meals for each meal type */}
             <div className={`${styles.dayMeal} col-md-4 col-sm-6 mt-3 mr-3`}>
               <Table striped bordered hover variant="light">
                 <tbody>
-                  {selectedDayMeals.map((meal, index) => (
+                  {["Breakfast", "Lunch", "Dinner"].map((mealType, index) => (
                     <tr key={index} className={`${styles.foodCheck}`}>
-                      <td colSpan={2}>{getMealTitle(index)}</td>
-                      <td className="d-flex gap-5">
-                        <h5>{meal}</h5>
-                      </td>
+                      <td>{mealType}</td>
+                      {selectedDayMeals
+                        .filter((meal) => meal.mealOfDay === mealType)
+                        .map((meal, mealIndex) => (
+                          <React.Fragment key={mealIndex}>
+                            <td>{meal.name}</td>
+                            <td>{meal.calorie}</td>
+                          </React.Fragment>
+                        ))}
                     </tr>
                   ))}
                 </tbody>
@@ -213,19 +291,20 @@ function CaloriesCounter() {
                     <tr>
                       <td colSpan={2}>Total</td>
                       <td>
-                        2102 <span>g</span>
+                        {calculateTotalCalories(selectedDayMeals)}{" "}
+                        <span>g</span>
                       </td>
                     </tr>
                     <tr>
                       <td colSpan={2}>Youd daily goal</td>
                       <td>
-                        7120 <span>g</span>
+                        {dailyCalorieEstimate} <span>g</span>
                       </td>
                     </tr>
                     <tr>
                       <td colSpan={2}>Remaining</td>
                       <td>
-                        5023 <span>g</span>
+                        {caloreLeft} <span>g</span>
                       </td>
                     </tr>
                   </tbody>
@@ -284,7 +363,7 @@ function CaloriesCounter() {
             </button>
           </div>
 
-          <div className={`${styles.buttHold} m-4 col-md-10 col-sm-10`}>
+          {/* <div className={`${styles.buttHold} m-4 col-md-10 col-sm-10`}>
             <h2>Our Recommendation</h2>
             <span className="col-md-12">
               We recommend that you increase your daily calorie intake from
@@ -292,7 +371,7 @@ function CaloriesCounter() {
               3,500 calories (500 calories saved over 7 days) is the approximate
               number of calories in 1 pound of body fat
             </span>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
