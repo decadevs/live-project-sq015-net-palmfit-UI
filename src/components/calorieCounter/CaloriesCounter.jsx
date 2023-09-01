@@ -5,6 +5,8 @@ import Form from "react-bootstrap/Form";
 import Table from "react-bootstrap/Table";
 
 function CaloriesCounter() {
+  const [tableInfo, setTableInfo] = useState([]);
+
   //   const [selectedDay, setSelectedDay] = useState("1"); // Default selected day is Monday
 
   //   const dayMealOptions = {
@@ -35,93 +37,6 @@ function CaloriesCounter() {
         return "";
     }
   }
-
-  const [selectedDay, setSelectedDay] = useState("Monday");
-  const [selectedDayMeals, setSelectedDayMeals] = useState([]);
-  const [mealOptions, setMealOptions] = useState([]);
-
-  //   useEffect(() => {
-  //     // Fetch data from the API
-  //     axios
-  //       .get(
-  //         "https://localhost:7069/api/MealPlanController/get-selected-meal-plan?appUserId=03aff654-84a2-464e-8c93-8b1ab274e992"
-  //       )
-  //       .then((response) => {
-  //         // Extract and update the meal options and selected day meals
-  //         console.log(response.data);
-  //         const mealData = response.data.data.$values;
-  //         const dayMeals = mealData.filter(
-  //           (meal) => meal.dayOfWeek === selectedDay
-  //         );
-  //         const mealOptions = mealData.map((meal) => meal.name);
-  //         console.log(mealData, dayMeals, mealOptions);
-
-  //         setSelectedDayMeals(dayMeals);
-  //         setMealOptions(mealOptions);
-  //       })
-  //       .catch((error) => {
-  //         console.error("Error fetching data:", error);
-  //       });
-  //   }, [selectedDay]);
-
-  useEffect(() => {
-    axios
-      .get(
-        "https://localhost:7069/api/MealPlanController/get-selected-meal-plan?appUserId=03aff654-84a2-464e-8c93-8b1ab274e992"
-      )
-      .then((response) => {
-        const mealData = response.data.data.$values;
-
-        // Convert selectedDay to its corresponding day of the week
-        //const selectedDayIndex = parseInt(selectedDay) - 1; // Convert to 0-based index
-        const daysOfWeek = [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ];
-        const selectedDayName = daysOfWeek; //[selectedDayIndex];
-
-        // Filter meals for the selected day and meal type
-        const dayMeals = mealData.filter(
-          (meal) => meal.dayOfWeek === selectedDay
-        );
-        console.log(dayMeals);
-        setSelectedDayMeals(dayMeals);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-  }, [selectedDay]);
-
-  //   useEffect(() => {
-  //     axios
-  //       .get(
-  //         "https://localhost:7069/api/MealPlanController/get-selected-meal-plan?appUserId=03aff654-84a2-464e-8c93-8b1ab274e992"
-  //       )
-  //       .then((response) => {
-  //         const mealData = response.data.data.$values;
-  //         const dayMeals = mealData.filter(
-  //           (meal) => meal.day === parseInt(selectedDay)
-  //         ); // Filter meals for the selected day
-  //         const mealOptions = dayMeals.map((meal) => meal.name);
-
-  //         setSelectedDayMeals(dayMeals);
-  //         setMealOptions(mealOptions);
-  //         console.log({ filtered: mealData.filter((meal) => meal.day === "1") });
-  //         console.log({
-  //           "meal data": mealData,
-  //           "day meals": dayMeals,
-  //           "meal options": mealOptions
-  //         });
-  //       })
-  //       .catch((error) => {
-  //         console.error("Error fetching data:", error);
-  //       });
-  //   }, [selectedDay]);
 
   // meal
   const [mealName, setMealName] = useState("Coconut Jollof Rice"); // State to store selected meal name
@@ -164,6 +79,41 @@ function CaloriesCounter() {
   useEffect(() => {
     fetchCalorieInfo();
   }, [mealName, unit, mealQuantity]);
+
+  const [selectedDay, setSelectedDay] = useState("Monday");
+  const [selectedDayMeals, setSelectedDayMeals] = useState([]);
+  const [mealOptions, setMealOptions] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://localhost:7069/api/MealPlanController/get-selected-meal-plan?appUserId=03aff654-84a2-464e-8c93-8b1ab274e992"
+      )
+      .then((response) => {
+        const mealData = response.data.data.$values;
+        const daysOfWeek = [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ];
+        const selectedDayName = daysOfWeek; //[selectedDayIndex];
+
+        // Filter meals for the selected day and meal type
+        const dayMeals = mealData.filter(
+          (meal) => meal.dayOfWeek === selectedDay
+        );
+        console.log(dayMeals);
+
+        setSelectedDayMeals(dayMeals);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, [selectedDay]);
 
   function calculateTotalCalories(meals) {
     let totalCalories = 0;
