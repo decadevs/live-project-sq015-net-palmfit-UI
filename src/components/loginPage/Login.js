@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import "../../styles/SignUpPage1.css";
 import SignUpBanner from '../../images/SignUpBanner.svg';
 import axios from 'axios';
 import Cookies from 'js-cookie'; // Import the cookie library
+import {UserContextConsumer} from "../../context/UserContext"
+import jwtDecode from "jwt-decode"
+import { redirect, useNavigate } from "react-router-dom";
+ 
 
 function Login() {
-    
+    const navigate = useNavigate()
+    const {userDispatch} = useContext(UserContextConsumer)
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
@@ -16,19 +21,21 @@ function Login() {
     const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}$/;
     const isPasswordValid = passwordRegex.test(password);
     const isEmailValid = emailRegex.test(email);
+    const [caloriesData, setCaloriesData] = useState({});
+    
 
     const handleLogin = async (e) => {
         e.preventDefault();
         setLoading(true);
 
         try {
-            
+
             if (!isEmailValid) {
                 setError('Please enter a valid email address.');
                 setSuccessMessage('');
                 return;
             }
-            
+
 
             if (!isPasswordValid) {
                 setError('Password must have at least 8 characters, one uppercase letter, one lowercase letter, one number, and one special character.');
@@ -36,40 +43,66 @@ function Login() {
                 return;
             }
 
-            
 
-            const response = await axios.post('https://palmfit-test.onrender.com/api/Auth/login', {
+
+            const response = await axios.post('https://localhost:7069/api/Auth/login', {
                 email,
                 password
             });
-         
+
             if (response.data.succeeded) {
                 // Access the Authorization header from the response headers
                 const authorizationHeader = response.headers['authorization'];
-                
+
                 if (authorizationHeader) {
                     const token = authorizationHeader.replace('Bearer ', '');
-                    console.log(token)
-                    // Storing the token in a cookie with an expiry time of 1 day
-                    Cookies.set('token', token, { expires: 1 });
-                    
-                }
-              
-                setError(''); // Clear any previous error
-                setSuccessMessage(response.data.data);
-            }
-            else
-            {
-                setSuccessMessage('');
-                setError(response.data.data); // Display the error message
-            }
-            
+                    const result = jwtDecode(token);
+                    localStorage.setItem('userToken', JSON.stringify(result));
+                    userDispatch({ type: "jwt", payload: { userId: result.sub, jwt: token } })
 
-            // Clear input fields after successful login
-            setEmail('');
-            setPassword('');
-            
-            setError('');
+
+
+                    
+
+                    
+                    const fetchData = async () => {
+                        try {
+                            const apiUrl = `https://localhost:7069/api/UserCalorieData/get-user-data-by-id/${result.sub}`;
+                            const response = await axios.get(apiUrl);
+                            // Log the data from the response
+                            console.log(response.data);
+                           
+                                console.log("success")
+                            navigate('/meal-plans');
+
+ 
+                        } catch (err) {
+                            
+                            navigate('/onboarding');
+                            console.log("fail")
+
+                            console.error('Error fetching data:', err);
+                            
+                        }
+                    };
+                    await fetchData();
+
+
+                    setError(''); // Clear any previous error
+                    setSuccessMessage(response.data.data);
+                }
+                else {
+                    setSuccessMessage('');
+                    setError(response.data.data); // Display the error message
+                }
+
+
+                // Clear input fields after successful login
+                setEmail('');
+                setPassword('');
+
+                setError('');
+            }
         }
         catch (error)
         {
@@ -81,7 +114,6 @@ function Login() {
             else
             {
                 setSuccessMessage('');
-                console.error(error);
                 setError('An error occurred during Login');
             }
         }

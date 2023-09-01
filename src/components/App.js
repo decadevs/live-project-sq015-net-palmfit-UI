@@ -25,6 +25,7 @@ import {
   FoodSearch,
   LoadingPage
 } from "./";
+import MultiStepForm from "../components/useronboarding/MultiStepForm";
 
 //auth
 import Auth from "../utils/Auth";

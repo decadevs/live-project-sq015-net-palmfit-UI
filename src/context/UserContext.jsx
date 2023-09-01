@@ -1,24 +1,52 @@
-import { createContext, useReducer } from "react";
+import { createContext, useEffect, useReducer } from "react";
+import jwtDecode from "jwt-decode";
 
 const UserContext = createContext("");
 
 let InitUser = {
-  role: "user",
-  jwt: "s",
-  isLoggedIn: true
+  userInfo: JSON.parse(localStorage.getItem("user")) || {
+    userId: null,
+    token: null,
+    isLoggedIn: false
+  },
+  jwt: null
 };
 
 function reducer(state, action) {
   switch (action.type) {
-    case "role":
-      return { ...state, role: action.payload };
-    case "jwt_token":
+    case "jwt":
       return { ...state, jwt: action.payload };
+    case "storage":
+      return { ...state, userInfo: action.payload };
+    case "logout":
+      localStorage.removeItem("user");
+      return { ...state, userId: null, token: null, isLoggedIn: false };
   }
 }
 
 function UserContextProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, InitUser);
+
+  useEffect(() => {
+    if (state.jwt != null) {
+      dispatch({
+        type: "storage",
+        payload: {
+          userId: state.jwt.userId,
+          token: state.jwt.jwt,
+          isLoggedIn: true
+        }
+      });
+      localStorage.setItem(
+        "user",
+        JSON.stringify({
+          userId: state.jwt.userId,
+          token: state.jwt.jwt,
+          isLoggedIn: true
+        })
+      );
+    }
+  }, [state.jwt]);
 
   return (
     <UserContext.Provider value={{ userState: state, userDispatch: dispatch }}>

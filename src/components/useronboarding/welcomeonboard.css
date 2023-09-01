@@ -1,0 +1,16 @@
+.holder__{
+    align-self: center;
+  }
+  .custom__ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      width: 350px; 
+      height: 300px; 
+      padding: 20px; 
+      background-color: white; 
+      box-shadow: 0px 4px 6px hsla(0, 1%, 38%, 0.631); 
+      border-radius: 8px;
+      margin-top: 5%;
+    }
+
