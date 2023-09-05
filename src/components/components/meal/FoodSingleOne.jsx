@@ -7,10 +7,11 @@ const FoodSingleOne = () => {
       <div className="search-container">
         <h4>Lets find some food for your meal</h4>
         <input type="text" className="search-input" placeholder="Rice" />
-        <span className="search-icon">&#128269;</span>
+        <img className="search-icon" alt="search" src="/search.svg" />
+        {/* <span className="search-icon">&#128269;</span> */}
       </div>
       <div className = 'box'>
-        <p className='box-p'>Plain White Rice</p>
+        <p className='box-p'>Plai White Rice</p>
         <h1 className="box-h1">242 Calories</h1>
         <input className='box-input' type='text' placeholder="Food quantity"></input>
         <select className="box-select">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import FoodTile from "./FoodTile";
 import "../styles/Food-Search.css";
 
@@ -53,7 +53,7 @@ const FoodSearch = () => {
         <h1>Let's find some food for your meal</h1>
         <div className="search-container">
             <input className="search-box" type="text" required placeholder="Enter food or category" />
-            <img className="search-icon" alt="search-icon" src="/search.svg" />
+            {/* <img className="search-icon" alt="search-icon" src="/search.svg" /> */}
         </div>
       <p className="browse-text">Browse common foods</p>
       <div className="food-container" >

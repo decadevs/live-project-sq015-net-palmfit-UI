@@ -8,6 +8,7 @@ function DailyPlanBreakfast() {
         <div className={styles.container}>
 
             <div className={styles.weeklyPlan}>
+                <p>You’re a</p>
                 <div className={styles.header_con}>
                     <div className={styles.title_con}>
                         <h4>Name of Daily plan</h4>

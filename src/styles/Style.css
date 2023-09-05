@@ -66,14 +66,14 @@ line-height: normal;
     display: inline-flex;
     height: 35px;
     padding: 10px 27px 26px 27px;
-    margin-left: 10rem;
+    margin-left: 35rem;
     align-items: flex-start;
     gap: 30px;
     flex-shrink: 0;
     border-radius: 5px;
-background: #F5F5F5;
-font-weight: bold;
-margin-top: 10px;
+    background: #F5F5F5;
+    font-weight: bold;
+    margin-top: 10px;
   }
   
   .food-table input[type="number"] {
@@ -95,11 +95,11 @@ margin-top: 10px;
 
   .search-container p {
     color: #000;
-font-family: "Nunito Sans";
-font-size: 18px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
+    font-family: "Nunito Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
   }
   
   .search-form {
@@ -112,19 +112,19 @@ line-height: normal;
     margin-right: 10px;
     padding: 5px;
     border-radius: 10px;
-border: 1px s #BDBDBD;
-outline: none;
-background: #FFF;
-width: 55rem;
-height: 3rem;
-flex-shrink: 0;
+    border: 1px s #BDBDBD;
+    outline: none;
+    background: #FFF;
+    width: 55rem;
+    height: 3rem;
+    flex-shrink: 0;
   }
   
   .search-button {
     background: none;
     border: none;
     cursor: pointer;
-    margin-left: -70px;
+    margin-left: 100px;
   }
   
 
@@ -142,7 +142,7 @@ flex-shrink: 0;
   }
 
   .total-row {
-    margin-left: 0; /* Reset left margin for smaller screens */
+    margin-left: 10rem; /* Reset left margin for smaller screens */
     flex-direction: row; /* Stack elements vertically */
     align-items: center; /* Center items horizontally */
   }
@@ -204,7 +204,7 @@ flex-shrink: 0;
 
 
 .frame {
-  background-color: #fbfbfb;
+  background-color: red;
   border: 1px none;
   height: 340px;
   position: relative;

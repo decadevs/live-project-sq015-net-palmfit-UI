@@ -1,41 +1,43 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import '../styles/App.css';
-
-//images
+//import "../styles/App.css";
+//import "../styles/FoodSearch.css";
 import { logo_dark_svg, menu } from "./navigation/assets";
 
 //components
 import {Header, Footer, Landing} from "./index"
+import SignUpPage1 from './SignUpPage1';
+import PasswordReset from './PasswordReset';
+import { ProfilePage } from './ProfilePage';
+import FoodSearch from './FoodSearch';
 
 
 
+//import LandingPage from '../components/HomePg/LandingPg';
+import '../styles/Style.css';
+//import { ProfilePage } from './ProfilePage';
+
+import PaymentSubscription from './Payment/Subscription';
+import FoodSingleOne from '../components/components/meal/FoodSingleOne';
+//import MealInfo from "./Meal-List-Plan/MealInfo";
+import FoodTable from "./Meal-List-Plan/FoodTable";
+import SearchFood from '../components/Meal-List-Plan/SearchFood';
+import Subscription from "./subscription/Subscription";
+
+import CalculateCalories from "./CalculateCalories";
+//import Navigation from "./navigation/Navigation";
+import MealPlan from "./MealPlans/Mealplan";
 
 
+//import WeeklyPlanbreakfast from "./weeklyplanbreakfast/WeeklyPlanbreakfast";
+//import styles from "../styles/WeeklyPlanbreakfast.module.css";
 
-// import LandingPage from '../components/HomePg/LandingPg';
-// import FoodSearch from './FoodSearch';
-// import '../styles/App.css';
-// import { ProfilePage } from './ProfilePage';
 
-// import PaymentSubscription from './Payment/Subscription';
-// import FoodSingleOne from '../components/components/meal/FoodSingleOne';
-
-// import "../styles/App.css";
-// import "../styles/FoodSearch.css";
-
-// import MealInfo from "./Meal-List-Plan/MealInfo";
-// import FoodTable from "./Meal-List-Plan/FoodTable";
-// import SearchFood from "./Meal-List-Plan/SearchFood";
-// import Subscription from "./subscription/Subscription";
-
-// import CalculateCalories from "./CalculateCalories";
-import Navigation from "./navigation/Navigation";
-// import MealPlan from "./MealPlans/Mealplan";
-// import WeeklyPlanbreakfast from "./weeklyplanbreakfast/WeeklyPlanbreakfast";
-// import styles from "../styles/WeeklyPlanbreakfast.module.css";
-// import { CalulateCalories } from "../components/CalculateCalories";
-// import DailyPlanBreakfast from "./DailyPlan/DailyPlanBreakfast";
+//import { CalulateCalories } from "../components/CalculateCalories";
+import DailyPlanBreakfast from "./DailyPlan/DailyPlanBreakfast";
+import DailyPlanAccordion from './DailyPlan/DailyPlanAccordion';
+import ErrorPage from './ErrorPage';
 
 function App() {
   const foods = [
@@ -70,17 +72,23 @@ function App() {
           </div> */}
 
       <div className="pages">
-        <Landing/>
-            {/* <ProfilePage /> */}
-            {/* <PaymentSubscription />
-            <FoodSingleOne />
-            <MealInfo mealName="Meal 1 name" totalCalories={""} />
-            <FoodTable foods={[]} />
-            <SearchFood />
-            <DailyPlanBreakfast />
-            <Subscription />
-            <CalculateCalories />
-            <MealPlan /> */}
+             {/* <Landing/> */}
+            {/* <ProfilePage/> */}
+            {/* <PaymentSubscription /> */}
+            {/* <FoodSingleOne />  */}
+            {/* <FoodTable foods={[]} mealName="Meal 1 name" totalCalories={""} />  */}
+            {/* <SearchFood /> */}
+            {/* <DailyPlanBreakfast /> */}
+            {/* <Subscription /> */}
+            {/* <CalculateCalories /> */}
+            {/* <MealPlan /> */}
+            {/* <SignUpPage1 /> */}
+            {/* <PasswordReset/> */}
+            {/* <ProfilePage/> */}
+            {/* <FoodSearch/> */}
+            <ErrorPage/>
+            {/* <DailyPlanAccordion/> */}
+            {/* <DailyPlanBreakfast/> */}
           </div>
         </div>
   );

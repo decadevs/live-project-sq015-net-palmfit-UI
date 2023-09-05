@@ -22,12 +22,12 @@ export default function CalulateCalories() {
                 <div class="bottom mt-4">
                     <div class="foodHolder mb-3">
                         <span>Food</span>
-                        <input type="text" placeholder="Enter a Food" class="form-control p-2.5" />
+                        <input type="text" placeholder="Enter a Food" class="form-control py-4" />
                     </div>
                     <div class="foodQuality mb-3">
                         <span>Food Quantity</span>
                         <div class="takers d-flex align-items-center">
-                        <input type="text" placeholder=" " class="form-control p-2.5 me-2" />
+                        <input type="text" placeholder=" " class="form-control py-4 me-2" />
                         <select id="country" name="country" class="form-select flex-grow-1">
                             <option value="australia">{option}</option>
                             <option onClick={() => pickOption('Cup')} value="Cup">Cup</option>

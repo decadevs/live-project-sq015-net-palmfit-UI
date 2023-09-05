@@ -3,7 +3,7 @@ import "../../styles/MealPlan.css";
 import MealCard from './Mealcard';
 
 const MealPlan = () => {
-    const mealImageUrl = ["food.png", "food.png", "food.png", "food.png", "food.png"];
+    const mealImageUrl = ["mealplans.svg", "mealplans.svg", "mealplans.svg", "mealplans.svg", "mealplans.svg"];
     const mealPlan = ["Breakfast", "Dinner", "Lunch", "Breakfast", "dinner"];
     const mealText = [
         "Take your breakfast early.",

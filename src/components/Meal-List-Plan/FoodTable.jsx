@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
 
-const FoodTable = ({ foods, addMeal }) => {
+
+
+const FoodTable = ({ foods, addMeal, mealName, totalCalories }) => {
   const [foodData, setFoodData] = useState(foods);
 
   return (
     <>
+
+    <div className="meal-info">
+           <p>MEAL</p>
+          <h1 className="meal-name">{mealName}</h1>
+      </div>
     <table className="food-table">
       <thead>
         <tr>

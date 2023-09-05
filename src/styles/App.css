@@ -285,40 +285,53 @@ body {
   padding: 0;
   background-color: #f4f4f4;
 }
-.h4{
-  margin-left: 300px;
-  margin-top: 70px;
+section{
+  margin-left: 20px;
 }
-.search-container {
-  position: relative;
-  width: 600px;
-  margin-left: 300px;
-  margin-top: 80px;
+.para{
+  color: #000;
+  font-family: Nunito Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
-.search-input {
-  width: 100%;
-  padding: 10px;
+.hat{
+  margin-top: 2px;
+  display: flex;
+}
+
+.search-button1{
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 0;
+}
+
+.search-input1{
+  width: 45rem;
+  height: 3rem;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
+  left: 0;
 }
-
 .search-icon {
   position: absolute;
-  top: 70%;
-  right: 10px;
+  top: 48%;
+  left: 42rem;
   transform: translateY(-50%);
-  font-size: 20px;
-  color: #000; /* Set the color to black */
   cursor: pointer;
   filter: grayscale(100%); /* Convert the icon to black and white */
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 .box {
   height: 300px;
   width: 500px;
   background-color: #fbfbfb;
-  margin-left: 300px;
   margin-top: 50px;
 
 }
@@ -356,7 +369,7 @@ input{
 }
 .button-div{
   margin-top: 50px;
-  margin-left: 300px;
+  margin-bottom: 50px;
 }
 .button{
   text-decoration: none;
@@ -365,4 +378,30 @@ input{
   background-color: teal;
   color: white;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 740px){
+  .search-input1{
+    width: 200%;
+    max-width: 35rem;
+    height: 3rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    left: 0;
+    padding-left: 45px; /* Add padding for text inside input */
+  }
+  .search-icon {
+    position: absolute;
+    top: 36%; /* Vertically center the icon within the input */
+    max-height: 100%;
+    right: 15px; /* Adjust the right position as needed */
+    left: 25rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    filter: grayscale(100%); /* Convert the icon to black and white */
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
 }
