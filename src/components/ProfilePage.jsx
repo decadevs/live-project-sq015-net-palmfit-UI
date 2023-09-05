@@ -1,30 +1,59 @@
-import React from 'react'
-import '../styles/ProfilePage.css'
+import React, { useState } from 'react';
+import '../styles/ProfilePage.css';
 import facebookLogo from '../images/logos_facebook.svg';
 import twitterLogo from '../images/logos_twitter.svg';
 import whatsappLogo from '../images/logos_whatsapp.svg';
 import UserDetails from './UserDetails';
 
+export default function ProfilePage() {
+  const [oldPassword, setOldPassword] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [chageStatus, setChageStatus] = useState(null);
 
-export default function ProfilePage () {
+
+  const handleChangePassword = () => {
+    const data = {
+      oldPassword: oldPassword,
+      newPassword: newPassword,
+      email: email
+    };
+
+    const apiUrl = "https://palmfit-test.onrender.com/api/Auth/password-reset";
+    fetch(apiUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => {
+        if (response.ok) {
+          setChageStatus(response.data.message);
+          console.log("Password changed successfully!");
+        } else {
+          setChageStatus(response.data.message);
+          console.error("Password change failed!");
+        }
+      })
+      .catch(error => {
+        console.error("An error occurred:", error);
+    } );
+  };
+
   return (
     <div className="element">
-        <div className="profileholder">
-            <h2 className="profiletag">Profile</h2>
-            <div className="topholder">
-                <div className="leftTop">
+      <div className="profileholder">
+        <h2 className="profiletag">Profile</h2>
+        <div className="leftTop">
                     <h4>Account Settings</h4>
                     <span>These are your account information used to keep 
                         your account secure and send you notifications.
                     </span>
                 </div>
-                
-            </div>
-            <br/>
-            <br/>
-            <UserDetails/>
+        <UserDetails/>
 
-            <div className="buttomholder">
+        <div className="buttomholder">
                 <div className="leftbutt">
                     <h3>Referral</h3>
                     <span>Refer your friends and let them join you on this journey.</span>
@@ -36,7 +65,6 @@ export default function ProfilePage () {
                         palmfit.com/referrals=1579292074940
                         </div>
 
-                        <a className="copy-link" onclick="copyReferralLink()">Copy link</a>
                     </div>
                     <div className="socials">
                         <a href="https://www.facebook.com/yourfacebookprofile" target="_blank" rel="noopener noreferrer">
@@ -53,36 +81,54 @@ export default function ProfilePage () {
             </div>
             <br/>
             <br/>
-            <br/>
-            <br/>
-            <h2>Password Change</h2>
 
-            <form className="rightTop">
+
+
+
+            <h2>Password change</h2>
+            <form className="topholder">
+                <div className="rightTop">
                     <div className="password">
-                        <div className="oldpass">
-                            <h3>Old Password</h3>
-                            <input className="form-control p-2 me-2" type="text" />
-                        </div>
-                        <div className="newpass">
-                            <h3>New Password</h3>
-                            <input className="form-control p-2 me-2"  type="text" />
-                        </div>
+                    <div className="oldpass">
+                        <h3>Old Password</h3>
+                        <input
+                        className="form-control p-2 me-2"
+                        type="password"
+                        value={oldPassword}
+                        onChange={e => setOldPassword(e.target.value)}
+                        />
                     </div>
-
-                    <div className="email">
-                        <h3>Email Address</h3>
-                        <input className="form-control p-2" type="text" placeholder='Enter your email address'/>
+                    <div className="newpass">
+                        <h3>New Password</h3>
+                        <input
+                        className="form-control p-2 me-2"
+                        type="password"
+                        value={newPassword}
+                        onChange={e => setNewPassword(e.target.value)}
+                        />
                     </div>
+                </div>
 
-                    <div className="changePass">
-                        <h3>Password</h3>
-                        <button className="btn-teal">Change your password</button>
-                    </div>
-                </form>
+                <div className="email">
+                <h3>Email Address</h3>
+                <input
+                    className="form-control p-2"
+                    type="text"
+                    placeholder="Enter your email address"
+                    value={email}
+                    onChange={e => setEmail(e.target.value)}
+                />
+                </div>
 
-
-
-        </div>
+                <div className="changePass">
+                <button className="btn-teal" onClick={handleChangePassword}>
+                    Change your password
+                </button>
+                </div>
+                <span>Status: {chageStatus}</span>
+            </div>
+        </form>
+      </div>
     </div>
-  )
+  );
 }

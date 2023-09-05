@@ -1,11 +1,13 @@
-﻿* {
+* {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
-
-
+.resend-link{
+    outline: none;
+    border: none;
+    background: none;
+}
 :focus {
     outline: none;
 }
@@ -15,12 +17,17 @@ img {
     max-width: 100%;
 }
 
-  
+.wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 #Signuplogo {
     position: relative;
-   
+    margin-left: -30vw;
 }
 
 
@@ -47,37 +54,37 @@ img {
 
 .form-content {
     font-size: 13px;
-    width: 50%;
-   
+    width: 70%;
+    padding-top: 10vh;
     padding-left: 3vw;
     padding-right: 5vw;
+    margin-top:15vh;
 }
 
 .form-header {
     text-align: center;
     width: 100%;
-    
 }
 
 #SignUp-H3 {
     font-family: "Muli-SemiBold";
     font-size: 20px;
     color: #453e79;
-    margin-top:-18vh;
+    
 }
 
 .form-row {
     margin-bottom: 15px;
     width: 100%;
 }
+.form-row .take{
+    margin-left: 30%;
+}
 
-    .form-row .form-holder {
+    .form-row .form-holder.w-100 {
+        width: 100%;
+        margin-right: 0;
     }
-
-        .form-row .form-holder.w-100 {
-            width: 100%;
-            margin-right: 0;
-        }
 
 
 .form-holder {
@@ -212,7 +219,11 @@ img {
             margin-bottom: 18px;
         }
 
-     
+    .wrapper {
+        height: 1201px;
+        background: none;
+
+    }
 
     .checkbox-circle {
         width: 100%;
@@ -227,5 +238,41 @@ img {
             top: 52%;
             transform: translateX(50%);
         }
+
+     
+}
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
+ 
+
+.otp-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.otpInput {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+    margin-left:1vw;
+}
+
+    .otpInput:focus {
+        border-color: #2196f3;
+    }
+
+#palmfitName{
+    margin-top:-20vh;
+}
